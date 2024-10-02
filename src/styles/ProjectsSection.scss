@@ -1,0 +1,155 @@
+@import "variables";
+
+.projectCoverImage {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  background-image: url('../assets/projects/HotspotHeroImage.jpg');
+}
+
+h3 {
+  color: $text-color;
+}
+
+.space {
+  height: 300px;
+}
+
+.projects-container {
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  justify-content: center; 
+  padding-top: 100px;
+  padding-bottom: 100px;
+  padding-left: 5px; 
+  padding-right: 5px; 
+  position: relative;
+  background-color: $background-color;
+  display: block;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+.featured-projects {
+  display: grid;
+  z-index: 11;
+  grid-template-columns: repeat(2, 1fr); 
+  grid-template-rows: repeat(2, 1fr);    
+  gap: 5px; 
+  height: 100vh; 
+  width: 100vw;
+}
+
+.project {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+}
+
+#project-1 {
+  background-image: url('../assets/projects/HotspotHeroImage.jpg');
+}
+
+#project-2 {
+  background-image: url('../assets/projects/Memosphere/MemosphereHeroImage.png');
+}
+
+#project-3 {
+  background-image: url('../assets/projects/DF/DFHeroImage.png');
+}
+
+#project-4 {
+  background-image: url('../assets/projects/SoBHero.png');
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7); 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease; 
+}
+
+.project:hover .overlay {
+  opacity: 1;
+}
+
+.overlay h4 {
+  color: white;
+  margin: 0;
+  padding-left: 15%;
+  padding-top: 10;
+  padding-right: 15%;
+  text-align: center;
+}
+
+.overlay p {
+  color: white;
+  margin: 0;
+  padding-left: 15%;
+  padding-right: 15%;
+  text-align: center;
+}
+
+.title {
+  white-space: nowrap;
+}
+
+.section-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: -30px;
+}
+
+.section-title .line {
+  z-index: 11;
+  flex-grow: 1;
+  height: 2px;
+  background-color: $text-color;
+  margin: 0 15px; 
+  width: 100%;
+}
+
+.section-title h2 {
+  z-index: 11;
+  padding: 0;
+  text-align: center;
+}
+
+
+
+
+
+@media (max-width: 800px) {
+  .featured-projects {
+    display: grid;
+    z-index: 11;
+    grid-template-columns: 1fr; 
+    grid-template-rows: auto;
+    gap: 5px; 
+    height: auto; 
+  }
+  .project.in-view .overlay {
+    opacity: 1;
+  }
+  .project {
+    height: 50vh;
+  }
+}
