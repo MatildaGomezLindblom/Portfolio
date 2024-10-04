@@ -48,65 +48,72 @@ function DF() {
   });
 
   const projectData = {
-    title: "Digital fotovägg",
-    pillText: "! Pågående projekt",
+    title: "Digital photo wall",
+    pillText: "! Ongoing project",
     subtitle:
-      "Ett digitalt och interaktivt komplement till Knightecs fysiska fotovägg.",
+      "A digital and interactive complement to Knightec's physical photo wall.",
     sections: [
       {
-        heading: "Utmaning",
-        text: "Designa och utveckla en digital version av den analoga fotovägg som finns på Knightecs kontor med syfte att förstärka intrycket av att företaget ligger i framkant tekniskt samt att öka gemenskapen på kontoret.",
+        heading: "Challenge",
+        text: "To design and develop a digital version of the analog photo wall at Knightec's office, aiming to reinforcing the impression that the company is at the forefront of technology and increasing community in the office.",
       },
       {
-        heading: "Lösning",
-        text: "En webbapplikation i 2 delar, en touch-vy för kontoret och en datorvy. I applikationen kan man se proffisionell och personlig information om alla kontorets medarbetare, sortera och filtrera efter olika grupper samt sprida information om event och liknande.",
+        heading: "Solution",
+        text: "A web application in two parts: a touch view for the office and a desktop view. The application allows users to see professional and personal information about all office employees, sort and filter by different groups, and spread information about events and similar activities.",
       },
     ],
-    buttonText: "Hoppa till resultatet",
+    buttonText: "Jump to the results",
     additionalInfo: [
       {
-        heading: "Kontext",
-        text: "Gruppprojekt 2023 i kursen Produktutveckling i medieteknik med metoden Design-Build-Test.",
+        heading: "Context",
+        text: "Group project on two courses 2023-2024 (Produktutveckling i medieteknik med metoden Design-Build-Test and during Avancerat kvalitetsprojekt inom Interaktionsteknik)",
       },
       {
-        heading: "Resurser",
-        text: "15 veckor 25 % i grupp om 5 personer (omfattningen av ett exjobb ungefär), handledning av Knightec.",
+        heading: "Resources",
+        text: "Design 15 weeks at 25% in a group of 5 people (approximately the scope of a thesis) and development 8 weeks 50 % 7,5 hp, supervised by Knightec.",
       },
       {
-        heading: "Vektyg",
+        heading: "Tools",
         text: "Figma, VS Code, Next, DevOps, Supabase.",
       },
     ],
     role: {
-      heading: "Min roll och uppgift",
-      tasks: ["UX/UI design", "Användartester av prototyper", "Akritektur"],
+      heading: "My role and tasks",
+      tasks: [
+        "UX/UI design",
+        "User testing of prototypes",
+        "Architecture",
+        "Calendar implementation",
+        "Posts and events",
+      ],
     },
   };
 
   const carouselImages = [
-    {
-      src: DFLoFi1,
-      legend:
-        "Version 1 har en sidebar med filtreringsfunktionalitet och en karusell med alla aktuella anslag på rullning.",
-    },
-    {
-      src: DFLoFi2,
-      legend: "Verion 2 har profilen som en popup.",
-    },
-    {
-      src: DFLoFi3,
-      legend: "Version 3 har mycket funktionalitet uppe i en navbar.",
-    },
-    {
-      src: DFLoFi4,
-      legend:
-        "Version 4 har initialt en rätt avancerad sökfunktion som sedan byttes till en utfällningsbar filtreringsruta.",
-    },
-    {
-      src: DFLoFi5,
-      legend:
-        "Version 5 har stort fokus på en mer proffisionell framsida och en mer personlig baksida på profilen.",
-    },
+
+      {
+        src: DFLoFi1,
+        legend:
+          "Version 1 features a sidebar with filtering functionality and a carousel displaying all current announcements in motion.",
+      },
+      {
+        src: DFLoFi2,
+        legend: "Version 2 has the profile presented as a popup.",
+      },
+      {
+        src: DFLoFi3,
+        legend: "Version 3 includes a lot of functionality in a navbar.",
+      },
+      {
+        src: DFLoFi4,
+        legend:
+          "Version 4 initially had a quite advanced search function, which was then replaced by a dropdown filtering box.",
+      },
+      {
+        src: DFLoFi5,
+        legend:
+          "Version 5 places a strong emphasis on a more professional front and a more personal back of the profile.",
+      },
   ];
 
   const LoFiImages = [
@@ -128,35 +135,38 @@ function DF() {
   const sections = [
     {
       id: "section1",
-      title: "DESIGNINTRO",
-      subtitle: "En gedigen designprocess från koncept till interaktiv Hi-Fi i Figma.",
+      title: "DESIGN INTRODUCTION",
+      subtitle:
+        "A thorough design process from concept to interactive Hi-Fi in Figma.",
       content: (
         <div>
           <div className="design-overview">
-              <div className="design-overview-content">
-                <img id="idea" src={idea}></img>
-                <img id="arrowDownRight" src={arrowDownRight}></img>
-                <img id="DFLoFiPreview" src={LoFiExampleDF}></img>
-                <img id="arrowUpRight" src={arrowUpRight}></img>
-                <img id="DFHiFiPreview" src={HiFiExampleDF}></img>
-              </div>
+            <div className="design-overview-content">
+              <img id="idea" src={idea}></img>
+              <img id="arrowDownRight" src={arrowDownRight}></img>
+              <img id="DFLoFiPreview" src={LoFiExampleDF}></img>
+              <img id="arrowUpRight" src={arrowUpRight}></img>
+              <img id="DFHiFiPreview" src={HiFiExampleDF}></img>
             </div>
+          </div>
         </div>
-      )},
+      ),
+    },
     {
       id: "section2",
-      title: "FÖRSTUDIE",
-      subtitle: "Projektetförberedelser och djupdykning i problemområdet.",
+      title: "PRESTUDY",
+      subtitle: "Project preparations and deep dive into the problem area.",
       content: (
         <div className="DF-section">
           <p>
-            I sökandet efter ett spännande uppdrag träffade vi på ett gäng på
-            Knightec som hade ett intressant förslag. De visade oss sin fysiska
-            fotovägg på kontoret som består av bilder på alla kontorets
-            medarbetare. Bilderna går i sin tur att vänta på för att få en kort
-            introduktion skriven av personen själv. Förslaget var att göra en
-            digital version av denna fotovägg, med samma syfte som dagens fast
-            med ytterligare funktionalitet och mer interaktivitet.
+            In the search for an exciting project for the course, we met a group
+            at Knightec who had an interesting proposal. They showed us their
+            physical photo wall in the office, which consists of pictures of all
+            the office's employees. The pictures can be turned around to dispaly
+            a short introduction in the back written by the person themselves.
+            The proposal was to create a digital version of this photo wall,
+            with the same purpose as the current one, but with additional
+            functionality and more interactivity.
           </p>
           <div className="DF-split-view">
             <img
@@ -171,23 +181,24 @@ function DF() {
 
           <div className="DF-text-and-image">
             <div>
-              <h3>Omvärldsanalys</h3>
+              <h3>Market Analysis</h3>
               <p>
-                Efter en planeringsfas med en SWOT-analys och planering av det
-                agila projektet genom ett GANTT-schema gjordes en omvärdsanalys
-                där alla i gruppen enskilt fick kolla upp liknande tjänster.
-                Bilder och länkar samlades in för att skapa boards med
-                inspiration att använda framåt.
+                After a planning phase that included a SWOT analysis and the
+                planning of the agile project through a GANTT chart, a market
+                analysis was conducted where everyone in the group individually
+                looked up similar services. Images and links were collected to
+                create boards with inspiration to use moving forward.
                 <br />
                 <br />
-                Slutsatserna av detta var att det verkar finnas flera företag
-                som har stora skärmar med bilder på alla kontorets anställda,
-                men ingen digital lösning likt den våra beställare önskade
-                verkade finnas. Däremot undersöktes olika typer av HR
-                plattformar där anställda visas upp och sorteras på olika sätt.
-                Det fanns även en del stora skärmar som sitter uppe på kontor
-                som kan användas för att uppmärksamma anställda, visa upp
-                företagets prestationer och sociala medier etc.
+                The conclusions drawn from this were that there seem to be
+                several companies with large screens displaying pictures of all
+                the office's employees, but no digital solution like the one our
+                client desired appeared to exist. However, various types of HR
+                platforms were examined where employees are showcased and sorted
+                in different ways. There were also some large screens placed in
+                offices that could be used to recognize employees, showcase the
+                company's achievements, and display social media, etc, which
+                inspired the process moving forward.
               </p>
             </div>
             <img
@@ -198,15 +209,15 @@ function DF() {
           <div className="section-section">
             <h3>Personas</h3>
             <p>
-              För att få grepp om vilka olika typer av personer som ska använda
-              tjänsten fixade projektets beställare lite olika use-cases som låg
-              till grund för 2 personas vi tyckte var extra intressanta att ha i
-              åtanke. Det är en för en mer erfaren anställd som för tillfället
-              jobbar på distans och har lite svårt att hänga med på kontorets
-              förändringar från hemmet. Den andra är yngre och representerar nya
-              på arbetsplatsen samt exjobbare. Detta är en person som vill
-              använda tjänsten för att lära känna kollegor och känna sig
-              inkluderad på arbetsplatsen.
+              To understand the different types of people who will use the
+              service, the project's client provided various use cases that
+              formed the basis for two personas we found particularly
+              interesting to keep in mind. The first is for a more experienced
+              employee who is currently working remotely and finds it a bit
+              challenging to keep up with changes at the office from home. The
+              second one is younger and represents newcomers to the workplace
+              and interns. This is a person who wants to use the service to get
+              to know colleagues and feel included in the workplace.
             </p>
           </div>
           <div className="DF-split-view">
@@ -217,62 +228,68 @@ function DF() {
             <img src={DFpersona2} alt="Persona 2, new at the workplace."></img>
           </div>
           <div className="section-section">
-            <h3>Intervjuer</h3>
+            <h3>Interviews</h3>
             <p>
-              Intervjuer genomfördes för att skapa kontext kring målgruppen och
-              ta reda på mer om deras önskemål och behov. För att få en så bra
-              bild av målgruppen som möjligt intervjuades, förutom våra 2
-              beställare, även 3 andra anställda.
+              Interviews were conducted to create context around the target
+              group and to learn more about their wishes and needs. To gain the
+              best possible insight into the target group, in addition to our
+              two clients, three other employees were also interviewed.
               <br />
               <br />
-              <b> Person 1:</b> gruppchef som varit på Knightec i 2.5 år med
-              arbetsuppgifter såsom rekrytering och säljmöten.
+              <b> Person 1:</b> Group manager who has been at Knightec for 2.5
+              years, with responsibilities such as recruitment and sales
+              meetings.
               <br />
               <br />
-              <b> Person 2:</b> rätt ny konsult som jobbat ca ett halvår.
+              <b> Person 2:</b> Relatively new consultant who has worked for
+              about six months.
               <br />
               <br />
-              <b> Person 3:</b> senior konsult som jobbat på företaget i 6 år.
+              <b> Person 3:</b> Senior consultant who has worked at the company
+              for six years.
               <br />
               <br />
-              Intervjuerna var semistrukturerade och tog upp frågor kring vad de
-              önskar göra med produkten, hur profiler ska se ut och fungera samt
-              vilken skärmstorlek man föredrar. Resultatet sammanfattades i
-              kategorier och svaren jämfördes.
+              The interviews were semi-structured and addressed questions
+              regarding what they wish to do with the product, how profiles
+              should look and suggested functionality, as well as preferred
+              screen size. The results were summarized into categories and the
+              responses were compared.
               <br />
               <br />
-              De största skillnaderna mellan deltagarna var ifall syftet med
-              tjänsten skulle fungera som reklam utåt, eller vara en rolig
-              tjänst för medarbetarna. En åsikt var att tjänsten helt skulle
-              ersätta den analoga fotoväggen och slås ihop med infoskärmen i
-              entren till varje kontor i form av en stor touchskärm, medan
-              tanken från beställarens håll var att tjänsten skulle vara ett
-              digitalt komplement, på en lite mindre skärm.
+              The biggest differences among the participants were whether the
+              purpose of the service should function as advertising outward or
+              be a fun service for the employees. One opinion was that the
+              service should completely replace the analog photo wall and merge
+              with the information screen in the lobby of each office in the
+              form of a large touchscreen, while the idea from the client's side
+              was that the service should be a digital complement on a somewhat
+              smaller screen.
             </p>
           </div>
           <div>
             <div className="highlighted-section">
-              <h3>Slutsatser från intervjuer</h3>
+              <h3>Conclusions from interviews</h3>
               <p>
-                Efter diskusion med beställare beslutades det att tjänstens
-                syfte är att vara ett roligt komplement till fotoväggen, för
-                medarbetarna, det vill säga inte reklam utåt. Däremot
-                diskuterades det att tjänsten senare kunde utvecklas att även
-                fungera som ansiktet utåt genom att kombinera denna med
-                infoskärmen i entren. Skärmen ska ha roliga features, men även
-                viktig och användbar funktionalitet såsom att se vem som jobbar
-                vart, grupperingar, kontaktuppgifter etc. Tjänsten ska designas
-                för en mindre skärm så som en iPad eller större datorskärm.
+                After discussions with the clients, it was decided that the
+                purpose of the service is to be a fun complement to the photo
+                wall for the employees, meaning it will not serve as advertising
+                outward. However, it was discussed that the service could later
+                be developed to also function as the outward-facing aspect by
+                combining it with the information screen in the lobby. The
+                screen should have fun features, but also important and useful
+                functionality, such as seeing who works where, groupings,
+                contact details, etc. The service should be designed for a
+                smaller screen, such as a larger computer monitor.
               </p>
             </div>
           </div>
           <div className="section-section">
             <div>
-              <h3>Brainstorm och prioritering</h3>
+              <h3>Brainstorming and prioritazion</h3>
               <p>
-                Vi använde brainstorming för idégenerering av olika funktioner
-                lösningen skulle kunna innehålla. Dessa skrevs ner på
-                post-it-lappar som därefter prioriterades i en
+                We used brainstorming for idea generation of various features
+                that the solution could include. These were written down on
+                post-it notes, which were then prioritized in an{" "}
                 <a
                   href="https://www.nngroup.com/articles/prioritization-methods/"
                   target="_blank"
@@ -293,18 +310,18 @@ function DF() {
     {
       id: "section3",
       title: "LO-FI",
-      subtitle: "Från idé till ett testat första förslag.",
+      subtitle: "From idea to a tested first prototype",
       content: (
         <div className="DF-section">
           <div>
             <h3>Lo-Fi</h3>
             <p>
-              Varje gruppmedlem fick först göra var sin tolkning av de
-              prioriterade idéerna genom skapandet av Lo-Fi's. Efter detta
-              skedde en ny iteration av samma fas där alla i gruppen återigen
-              individuellt fick göra digitala wireframes inspirerade av
-              föregående skisser, detta för att kunna skapa gemensamma
-              wireframes sammanställda utifrån alla individuella skisser.
+              Each group member first created their own interpretation of the
+              prioritized ideas by making Lo-Fi designs. After this, a new
+              iteration of the same phase took place, where everyone in the
+              group once again individually created digital wireframes inspired
+              by the previous sketches. This was done to create common
+              wireframes compiled from all individual sketches.
             </p>
             <div>
               <ImageCarousel
@@ -316,9 +333,9 @@ function DF() {
           <div className="section-section">
             <h3>Wireframes</h3>
             <p>
-              Efter andra individuella iterationen gjordes en gemensam
-              interation där wireframes skapades utifrån det vi gillade ur våra
-              förslag. Nedan är några av dem:
+              After the second individual iteration, a joint iteration was
+              conducted where wireframes were created based on what we liked
+              from our proposals. Below are some of them:
             </p>
             <div className="image-grid">
               {LoFiImages.map((src, index) => (
@@ -332,23 +349,21 @@ function DF() {
             </div>
           </div>
           <div>
-            <h3>Testning av wireframes</h3>
+            <h3>Testing of Wireframes</h3>
             <p>
-              Testningen genomfördes på beställare och handledare på Knightec
-              och var utformad för att fånga deras initiala reaktion.
+              The testing was conducted with the clients and supervisors at
+              Knightec and was designed to capture their initial reactions.
               <br />
               <br />
-              Testningen resulterade i en del förändringar:
+              The testing resulted in several changes:
             </p>
             <ul>
-              <li>Det ska gå att kombinera taggar i filtreringen.</li>
+              <li>It should be possible to combine tags in the filtering.</li>
+              <li>The banner on the personal profile should be an image.</li>
+              <li>Randomize who appears on the homepage.</li>
               <li>
-                Bannern på den personliga profilen ska kunna vara en bild.
-              </li>
-              <li>Randomisera vilka som syns på förstasidan.</li>
-              <li>
-                Man ska kunna söka på olika titlar, som senior consultant eller
-                team managers.
+                One should be able to search for different titles, such as
+                senior consultant or team manager.
               </li>
             </ul>
           </div>
@@ -358,19 +373,19 @@ function DF() {
     {
       id: "section4",
       title: "HI-FI",
-      subtitle: "Den slutgiltiga hi-fi-prototypen i Figma.",
+      subtitle: "The final Hi-Fi prototype in Figma.",
       content: (
         <div className="DF-section">
           <p>
-            HiFi prototypen gjordes i Figma. Designen utgår från de uppdaterade
-            wireframsen och lägger till färg och form samt en del extra
-            funktionalitet som uppstod under testningen.
+            The HiFi prototype was created in Figma. The design is based on the
+            updated wireframes and adds color and shape as well as some extra
+            functionality that emerged during testing.
           </p>
           <div className="">
-            <h3>Grafisk profil</h3>
+            <h3>Graphic profile</h3>
             <p>
-              Den grafiska profilen är inspirerad av Knightecs nuvarande
-              webbplats och instagramflöde:
+              The graphic profile is inspired by Knightec's current website and
+              Instagram feed:
             </p>
             <div className="DF-split-view">
               <img
@@ -385,25 +400,25 @@ function DF() {
             <div className="DF-text-and-image">
               <div>
                 <p>
-                  Font och annan styling togs från webbplatsen så gott det gick.
-                  Färgpaletten består till till största del av vitt och svart,
-                  med mycket inslag av bilder, främst på natur. Därför valdes
-                  vitt och svart till designens primära/neutrala färger, med en
-                  viss nedtoning för att kontrasten inte ska bli för hög.
-                  Naturbilder togs både från Knightecs webbplats men också från
-                  diverse gratisplattformar. Komponenter såsom knappar och
-                  navigations-baren försökte imiteras för att skapa en
-                  enhetlighet mellan fotoväggskomplementet och resten av
-                  företagets grafiska identitet.
+                  Fonts and other styling were taken from the website when
+                  possible. The color palette mainly consists of white and
+                  black, with a lot of images, primarily of nature. Therefore,
+                  white and black were chosen as the primary/neutral colors of
+                  the design, with a slight tone down to avoid high contrast
+                  that wouldn't align with accessability standards. Nature
+                  images were sourced from Knightec's website as well as various
+                  free platforms. Components such as buttons and the navigation
+                  bar were imitated to create consistency between the photo wall
+                  complement and the rest of the company’s graphic identity.
                   <br />
                   <br />
-                  Till detta valde vi att lägga till en grå och en lila för att
-                  ha mer färg att jobba med för att framhäva vissa aspekter. För
-                  att markera destruktiva handlingar såsom delete valdes en lite
-                  nedtonad röd färg. Generellt sett är knapparna svarta, men
-                  dessa extra färger hjälper till att guida ögat till rätt
-                  ställe under interaktionen. Det är även lättare för användaren
-                  att förstå knappens innebörd med färg, inte bara med ord.
+                  Additionally, we chose to add a gray and a purple to have more
+                  color to work with to highlight certain aspects. To denote
+                  destructive actions such as delete, a slightly toned-down red
+                  color was selected. Generally, the buttons are black, but
+                  these extra colors help guide the eye to the right place
+                  during processes. Also, it's easier for the user to understand
+                  the meaning of the button with color and not just words.
                 </p>
               </div>
               <img
@@ -418,23 +433,23 @@ function DF() {
               ></img>
               <div>
                 <p>
-                  Den enda ikonen som kunde tas från Knightecs egna webbplats
-                  var en “fälla ner pil”. Denna användes sedan för att skapa en
-                  “gå tillbaka pil” samt ett “ta bort kryss”. Resterande togs
-                  från ett ikonbibliotek och modifierades för att se mer
-                  enhetliga ut. Olika versioner för varje ikon togs fram för att
-                  sedan välja ut den som känns mest relevant för syftet.
+                  The only icon that could be taken from Knightec's own website
+                  was a "down arrow." This was then used to create a "back
+                  arrow" and a "remove cross." The remaining icons were sourced
+                  from an icon library and modified to appear more uniform.
+                  Different versions of each icon were developed to select the
+                  one that feels most relevant for the purpose.
                 </p>
               </div>
             </div>
           </div>
           <div className="section-section">
-            <h3>Testning av Hi-Fi-prototyp</h3>
+            <h3>Testning of the Hi-Fi prototype</h3>
             <p>
-              Testningen utfördes på plats med beställare (som varit med under
-              hela processen) och en exjobbare inom UX (som var helt ny till
-              konceptet). Prototypen skickades även till en annan grupp på
-              kursen som utvärderade den utefter{" "}
+              The testing was conducted on-site with the client (who had been
+              involved throughout the entire process) and a graduate student in
+              UX (who was completely new to the concept). The prototype was also
+              sent to another group in the course who evaluated it based on{" "}
               <a
                 href="https://www.nngroup.com/articles/ten-usability-heuristics/"
                 target="_blank"
@@ -445,7 +460,9 @@ function DF() {
               .
               <br />
               <br />
-              Denna feedback ledde till en del förändringar. De största förändringarna är visualiserade nedan där grönt markerar det nya och rött det gamla:
+              This feedback led to some modifications. The most significant
+              changes are visualized below, where green marks the new and red
+              marks the old:
             </p>
             <div className="image-grid">
               {HiFiChangesImages.map((src, index) => (
@@ -459,44 +476,52 @@ function DF() {
             </div>
           </div>
           <div className="section-section">
-            <h3>Slutgiltig HiFi</h3>
-            <a href="https://www.figma.com/proto/ChfODED8YAIHhoZB7INNGf/Digital-Fotov%C3%A4gg?node-id=377-3971&node-type=canvas&t=QzIQgLg49YoH5Sbj-1&scaling=min-zoom&content-scaling=fixed&page-id=365%3A3118&starting-point-node-id=377%3A3971&show-proto-sidebar=1">Länkt till prototyp i Figma här!</a>
+            <h3>Final Hi-Fi</h3>
+            <a href="https://www.figma.com/proto/ChfODED8YAIHhoZB7INNGf/Digital-Fotov%C3%A4gg?node-id=377-3971&node-type=canvas&t=QzIQgLg49YoH5Sbj-1&scaling=min-zoom&content-scaling=fixed&page-id=365%3A3118&starting-point-node-id=377%3A3971&show-proto-sidebar=1">
+              Link to prototype in Figma here!
+            </a>
             <img
-            src={DFFinalHiFi}
-            alt="The graphical profile inspired by Knightecs graphical identity."
-            >
-            </img>
+              src={DFFinalHiFi}
+              alt="The graphical profile inspired by Knightecs graphical identity."
+            ></img>
           </div>
         </div>
       ),
     },
     {
       id: "section5",
-      title: "UTVECKLING",
-      subtitle: "Från Figmaprototyp till en utvecklad touchvy.",
+      title: "DEVELOPMENT",
+      subtitle: "The development of the touch screen view in Next.js.",
       content: (
         <div className="DF-section">
           <p>
-            Utvecklingen av designen sker nu HT24 i en projektkurs som
-            planerades av en av gruppmedlemmarna under ett sommarjobb hos
-            Knightec förra sommaren. Denna projektkurs på 7,5hp pågår just nu
-            sååå fortsättning följer...
+            The development of the design is now taking place in the HT24
+            project course, which was planned by one of the group members during
+            a summer job at Knightec last summer. The touch view is being
+            developed using Next with TypeScript, SaSS and a Supabase
+            database for testing. This project course, worth 7.5 hp, is
+            currently ongoing, so stay tuned for further updates...
           </p>
         </div>
       ),
     },
     {
       id: "results",
-      title: "RESULTAT",
-      subtitle: "Kommer snart.",
+      title: "RESULTS",
+      subtitle: "Coming soon.",
       content: (
         <div className="DF-section">
-          <p><i>Projektet görs tillsammans med mina skickliga gruppmedlemmar och goda vänner Ebba Backlund, Moa Berquist, Melker Henriksson och Gustav Bolén!</i></p>
+          <p>
+            <i>
+              The project is being carried out together with my skilled group
+              members and good friends: Ebba Backlund, Moa Berquist, Melker
+              Henriksson, and Gustav Bolén!
+            </i>
+          </p>
         </div>
       ),
     },
-    {
-    },
+    {},
   ];
 
   return (

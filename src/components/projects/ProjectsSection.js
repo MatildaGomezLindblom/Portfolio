@@ -8,10 +8,34 @@ function ProjectsSection() {
   const navigate = useNavigate();
 
   const projects = [
-    { id: "project-1", page: "/Hotspot", tags: "React Native • Användarhantering • UX • Firebase", title: "HOTSPOT - Appen för att spara och dela sina favoritplatser med vänner."},
-    { id: "project-2", page: "/Memosphere", tags: "React Native • OpenAI • UX • Firebase", title: "MEMOSPHERE - Håll kontakt med nära och kära med hjälp av AI."},
-    { id: "project-3", page: "/DF", tags: "Next • Knightec • UX • Supabase", title: "DIGITAL FOTOVÄGG - Ett digitalt och interaktivt komplement till Knightecs fysiska fotovägg."},
-    { id: "project-4", page: "/SoB", tags: "Verksamhetsutveckling • Internship • UX • CGI • Region Västernorrland", title: "VÄRDESKAPANDE DIGITALA TJÄNSTER I VÅRDEN - Förslag på hur regionen kan öka användningen av tjänsten Stöd och Behandling."},
+    {
+      id: "project-1",
+      page: "/Hotspot",
+      tags: "React Native • User Management • UX • Firebase",
+      title:
+        "HOTSPOT - The app for pinning and sharing your favorite places with friends.",
+    },
+    {
+      id: "project-3",
+      page: "/DF",
+      tags: "Next • Knightec • UX • Supabase",
+      title:
+        "DIGITAL PHOTO WALL - A digital and interactive complement to Knightec's physical photo wall.",
+    },
+    {
+      id: "project-2",
+      page: "/Memosphere",
+      tags: "React Native • OpenAI • UX • Firebase",
+      title:
+        "MEMOSPHERE - Stay in touch with loved ones in an exciting and unique way using AI.",
+    },
+    {
+      id: "project-4",
+      page: "/SoB",
+      tags: "Business Development • Internship • UX • CGI • Region Västernorrland",
+      title:
+        "VÄRDESKAPANDE DIGITALA TJÄNSTER I VÅRDEN - Exploration and improvement of Västernorrlands management of the digital platform Stöd och Behandling.",
+    },
   ];
 
   const handleImageClick = (project) => {
@@ -48,45 +72,47 @@ function ProjectsSection() {
 
     setTimeout(() => {
       navigate(project.page);
-    }, 800); 
+    }, 800);
   };
 
   return (
     <div className="projects-container">
       <div className="section-title">
         <div className="line"></div>
-        <h3 className="title">Utvalda projekt</h3>
+        <h2 className="title">Featured projects</h2>
         <div className="line"></div>
       </div>
       <div className="featured-projects">
-      {projects.map((project) => (
-        <motion.div
-        key={project.id} id={project.id}
-        className="project"
-        initial={{ scale: 1, x: 0, y: 0, zIndex: 10 }}
-        animate={
-          transitioningProject?.id === project.id
-            ? {
-                scale: transitioningProject.scale,
-                x: transitioningProject.x,
-                y: transitioningProject.y,
-                zIndex: transitioningProject.zIndex,
-              }
-            : { scale: 1, x: 0, y: 0, zIndex: 10 }
-        }
-        transition={{ duration: 0.8, type: "easeIn" }}
-        onClick={() => handleImageClick(project)}
-      >
-        {transitioningProject?.id !== project.id && (
-          <div className="overlay">
-            <p>{project.tags}</p>
-            <h4>
-              {project.title}
-            </h4>
-          </div>
-        )}
-      </motion.div>
-          ))}
+        {projects.map((project) => (
+          <motion.div
+            key={project.id}
+            id={project.id}
+            className="project"
+            initial={{ scale: 1, x: 0, y: 0, zIndex: 10 }}
+            animate={
+              transitioningProject?.id === project.id
+                ? {
+                    scale: transitioningProject.scale,
+                    x: transitioningProject.x,
+                    y: transitioningProject.y,
+                    zIndex: transitioningProject.zIndex,
+                  }
+                : { scale: 1, x: 0, y: 0, zIndex: 10 }
+            }
+            transition={{ duration: 0.8, type: "easeIn" }}
+            onClick={() => handleImageClick(project)}
+          >
+            {transitioningProject?.id !== project.id && (
+              <div className="overlay">
+                <p>{project.tags}</p>
+                <h4>{project.title}</h4>
+              </div>
+            )}
+          </motion.div>
+        ))}
+      </div>
+      <div className="section-end">
+        <div className="line"></div>
       </div>
       <div className="space"></div>
     </div>

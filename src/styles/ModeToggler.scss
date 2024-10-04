@@ -3,7 +3,7 @@
 .container {
     height: 25px;
     width: 50px;
-    background: $primary-color;
+    background: $primary-color-2;
     border-radius: 25px;
     display: flex;
     align-items: center;
@@ -11,7 +11,7 @@
     padding: 0 5px;
     cursor: pointer;
     transition: all 0.3s;
-    border: 1px solid $background-color;
+    box-shadow: rgba(0, 0, 0, 0.14) 0px 1px 3px;
   }
 
   .handle {
@@ -21,8 +21,9 @@
     display: grid;
     align-items: center;
     justify-items: center;
-    background-color: #fff7ca;
+    background-color: $sun-color;
     overflow: hidden;
+    border: 1px solid #f8e328;
   }
 
   .icon {
@@ -30,5 +31,10 @@
   }
   
 .dark-mode {
+  .handle {
+    border: 1px solid #f8f8f8;
+    background-color: #e7e7e7;
+
+  }
 
 }

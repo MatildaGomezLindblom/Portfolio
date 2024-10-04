@@ -26,41 +26,41 @@ function Hotspot() {
 
   const projectData = {
     title: "Hotspot",
-    subtitle: "Appen för att spara och dela sina favoritställen.",
+    subtitle: "The app to pin and share your favorite places.",
     sections: [
       {
-        heading: "Utmaning",
-        text: "I projekt designa och utveckla en interaktiv prototyp av en mobilapplikation, med extra fokus på tillgänglighet. Vi valde att lösa problemet med att hitta smultronställen på ett smidigt och pålitligt sätt.",
+        heading: "Challenge",
+        text: "Design and develop an interactive prototype of a mobile application, with extra focus on accessibility. We chose to solve the problem of finding hidden gems in a smooth and reliable way.",
       },
       {
-        heading: "Lösning",
-        text: "En app med användarhantering och integrerad karta där man skapa pins för sina favoritplatser med kommentarer som delas mellan använarens vänner.",
+        heading: "Solution",
+        text: "An app with user management and an integrated map where users can create pins for their favorite places with comments shared among the user's friends.",
       },
     ],
-    buttonText: "Hoppa till resultatet",
+    buttonText: "Jump to the result",
     additionalInfo: [
       {
-        heading: "Kontext",
-        text: "Gruppprojekt 2023 i kursen Prototyputveckling för mobila applikationer.",
+        heading: "Context",
+        text: "Group project 2023 in the course Prototyputveckling för mobila applikationer.",
       },
       {
-        heading: "Resurser",
-        text: "5 veckor halvtid i grupp om 5 personer.",
+        heading: "Resources",
+        text: "5 weeks 50% in a group of 5 people.",
       },
       {
-        heading: "Vektyg",
+        heading: "Tools",
         text: "Figma, VS Code, React Native.",
       },
     ],
     role: {
-      heading: "Min roll och uppgift",
+      heading: "My role",
       tasks: [
         "UX/UI design",
-        "Användartester av prototyper",
-        "Designa och sätta upp databas (användare, vänner och pins)",
-        "Service layer till databasen",
-        "Vännersidan",
-        "Sökfunktion för vänner",
+        "User testing of prototypes",
+        "Designing and setting up the database",
+        "Service layer for the database",
+        "Friends page",
+        "Search function for friends",
       ],
     },
   };
@@ -69,17 +69,17 @@ function Hotspot() {
     {
       src: hotspotVersion1,
       legend:
-        "I version 1 har funktionen “lägg till pin” en egen knapp i navbaren, vännersidan ligger i profilsidan.",
+        "In version 1, the 'add pin' function has its own button in the navbar, and the friends page is located on the profile page.",
     },
     {
       src: hotspotVersion2,
       legend:
-        "I version 2 är lägg till pin en flytande knapp vilket ger plats för vänner i navbaren.",
+        "In version 2, 'add pin' is a floating button, which makes room for friends in the navbar.",
     },
     {
       src: hotspotVersion3,
       legend:
-        "Version 3 har en navbar som ändrar funktionalitet beroende på vilken sida användaren befinner sig på.",
+        "Version 3 has a navbar that changes functionality depending on which page the user is on.",
     },
   ];
 
@@ -87,14 +87,15 @@ function Hotspot() {
     {
       id: "section1",
       title: "DESIGN",
-      subtitle: "Från idé till testad hi-fi i Figma på en vecka.",
+      subtitle: "From idea to tested hi-fi in Figma in a week.",
       content: (
         <div>
           <div>
             <p>
-              Tanken var att skapa en applikation som låter användaren pinna
-              platser på kartan, både för sin egen skull, men även för att skapa
-              ett rekommendationssystem för nära och kära.
+              The idea was to create an application that allows users to pin
+              locations on the map, both for their own benefit and to create a
+              recommendation system for friends and family that would be more
+              trustworthy than Google reviews for example.
             </p>
             <div className="design-overview">
               <div className="design-overview-content">
@@ -108,7 +109,7 @@ function Hotspot() {
           </div>
           <div className="section-section">
             <h3>Storyboard</h3>
-            <p>För att visualisera användarresan.</p>
+            <p>To visualize the user journey</p>
             <img
               className="hotspot-storyboard"
               src={hotspotStoryboard}
@@ -118,14 +119,13 @@ function Hotspot() {
           <div className="section-section">
             <h3>Lo-fi</h3>
             <p>
-              Vi visste att vi behövde en karta med sök- och
-              filtreringsfunktion, skapandet och uppvisandet av pins, profiler,
-              och funktionalitet för att logga in och ut samt hantera vänner.
-              Utifrån detta skapades en lo-fi prototyp i Figma. Den största
-              utmaningen var att lista ut vart alla dessa komponenter skulle
-              vara placerade för att navigeringen skulle bli så intuitiv som
-              möjligt. Därför gjordes 3 versioner som sedan testades på 6
-              användare.
+              We knew we needed a map with search and filtering functions, the
+              creation and display of pins, profiles, and functionality to log
+              in and out as well as to manage friends. Based on this, a lo-fi
+              prototype was created in Figma. The biggest challenge was figuring
+              out where all these components should be placed to make the
+              navigation as intuitive as possible. Therefore, three versions
+              were created and tested on six users.
             </p>
             <div>
               <ImageCarousel
@@ -136,23 +136,26 @@ function Hotspot() {
           </div>
           <div className="section-section hotspot-testing-results">
             <div>
-              <h3>Resultat av testning</h3>
+              <h3>Results from user testing</h3>
               <p>
-                Testningen visade att det inte uppskattades när ikonen i
-                navbaren ändrades beroende på vilken sida man var på. Därför var
-                version 1 och 2 favoriterna. Vi valde att fortsätta med version
-                1 då navigationen liknande andra populära appar såsom instagram,
-                med en del justeringar efter feedback från testningen.{" "}
+                The testing showed that it was not appreciated when the icon in
+                the navbar changed depending on which page the user was on.
+                Therefore, versions 1 and 2 were the favorites. We chose to
+                continue with version 1 since the navigation resembled other
+                popular apps like Instagram, with some adjustments based on
+                feedback from the testing.{" "}
               </p>
-              <p className="list-title">Ändringar som gjordes var följande:</p>
+              <p className="list-title">
+                Some changes that were made were the following:
+              </p>
               <ul>
                 <li>
-                  Endast en karta istället för seperata för mina pins och
-                  vänners pins.
+                  Only one map instead of separate ones for my pins and my
+                  friends' pins.
                 </li>
-                <li>Inställningar i högra hörnet i profilen.</li>
+                <li>Settings in the top right corner of the profile.</li>
                 <li>
-                  Preview på vänner i profilen, istället för knappen endast.
+                  Preview of friends in the profile, instead of just a button.
                 </li>
               </ul>
             </div>
@@ -164,12 +167,13 @@ function Hotspot() {
             </div>
           </div>
           <div className="section-section">
-            <h3>Moodboard och grafisk profil</h3>
+            <h3>Moodboard and graphic profile</h3>
             <p>
-              Då vår applikation skulle innehålla en karta med pins samt många
-              bilder valde vi att hålla oss till få färger och ett ljust tema.
-              Vi valde en nedtonad röd för framhävda element såsom knappar, samt
-              en beige-gul som komplement för att kunna skapa en snygg gradient.
+              Since our application would contain a map with pins as well as a
+              lot of images, we chose to stick to a few colors and a light
+              theme. We selected a muted red for highlighted elements like
+              buttons, along with a beige-yellow as a complement to create a
+              nice gradient.
             </p>
             <div className="mooadboard-graphicprofile-container">
               <img
@@ -185,9 +189,9 @@ function Hotspot() {
           <div className="section-section">
             <h3>Hi-Fi</h3>
             <p>
-              Utifrån moodboarden, den grafiska profilen och den uppdaterade
-              lo-fien skapades en hi-fi i Figma, nedan är några av sidorna vi
-              gjorde.
+              Based on the mood board, the graphic profile, as well as the
+              updated low-fidelity prototype, a high-fidelity design was created
+              in Figma. Below are some of the pages we made.
             </p>
             <img
               className="hotspotHiFi"
@@ -200,40 +204,40 @@ function Hotspot() {
     },
     {
       id: "section2",
-      title: "UTVECKLING",
+      title: "DEVELOPMENT",
       subtitle:
-        "Från Figmaprototyp till semifungerande applikation med användarhantering och kartfunktion i React Native och Firestore databas.",
+        "From Figma prototype to a semi-functional application with user management and map functionality in React Native, with a Firestore database.",
       content: (
         <div>
           <p>
-            Under programmeringsfasen satt vi mycket tillsammans i gruppen i
-            början för att planera och sätta upp en enhetlig struktur för
-            projektet. Vi satte upp en kanban där alla fick ta egna uppgifter
-            eftersom, då satt vi mycket enskilt. I slutet satt vi några dagar
-            tillsammans för att koppla ihop alla delar och färdigställa det som
-            inte blivit klart.
+            During the programming phase, we spent a lot of time together as a
+            group in the beginning to plan and establish a unified structure for
+            the project. We set up a Kanban board where everyone could take on
+            their own tasks since we were working individually a lot. At the
+            end, we spent a few days together to connect all the parts and
+            finalize what had not been completed.
           </p>
           <div className="section-section">
-            <h3>Databasen</h3>
+            <h3>The database</h3>
             <p>
-              Vi valde att använda Firestore som databas för vårt projekt på
-              grund av dess skalbarhet och enkelhet samt dess stöd för
-              realtidsuppdateringar. Detta var min första erfarenhet med en
-              NoSQL-databas, vilket krävde en del research för att fastställa en
-              databasstruktur vi var nöjda med. Vi övervägde två alternativ för
-              att lagra vänlistor: antingen som en del av användardokumentet
-              eller som en separat collection. Vi valde att skapa en separat
-              collection för vänner. Detta förbättrar prestandan och
-              skalbarheten genom att undvika att behöva läsa hela
-              användardokumentet varje gång vi hämtar en användares vänlista,
-              även om det gör querys lite mer komplexa.
+              We chose to use Firestore as the database for our project due to
+              its scalability and simplicity, as well as its support for
+              real-time updates. This was my first experience with a NoSQL
+              database, which required some research to establish a database
+              structure we were satisfied with. We considered two options for
+              storing friend lists: either as part of the user document or as a
+              separate collection. We decided to create a separate collection
+              for friends. This improves performance and scalability by avoiding
+              the need to read the entire user document each time we fetch a
+              user's friend list, although it does make the queries a bit more
+              complex.
               <br />
               <br />
-              På samma sätt hanterar vi pins. Vi har en separat collection för
-              användar-ID som innehåller en subcollection för pins, där varje
-              dokument representerar en användares pin. Denna struktur
-              underlättar hanteringen och hämtningen av pins samtidigt som den
-              håller användardokumenten mer hanterbara.
+              In the same way, we handle pins. We have a separate collection for
+              user IDs that contains a subcollection for pins, where each
+              document represents a user's pin. This structure facilitates the
+              management and retrieval of pins while keeping the user documents
+              more manageable.
             </p>
             <img
               src={hotspotDatabase}
@@ -241,56 +245,55 @@ function Hotspot() {
             ></img>
           </div>
           <div className="section-section">
-            <h3>Kartan och pins</h3>
+            <h3>The Map and Pins</h3>
             <p>
-              Kartan och pins är centrala delar av Hotspot. För kartvisningen
-              använder vi react-native-maps, som integrerar med Google Maps på
-              Android och Apple Maps eller Google Maps på iOS. Aktuell plats
-              bestäms med expo-location, vilket gör att kartan kan centreras på
-              användarens position. För att snabbt söka efter och navigera till
-              specifika platser använder vi
-              react-native-google-places-autocomplete, som ger sökförslag medan
-              användaren skriver.
+              The map and pins are central parts of Hotspot. For the map
+              display, we use react-native-maps, which integrates with Google
+              Maps on Android and Apple Maps or Google Maps on iOS. The current
+              location is determined using expo-location, allowing the map to
+              center on the user's position. To quickly search for and navigate
+              to specific locations, we use
+              react-native-google-places-autocomplete, which provides search
+              suggestions as the user types.
               <br />
               <br />
-              Pins på kartan placeras ut vid inladdning och representerar både
-              användarens egna pins och deras vänners pins från databasen. Varje
-              pin har en unik färg och ikon baserat på dess kategori, och
-              användaren kan filtrera pins efter kategori, till exempel
-              stränder.
+              Pins on the map are placed during loading and represent both the
+              user's own pins and their friends' pins from the database. Each
+              pin has a unique color and icon based on its category, and the
+              user can filter pins by category, such as beaches.
               <br />
               <br />
-              När en användare skapar en pin, lägger de till en bild, plats,
-              beskrivning och titel. Den nya pinnen syns på både användarens
-              egen och vänners kartor. Varje pin berikas med platsinformation
-              från Google Places API. Om flera användare inom samma
-              vänskapsgrupp skapar pins på samma plats, kommer dessa att
-              grupperas under en gemensam pin, vilket förhindrar att flera pins
-              skapas för samma favoritställe.
+              When a user creates a pin, they add a picture, location,
+              description, and title. The new pin is visible on both the user's
+              and their friends' maps. Each pin is enriched with location
+              information from the Google Places API. If multiple users within
+              the same friendship group create pins at the same location, these
+              will be grouped under a common pin, preventing multiple pins from
+              being created for the same favorite spot.
             </p>
           </div>
           <div className="section-section">
-            <h3>Användare och vänner</h3>
+            <h3>Users Management</h3>
             <p>
-              För att skapa ett konto i appen behöver användaren ange en
-              e-postadress, namn och lösenord. Användaren har även möjlighet att
-              ladda upp en profilbild från sin kamerarulle. På sin profil kan
-              användaren se sin egen information, ett flöde av sina pins, samt
-              en förhandsvisning av sina vänner. Användaren kan också klicka för
-              att gå till vänners profiler.
+              To create an account in the app, the user needs to provide an
+              email address, name, and password. The user also has the option to
+              upload a profile picture from their camera roll. On their profile,
+              the user can see their own information, a feed of their pins, and
+              a preview of their friends. The user can also click to navigate to
+              friends' profiles.
               <br />
               <br />
-              När man navigerar till en vänsida laddar applikationen användarens
-              vänlista. Vänförfrågningar visas högst upp på sidan, där endast en
-              förfrågan visas initialt. Nedanför vänförfrågningarna visas en
-              lista över användarens vänner. Sidan innehåller en sökruta högst
-              upp där användaren kan söka efter användarnamn. Vid sökning visas
-              matchande vänner först, följt av vänner till vänner och sist
-              användare som inte har någon gemensam vän med sökaren.
-              Profilkorten för vänner visar bild, namn och eventuell vänstatus.
-              Användaren kan svepa på ett kort för att snabbt lägga till eller
-              ta bort en vän, eller klicka på kortet för att komma åt en mer
-              detaljerad vy med samma funktionalitet.
+              When navigating to a friend's page, the application loads the
+              user's friend list. Friend requests are displayed at the top of
+              the page, with only one request shown initially. Below the friend
+              requests, there is a list of the user's friends. The page includes
+              a search box at the top where the user can search for usernames.
+              When searching, matching friends are displayed first, followed by
+              friends of friends, and lastly users who have no mutual friends
+              with the searcher. The profile cards for friends show a picture,
+              name, and any friendship status. The user can swipe on a card to
+              quickly add or remove a friend, or click on the card to access a
+              more detailed view with the same functionality.
             </p>
           </div>
         </div>
@@ -298,8 +301,8 @@ function Hotspot() {
     },
     {
       id: "results",
-      title: "RESULTAT",
-      subtitle: "Demovideo och länk till GitHub repo.",
+      title: "RESULTS",
+      subtitle: "Demo video and link to GitHub repo.",
       content: (
         <div className="section-section">
           <iframe
@@ -318,64 +321,64 @@ function Hotspot() {
     },
     {
       id: "section4",
-      title: "MITT BIDRAG",
-      subtitle: "Vad jag gjort i projektet samt lite avslutande tankar.",
+      title: "MY CONTRIBUTION",
+      subtitle: "And some final thougths.",
       content: (
         <div>
           <div>
             <p>
-              Designdelen gjorde vi mestadels tillsammans men jag hade mest
-              fokus på vännersidan och knappar, vilket gjorde att dessa även
-              blev mina fokus underutvecklingsfasen också. Det var en intressant
-              sida att jobba med då den både innehöll svepanimationer,
-              dropdowns, inladdning av data samt en lite mer avanerad
-              sökfunktion.
+              The design part was mostly done together, but my main focus was on
+              the friends' page and buttons, which also became my focus during
+              the development phase. It was an interesting page to work on as it
+              included swipe animations, dropdowns, data loading, and a more
+              advanced search function.
               <br />
               <br />
-              Jag tog även på mig att fixa med databasen. Firebase var helt nytt
-              för mig och det var en väldigt givande utmaning! Jag gjorde det
-              mesta med databasen, från planering av struktur till ett service
-              lager och testning. Under slutfasen av projektet såg jag till att
-              integrera service-lagret med samtliga sidor i applikationen och
-              såg till att datan flödade smidigt mellan alla komponenter så att
-              applikationen fungerade som avsett.
+              I also took on the task of handling the database. Firebase was
+              completely new to me, and it was a very rewarding challenge! I
+              planned and presented the structure as well as creating a service
+              layer and testing. During the final phase of the project, I
+              ensured that the service layer was integrated with all pages in
+              the application and that the data flowed smoothly between all
+              components so that the application functioned as intended.
               <br />
               <br />
-              Det roligaste med projektet var att vi som grupp kunde skapa så
-              pass mycket funktionalitet på kort tid tack vare vårt samarbete.
-              Jag fick även chansen att lära mig om NoSQL och Firebase och min
-              roll gjorde att jag hade en rätt bra överblick över hur allt
-              skulle hänga ihop i slutändan.
+              The most enjoyable part of the project was that we, as a group,
+              could create so much functionality in a short time thanks to our
+              collaboration. I also had the chance to learn about NoSQL and
+              Firebase, and my role gave me a pretty good overview of how
+              everything would come together in the end.
             </p>
           </div>
           <div className="section-section">
-            <h3>Förbättringsmöjligheter</h3>
+            <h3>Improvement opportunities</h3>
             <p>
-              På grund av den begränsade tiden, plus att vi använde en del nya
-              ramverk, hann vi inte göra en fullt fungerande applikation. Den
-              saknar fortfarande mycket önskvärd funktionalitet som att filtrera
-              pins efter vänner, eller lägga till en vän direkt från dennes
-              profilsida. Det finns även en del buggar då vi inte hann testa
-              applikationen i slutet, samt en del varningar som dyker upp i
-              expo, dessa verkar dock inte påverka funktionaliteten.
+              Due to the limited time, combined with the fact that we were using
+              some new frameworks, we did not manage to create a fully
+              functional application. It still lacks many desired
+              functionalities, such as filtering pins by friends or adding a
+              friend directly from their profile page. There are also some bugs
+              since we didn’t have time to test the application thoroughly at
+              the end, as well as some warnings that appear in Expo; however,
+              these don’t seem to affect functionality.
               <br />
               <br />
-              Hade vi fått göra om projektet hade jag struntat i att försöka
-              fixa google signin då det inte var kompatibelt med expo i
-              slutändan. Jag hade även sett till att vi gjorde en ännu mer
-              utförlig planering i början för att se till att alla delar passade
-              ihop bättre i slutet. Kanske hade jag struntat i viss
-              funktionalitet såsom login för att hinna med tester på slutet för
-              att få bort ännu fler buggar och varningar.
+              If we were to redo the project, I would skip trying to fix Google
+              Sign-In since it ultimately wasn’t compatible with Expo. I would
+              also ensure that we made an even more detailed plan at the
+              beginning to ensure that all parts fit together better in the end.
+              Perhaps I would have omitted certain functionalities, such as
+              login, to have time for testing at the end to eliminate even more
+              bugs and warnings.
               <br />
               <br />
-              Trots detta är jag väldigt stolt över resultatet och det var ett
-              väldigt lärorikt projekt!{" "}
+              Despite this, I am very proud of the result, and it was a very
+              educational project!
             </p>
             <p>
               <i>
-                Hotspot gjordes tillsammans med Vilma Christensen, Linnea
-                Nilsson, Olle Strandberg och Malin Ramstedt.
+                Hotspot was done in collaboration with Vilma Christensen, Linnea
+                Nilsson, Olle Strandberg and Malin Ramstedt.
               </i>
             </p>
           </div>

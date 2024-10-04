@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { FaSun, FaMoon } from "react-icons/fa";
-
 import '../styles/ModeToggler.scss';
 
 const ModeToggler = ({toggleTheme}) => {

@@ -8,45 +8,46 @@ function About() {
   return (
     <div className="my-skills-container">
       <div className="title">
-        <h2>Tre kompetensområden</h2>
-        <i>Ett helhetsperspektiv.</i>
+        <h2>Three areas of expertise</h2>
+        <i>One holistic perspective.</i>
       </div>
       <div className="skills">
         <div className="skill skill-1">
           <IoHeart className="skills-icon icon1" />
           <div className="skills-title">
-            <h3>Användarupplevelse (UX)</h3>
+            <h3>User Experience</h3>
             <p>
-              Användarupplevelsen är kärnan i min skapandeprocess. Att
-              identifiera och förstå sig på sin målgrupp är kritsikt för att
-              skapa tillgängliga och värdeskapande lösningar. Därför strävar jag
-              alltid efter att förstå användarnas önskningar och behov genom att
-              kombinera kvalitativ och kvantitativ data.
+              The user experience is at the core of my creative process.
+              Identifying and understanding the target audience is crucial for
+              creating accessible and value-driven solutions. Therefore, I
+              always strive to understand users' desires and needs by combining
+              qualitative and quantitative data.
             </p>
           </div>
         </div>
         <div className="skill skill-2">
           <FaBrain className="skills-icon icon2" />
           <div className="skills-title">
-            <h3>Utveckling</h3>
+            <h3>Development</h3>
             <p>
-              Jag har erfarenhet av allt ifrån systemnära programmering i C och
-              machine learning i Python, till Webbutveckling med JavaScript i
-              React och androidutevckling i Kotlin. Med min erfarenhet av både
-              backend och frontend kan jag bidra till hela utvecklingsprocessen
-              och lätt sätta mig in i nya språk och ramverk.
+              I have experience in everything from systems-level programming in
+              C and machine learning in Python to web development with
+              JavaScript in React and Android development in Kotlin. With my
+              experience in both backend and frontend, I can contribute to the
+              entire development process and easily adapt to new languages and
+              frameworks.
             </p>
           </div>
         </div>
         <div className="skill skill-3">
           <FaFireFlameCurved className="skills-icon icon3" />
           <div className="skills-title">
-            <h3>Grafisk Design</h3>
+            <h3>Graphic Design</h3>
             <p>
-              Med mitt öga för färg och form, samt kunskap inom typografi och
-              visuell hierarki, är jag skicklig på att kommunicera mina ideér
-              visuellt och skapa tilltalande material för att effektivt skapa
-              förståelse och förmedla buskap.
+              With my keen sense of color and shape, as well as my knowledge of
+              typography and visual hierarchy, I am skilled at communicating my
+              ideas visually and creating appealing materials to effectively
+              build understanding and convey messages.
             </p>
           </div>
         </div>

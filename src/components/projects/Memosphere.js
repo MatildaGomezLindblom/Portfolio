@@ -51,41 +51,41 @@ function Memosphere() {
 
   const projectData = {
     title: "Memosphere",
-    subtitle: "Håll kontakt med nära och kära med hjälp av AI.",
+    subtitle: "Stay in touch with loved ones in an exciting and unique way using AI.",
     sections: [
       {
-        heading: "Utmaning",
-        text: "Designa och utveckla en mobil applikation med hjälp av någon typ av ny teknik på temat: “Ensure that family, friends & professionals who care for seniors receive the support they need?”.",
+        heading: "Challenge",
+        text: "Design and develop a mobile application using some type of new technology on the theme: 'Ensure that family, friends & professionals who care for seniors receive the support they need?'.",
       },
       {
-        heading: "Lösning",
-        text: "En AI driven mobilapplikation som ska stärka relationen mellan äldre och deras nära och kära, genom att uppmuntra till veckovis kontakt där man delar med sig om sin vecka.",
+        heading: "Solution",
+        text: "An AI-driven mobile application aimed at strengthening the relationship between seniors and their loved ones by encouraging weekly contact where they share weekly updates.",
       },
     ],
-    buttonText: "Hoppa till resultatet",
+    buttonText: "Jump to Results",
     additionalInfo: [
       {
-        heading: "Kontext",
-        text: "Gruppprojekt 2023 i kursen Innovativa mobila tjänster och system.",
+        heading: "Context",
+        text: "Group project 2023 in the course Innovativa mobila tjänster och system.",
       },
       {
-        heading: "Resurser",
-        text: "5 veckor 30 % i grupp om 6 personer, handledning av Daresay.",
+        heading: "Resources",
+        text: "5 weeks 30% in a group of 6 people, with guidance from Daresay.",
       },
       {
-        heading: "Vektyg",
+        heading: "Tools",
         text: "Figma, VS Code, React Native, OpenAI, Firestore.",
       },
     ],
     role: {
-      heading: "Min roll och uppgift",
+      heading: "My Role and Tasks",
       tasks: [
         "UX/UI design",
-        "Användartester av prototyper",
-        "Designa och sätta upp databas",
-        "Service layer till databasen",
-        "Publiseringsflödet",
-        "Research om OpenAI",
+        "User testing of prototypes",
+        "Design and set up database",
+        "Service layer for the database",
+        "Publishing flow",
+        "Research on OpenAI",
       ],
     },
   };
@@ -94,22 +94,22 @@ function Memosphere() {
     {
       src: memosphereVersion1,
       legend:
-        "I version 1 flyter användare runt fritt på hemskärmen i en rymdsetting, likt i spelet Among us. När man skapar en veckouppdatering får man 3 förlag för inspiration.",
+        "In version 1, users float freely on the home screen in a space setting, similar to the game Among Us. When creating a weekly update, users receive 3 suggestions for inspiration.",
     },
     {
       src: memosphereVersion2,
       legend:
-        "I version 2 står användare utspridda på hemskärmen och en personligt genererad fråga ställs till användaren i veckouppdateringen.",
+        "In version 2, users are scattered on the home screen, and a personally generated question is asked to the user in the weekly update.",
     },
     {
       src: memosphereVersion3,
       legend:
-        "Version 3 har alla användare ett eget hus där veckouppdateringarna visas upp.",
+        "Version 3 features each user having their own house where the weekly updates are displayed.",
     },
     {
       src: memosphereVersion4,
       legend:
-        "Version 4 kan man själv välja kläder till sin användare som visas upp likt nintendos Mii's på hemskärmen.",
+        "In version 4, users can choose clothes for their avatar, displayed similarly to Nintendo's Mii's on the home screen.",
     },
   ];
 
@@ -134,31 +134,30 @@ function Memosphere() {
     {
       id: "section1",
       title: "DESIGN",
-      subtitle: "Från idé till design, riktigt snabbt.",
+      subtitle: "From idea to design in the blink of an eye.",
       content: (
         <div>
           <div>
             <p>
-              Vi ville gärna använda oss av AI vilket ledde oss till idén om att
-              skapa en applikation där man delar med sig om sin vecka med nära
-              och kära. Varje vecka får användaren lägga in en bild från veckan
-              som gått, eller generera en med AI utifrån text. Därefter kommer
-              applikationen använda sig av openAIs (vid denna tid nya funktion)
-              Vision samt en databas med frågor för att generera unika frågor
-              för användaren att besvara. Detta gör varje veckosummering unik
-              och intressant.
+              We wanted to utilize AI, which led us to the idea of creating an
+              application where users share their week with family and friends.
+              Each week, users can upload a picture from the past week or
+              generate one using AI based on a prompt. The application will then
+              use OpenAI's Vision (new feature at the time) and a database of
+              questions to generate unique inspiration for the user. This makes
+              each weekly summary unique and interesting.
               <br />
               <br />
-              I applikationen får man se sina vänner i en innovativ miljö där
-              man istället för att se en lista av vänner, får se sina vänners
-              karaktärer på en interaktiv canvas. Detta ska ge en unik och
-              lekfull touch. Har kan man alltså navigera sig mellan sin egna
-              profil och andras för att se deras veckosummeringar.
-              <br />
-              <br />
-              Vi hade även en tanke om att få in annan data från användarens
-              enhet, exempelvis hälsodata, för att kunna ställa mer personliga
-              frågor om detta.
+              In the application, users can see their friends in an fun and
+              innovative environment where, instead of viewing a list of
+              friends, they see their friends' characters on an interactive
+              canvas. This is designed to provide a unique and playful touch.
+              Users can navigate between their own profile and others' to view
+              their weekly summaries.
+              <br /> <br />
+              We also considered incorporating other data from the user's
+              device, such as health data, to ask more personalized questions
+              about this.
             </p>
             <img
               className="memosphere-storyboard"
@@ -182,17 +181,16 @@ function Memosphere() {
             </div>
           </div>
           <div className="section-section">
-            <h3>Lo-fi skiss</h3>
+            <h3>Lo-fi sketch</h3>
             <p>
-              För att bestämma en ungefärlig layout för appen gjordes en skiss
-              gemensamt.
+              To determine an approximate layout for the app, a sketch was
+              created collaboratively. This also laid ground for the foundation for our flow.
             </p>
             <img
               className="memosphere-storyboard"
               src={LoFiSketchMemosphere}
               alt="Lo-fi sketch with a few rough pages and some text and arrows."
             ></img>
-            <p>Denna lade även grunden till vårt flöde.</p>
             <img
               className="memosphere-storyboard"
               src={flowchartMemosphere}
@@ -202,9 +200,9 @@ function Memosphere() {
           <div className="section-section">
             <h3>Mid-fi</h3>
             <p>
-              När vi hade en gemensam bild av vad som behövdes fick alla göra
-              ett förslag var. Vissa valde att göra skisser, andra wireframes
-              eller en mid-fi.
+              When we had a common understanding of what was needed, everyone
+              made one proposal each. Some chose to create sketches, while
+              others created wireframes or more of a mid-fi design.
             </p>
             <div>
               <ImageCarousel
@@ -214,11 +212,11 @@ function Memosphere() {
             </div>
           </div>
           <div className="section-section">
-            <h3>Moodboard och grafisk profil</h3>
+            <h3>Moodboard and graphic profile</h3>
             <p>
-              Vi gick igenom alla förslag tillsammans och kom fram till att gå
-              vidare med rymdidén i version 1 i grunden. Vi hade många liknande
-              idéer som tillsammans kom att inspirera den slutgiltiga designen.
+              We reviewed all the proposals together and decided to move forward
+              with the space concept in version 1 as the foundation. We had many
+              similar ideas that collectively inspired the final design.
             </p>
             <div className="mooadboard-graphicprofile-container">
               <img
@@ -234,8 +232,8 @@ function Memosphere() {
           <div className="section-section">
             <h3>Hi-Fi</h3>
             <p>
-              Utifrån moodboarden, den grafiska profilen och våra gemensamma
-              förslag tog vi fram en hi-fi i Figma.
+              Based on the mood board, the graphic profile, and our collective
+              proposals, we developed a hi-fi in Figma.
             </p>
             <div className="image-grid">
               {hiFiImages.map((src, index) => (
@@ -253,67 +251,66 @@ function Memosphere() {
     },
     {
       id: "section2",
-      title: "UTVECKLING",
+      title: "DEVELOPMENT",
       subtitle:
-        "Från Figmaprototyp till fungerande applikation med AI-stöd i React Native och Firestore databas.",
+        "From Figma prototype to functional application with AI support in React Native and Firestore database.",
       content: (
         <div>
           <p>
-            Under utvecklingen delade vi upp arbetet genom en kanban via GitHub.
-            Vi började med att fördjupa oss i varsin ny teknik för att sedan
-            presentera det vi tagit reda på för resten av gruppen. Därefter
-            började vi programmera. Vi programmerade mycket enskilt men även en
-            del tillsammans mot slutet.
+            During development, we divided the work through a Kanban board via
+            GitHub. We started by diving into a new technology each, then
+            presented what we had learned to the rest of the group. After that,
+            we began programming. We did a lot of coding individually, but also
+            collaborated some towards the end.
           </p>
           <div className="section-section">
-            <h3>Val av AI</h3>
+            <h3>Choice of AI model</h3>
             <p>
-              Vi valde att använda oss av OpenAI då det är en användarvänlig och
-              rätt billig lösning som några i gruppen redan hade använt sig av i
-              tidigare projekt. När vi startade vårt projekt hade det även
-              kommit en hel del uppdateringar till tjänsten som vi såg fram emot
-              att utnyttja! Dessa var:
+              We chose to use OpenAI because it is a user-friendly and
+              relatively inexpensive solution that some group members had
+              already used in previous projects. By the time we started our
+              project, there had also been several updates to the service that
+              we looked forward to utilizing! These were:
               <br />
               <br />
-              <b>gpt-4-turbo:</b> en snabbare och billigare version av gpt-4.
+              <b>gpt-4-turbo:</b> a faster and cheaper version of gpt-4.
               <br />
               <br />
-              <b>DALL-E 3:</b> en AI-modell för bildgenerering som vid behov
-              utvecklar användarens prompt för att skapa ännu mer detaljerade
-              och kreativa bilder.
+              <b>DALL-E 3:</b>an AI model for image generation that enhances the
+              user's prompt when necessary to create even more detailed and
+              creative images.
               <br />
               <br />
-              <b>gpt-4-vision:</b> en avancerad AI-modell som kombinerar text-
-              och bildbehandling för att analysera bilder. Den kan förstå och
-              generera text baserat på visuella insikter, vilket gör den kapabel
-              att analysera och svara på frågor om bilder samt skapa text som
-              beskriver eller relaterar till bilder (sjukt coolt).
+              <b>gpt-4-vision:</b> an advanced AI model that combines text and
+              image processing to analyze images. It can understand and generate
+              text based on visual insights, allowing it to analyze and answer
+              questions about images, as well as create text that describes or
+              relates to images (super cool!!).
             </p>
           </div>
           <div className="section-section memosphere-text-and-image">
             <div>
-              <h3>Databasen</h3>
+              <h3>The database</h3>
               <p>
-                På grund av den begränsade tiden i projektet valde vi att köra
-                på en Firestore databas då det var något vi hade koll på sedan
-                tidigare projekt.
+                Due to the limited time in the project, we chose to use a
+                Firestore database since it was something we were familiar with
+                from previous projects.
                 <br />
                 <br />
-                <b>Users</b> håller all användarinformation, bland annat färgen
-                på ens karaktärs rymddräkt och en profilbild för en mer
-                personlig touch.
+                <b>Users</b> holds all user information, including the color of
+                their character's spacesuit and a profile picture for a more
+                personal touch.
                 <br />
                 <br />
-                <b>Friends</b> håller koll på alla användarens vänner och
-                vänförfrågningar.
+                <b>Friends</b> keeps track of all the user's friends and friend
+                requests.
                 <br />
                 <br />
-                <b>Weeks</b> innehåller information om veckouppdateringarna för
-                alla användare.
+                <b>Weeks</b> contains information about the weekly updates for
+                all users.
                 <br />
-                <br />
-                För att sedan hämta och hantera informationen från databasen
-                gjordes ett servicelager.
+                To retrieve and manage information from the database, a service
+                layer was created.
               </p>
             </div>
             <div>
@@ -333,40 +330,40 @@ function Memosphere() {
             <div>
               <h3>Hemskärm med användare i rymdsetting</h3>
               <p>
-                Hemskärmen visar dig och dina vänner som rymdavatarer. Du kan
-                välja en profilbild och en färg för din avatar. För närvarande
-                finns fyra färger, men fler kan läggas till. Avatarerna dyker
-                upp slumpmässigt och din egen avatar är lite större och alltid
-                centrerad. Du kan flytta runt avatarerna fritt på skärmen, och
-                genom att klicka på en avatar går du till personens profil och
-                veckoflödet.
+                The home screen displays you and your friends as space avatars.
+                You can choose a profile picture and a color for your avatar.
+                Currently, there are four colors available, but more can be
+                added. The avatars appear randomly, and your own avatar is
+                slightly larger and always centered. You can freely move the
+                avatars around the screen, and by clicking on an avatar, you
+                navigate to that person's profile and weekly flow.
                 <br />
                 <br />
-                Menyknappen erbjuder tre alternativ: inställningar, hantera
-                vänner, och en visselpipa. Dessa är inte implementerade men
-                tanken med visselpipan var att den skulle samla alla vänners
-                avatarer på ett organiserat sätt.
+                The menu button offers three options: settings, manage friends,
+                and a whistle. These features are not implemented, but the idea
+                for the whistle was to gather all friends' avatars in an
+                organized manner.
                 <br />
                 <br />
-                Knappen "skapa vecka" leder till publiceringsflödet.
+                The "create week" button leads to the publishing flow.
               </p>
             </div>
           </div>
           <div className="section-section memosphere-text-and-image">
             <div>
-              <h3>Välja veckans bild</h3>
+              <h3>Selecting the image of the week</h3>
               <p>
-                För att skapa en vecka kan man ta en egen bild från sin
-                kamerarulle eller direkt med kameran, eller generera en med AI.
-                För att ta egna bilder användes expo-picker och för att generera
-                användes DALL-E 3 genom OpenAI.
+                To create a week, you can take a personal photo from your camera
+                roll or directly with the camera, or generate one using AI. For
+                personal photos, the expo-picker was used, and for generating
+                images, DALL-E 3 from OpenAI was utilized.
                 <br />
                 <br />
-                För att generera en bild skickar användaren själv in en prompt
-                som skickas vidare till OpenAI som svarar med en bild. Medan en
-                bild genereras får användaren en loading screen med förklarande
-                text och en liten rymdlik animation för en ökad
-                användarupplevelse och en minskad upplevd väntetid.
+                To generate an image, the user submits a prompt, which is then
+                sent to OpenAI, which responds with an image. While an image is
+                being generated, the user sees a loading screen with explanatory
+                text and a small space-themed animation to enhance the user
+                experience and reduce perceived wait time.
               </p>
             </div>
             <div>
@@ -384,44 +381,46 @@ function Memosphere() {
               ></img>
             </div>
             <div>
-              <h3>Skriva veckans text</h3>
+              <h3>Writing the week description</h3>
               <p>
-                När användaren valt bild skickas den till OpenAI's API som
-                analyserar den för att generera inspiration till användaren. För
-                denna analys används den då nya funktionen gpt-4-vision, en
-                modell som kan förstå och generera text baserat på visuella
-                insikter. Till denna modell skickade vi alltås bilden samt
-                följande prompt:
+                When the user selects an image, it is sent to OpenAI's API,
+                which analyzes it to generate inspiration for the user. For this
+                analysis, the newly released feature gpt-4-vision is used, a
+                model that can understand and generate text based on visual
+                insights. For this model, we sent the image along with the
+                following prompt:
                 <br />
                 <br />
                 <i>
-                  Can you generate three suggestions for captions to this image.
+                  Can you generate three suggestions for captions to this image?
                   Respond in Swedish.
                 </i>
                 <br />
                 <br />
-                Tillbaka får användare 3 förslag på captions som vid klick förs
-                in i inputfältet där den kan redigeras eller förlängas.
+                The user receives three suggested captions that can be inserted
+                into the input field with a click, where they can be edited or
+                extended.
                 <br />
                 <br />
-                Därefter får man skriva fritt om sin vecka och för detta ges 3
-                förslag som plockas slumpmässigt ur en databas av inspiration.
+                After that, the user can freely write about their week, and for
+                this, three suggestions are randomly pulled from a database of
+                inspiration.
               </p>
             </div>
           </div>
           <div className="section-section memosphere-text-and-image">
             <div>
-              <h3>Profilsidan</h3>
+              <h3>Profile Page</h3>
               <p>
-                När en avatar blir klickad visas en overlay med profilens namn,
-                avatar, användarnamn och en sammanfattning av personens veckor.
-                De senaste veckorna kan scrollas horizontellt men man kan även
-                klicka på <i>visa alla</i> för att komma till en scrollbar lista
-                av alla veckor.
+                When an avatar is clicked, an overlay displays the profile's
+                name, avatar, username, and a summary of the person's weeks. The
+                recent weeks can be scrolled horizontally, but one can also
+                click on <i>show all</i> to access a scrollable list of all
+                weeks.
                 <br />
                 <br />
-                Klickar man på en vecka får man se hela veckosammanfattningen
-                med text och bild.
+                Clicking on a week allows the user to see the complete weekly
+                summary with text and image.
               </p>
             </div>
             <div>
@@ -436,8 +435,8 @@ function Memosphere() {
     },
     {
       id: "results",
-      title: "RESULTAT",
-      subtitle: "Demovideo och länk till GitHub repo.",
+      title: "RESULTS",
+      subtitle: "Demo video and link to the GitHub repo.",
       content: (
         <div className="section-section">
           <iframe
@@ -449,82 +448,85 @@ function Memosphere() {
           />
           <a href="https://github.com/OscarTideman/MemoSphere">
             {" "}
-            <FaGithub /> GitHub repo här
+            <FaGithub /> GitHub repo here
           </a>
         </div>
       ),
     },
     {
       id: "section4",
-      title: "MITT BIDRAG",
-      subtitle: "Vad jag gjort i projektet samt lite avslutande tankar.",
+      title: "MY CONTRIBUTION",
+      subtitle: "And some concluding thoughts.",
       content: (
         <div>
           <div>
             <p>
-              Idén och den initiala skissen på appen kom vi fram till
-              tillsammans. Därefter skapade vi egna tolkningar av skissen, här
-              gjorde jag Version 1 som visades tidigare. I Hi-Fi:en gjorde vi
-              mycket tillsammans men jag hade nog mest fokus på
-              publiseringsflödet. Jag fick även ansvaret över att researcha
-              OpenAi innan vi började använda det.
+              The idea and the initial sketch of the app were developed in
+              group. After that, we created our own interpretations of the
+              sketch; I made Version 1, which was shown earlier. In the Hi-Fi
+              design, we collaborated a lot, but I primarily focused on the
+              publishing flow. I was also responsible for researching OpenAI
+              before we started using it.
               <br />
               <br />
-              Då jag precis jobbat med Firebase i kursen innan tog jag på mig
-              att strukturera och sätta upp databasen samt göra ett service
-              lager. Jag såg även till att appen kunde hantera bilder som
-              base64, något vi inte lyckats med i ett tidigare projekt.
+              Since I had just worked with Firebase in the previous course, I
+              took on the task of structuring and setting up the database, as
+              well as creating a service layer. I also ensured that the app
+              could handle images as base64, something we hadn't managed to do
+              in a previous project.
               <br />
               <br />
-              Jag skapade även komponenten för knappar och progress dots för
-              publiseringsflödet samt jobbade mycket på sammanställningen av
-              detta flöde i slutet. Jag gjorde även komponenten för att visa upp
-              och få in inspiration till inputfältet samt en del smågrejor som
-              pop-ups och knappar.
+              I created the component for buttons and progress dots for the
+              publishing flow, and I worked extensively on compiling this flow
+              towards the end. I also developed the component to display and
+              gather inspiration for the input field, along with some smaller
+              tasks like pop-ups and buttons.
               <br />
               <br />
-              Detta projekt var särskilt kul eftersom att vi i gruppen redan
-              kunde en del sedan tidigare projekt, vilket gjorde att vi hade tid
-              att göra saker rätt bra. Det var extra kul att få använda sig av
-              så pass ny teknik från OpenAI, Vision var faktiskt överraskande
-              bra! Det roligaste i det här projektet var att jag kände mig rätt
+              This project was particularly enjoyable because our group already
+              had some knowledge from previous projects, which allowed us to
+              take the time to make features well implemented. It was especially
+              fun to utilize the new technology from OpenAI; Vision was
+              surprisingly good! The most enjoyable aspect of this project was
+              that I felt quite competent in what i was doing!
             </p>
           </div>
           <div className="section-section">
-            <h3>Förbättringsmöjligheter</h3>
+            <h3>Improvement opportunities</h3>
             <p>
-              På grund av den begränsade tiden hann vi inte göra en fullt
-              fungerande applikation. Vi prioriterade bort inloggning, vänner
-              och annan grundläggande funktionalitet för att kunna fokusera på
-              det som kändes nytt och roligt, vilket var ett bra val.
+              Due to the limited time, we couldn't create a fully functional
+              application. We excluded login, friends, and other basic
+              functionalities from our priority to focus on what felt new and
+              exciting, which was a good choice.
               <br />
               <br />
-              Hade vi fått mer tid hade vi velat göra en mer dynamisk bagrund på
-              hemskärmen, en rörlig som användaren kan navigera runt mer inom.
-              Vi hade även en tanke om att man skulle kunna låta användaren byta
-              till andra teman än rymden. Vi hade även velat göra något mer med
-              inspirationen som ges när man ska skriva om sin vecka. Vi hade
-              bland annat en tanke om att appen ska hämta hälsodata som kan
-              användas som förslag vid skapandet av veckosammanfattningarna,
-              exempelvis: <i>I onsdags gick jag 15000 steg för att...</i>
+              If we had more time, we would have liked to create a more dynamic
+              background on the home screen—one that users could navigate
+              within. We also considered allowing users to switch to themes
+              other than space. Additionally, we wished to do more with the
+              inspiration provided when writing about weeks. For instance, we
+              thought the app could fetch health data to suggest ideas for
+              summarizing the week, such as:{" "}
+              <i>On Wednesday, I walked 15,000 steps to...</i>
               <br />
               <br />
-              Hade vi fått göra om projektet hade jag kanske försökt se över
-              designen en runda till för att göra en bättre lösning för
-              profilsidorna. Designen var aldrig fokus i detta projekt, men en
-              riktig användartestning hade inte skadat om mer tid fanns att
-              tillgå.
+              If we were to redo the project, I might have reviewed the design
+              one more time to create a better solution for the profile pages.
+              Design was never the focus in this project, but proper user
+              testing would have been beneficial if more time had been
+              available.
               <br />
               <br />
-              Med tanke på att Memosphere skapades under en rätt begränsad tid
-              är jag väldigt stolt över resultatet. Det var ett väldigt lärorikt
-              projekt där vi fick testa på många nya tekniker och utveckla de
-              färdigheter vi redan besatt!
+              Considering that Memosphere was created in a relatively short
+              timeframe, I am very proud of the result. It was a highly
+              educational project where we got to experiment with many new
+              technologies and develop the skills we already possessed!
             </p>
             <p>
               <i>
-                Stort tack till alla mina projektkamrater; Oscar Tideman, Lukas
-                Nordangård, Joakim Lindfors, Moa Bergquist, och Linnéa Esberg!
+                A huge thank you to my project teammates; Oscar Tideman,
+                Lukas Nordangård, Joakim Lindfors, Moa Bergquist, and Linnéa
+                Esberg!
               </i>
             </p>
           </div>

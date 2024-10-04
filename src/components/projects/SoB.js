@@ -12,43 +12,50 @@ function SoB() {
   const projectData = {
     title: "Värdeskapande digitala tjänster i vården",
     subtitle:
-      "Ett utredande arbete och förslag på hur regionen kan öka användningen av e-tjänsten Stöd och Behandling.",
+      "An investigative study and proposal on how the region can increase the usage of the e-service Stöd och Behandling",
     sections: [
       {
-        heading: "Utmaning",
-        text: "Region Västernorrland är en av de regioner som använder Stöd och Behandling minst till förhållandet invånare.",
+        heading: "Challenge",
+        text: "Region Västernorrland is one of the regions that uses Stöd och Behandling the least in relation to the population.",
       },
       {
-        heading: "Lösning",
-        text: "Indentifiering och synliggörande av problem och lösningar, bland annat i form av ett processförslag och ett marknadsföringsmaterial.",
+        heading: "Solution",
+        text: "Identification and highlighting of problems and solutions, including a process proposal and marketing materials.",
       },
     ],
-    buttonText: "Hoppa till resultatet",
+    buttonText: "Jump to the result",
     additionalInfo: [
       {
-        heading: "Kontext",
-        text: "Sommarinternship 2024 som konsult hos CGI med Region Västernorrland som kund, parallelt med en kurs på 7.5hp i Design thinking via Mittuniversitetet.",
+        heading: "Context",
+        text: "Summer internship 2024 as a consultant at CGI with Region Västernorrland as the client, in parallel with a 7.5 hp course in Design Thinking via Mittuniversitetet.",
       },
       {
-        heading: "Resurser",
-        text: "8 veckor heltid tillsammans med en annan civilingenjörsstudent.",
+        heading: "Resources",
+        text: "8 weeks full-time work in collaboration with another engineering student.",
       },
       {
-        heading: "Vektyg",
+        heading: "Tools",
         text: "Figma, Teams, Microsoft Forms.",
       },
     ],
     role: {
-      heading: "Min roll och uppgift",
-      tasks: ["Verksamhetsutveckling", "Konsult", "UX/UI design", "Intervjuer", "Enkäter"],
+      heading: "My role and task",
+      tasks: [
+        "Business development",
+        "Consultant",
+        "UX/UI design",
+        "Interviews",
+        "Surveys",
+      ],
     },
   };
 
   const sections = [
     {
       id: "section1",
-      title: "BAKGRUND",
-      subtitle: "Om internshipet, uppdraget och e-tjänsten i fokus.",
+      title: "BACKGROUND",
+      subtitle:
+        "About the intership, the assignment and the e-service in focus.",
       content: (
         <div className="SoB-section">
           {/* <div className="quotes">
@@ -56,42 +63,44 @@ function SoB() {
             <div className="speech-bubble">hej</div>
             <div className="speech-bubble">hej</div>
           </div> */}
-          <h3>Internshipet</h3>
+          <h3>The Internship</h3>
           <p>
-            Mittuniversitetets Internship för blivande civilingenjörer erbjuder
-            civilingenjörsstudenter i årskurs 3 och 4 en chans att arbeta med
-            riktiga uppdrag hos företag eller myndigheter under sommaren.
-            Programmet kombinerar praktiskt arbete med en sommarkurs i Design
-            Thinking (7,5 hp). Jag sökte till Region Västernorrland och CGI's
-            uppdrag på temat <i>Värdeskapande digitala tjänster i vården</i> och
-            blev, tillsammans med en annan student, utvald till uppdraget.
+            Mittuniversitetet's internship for future engineers offers
+            engineering students in their 3rd and 4th years the opportunity to
+            work on real projects for companies or government agencies during
+            the summer. The program combines practical work with a summer course
+            in <i>Design Thinking</i> (7.5 hp). I applied to Region
+            Västernorrland and CGI's project on the theme{" "}
+            <i>Value-Creating Digital Services in Healthcare</i> and was
+            selected, along with another student.
           </p>
 
-          <h3>Uppdraget</h3>
+          <h3>The Assignment</h3>
           <p>
-            Vi blev tilldelade 2 handledare på CGI och 4 handledare på regionen.
-            Två av handledarna på regionen var objektspecialiser för e-tjänsten
-            Stöd och Behandling. De var tydliga med att vi skulle få fria tyglar
-            men föreslog att vi jobbade med fokus på ett riktigt problem, vilket
-            i detta fall var att Stöd och behandling inte används lika mycket
-            som önskat.
+            We were assigned two mentors from CGI and four from the region. Two
+            of the regional mentors were specialists in the{" "}
+            <i>Stöd och Behandling</i> e-service. They made it clear that we
+            would have a lot of freedom but suggested we focus on a real issue,
+            which in this case was the fact that <i>Stöd och Behandling</i> is
+            not being used as much as desired.
           </p>
 
-          <h3>Vad är Stöd och Behandling</h3>
+          <h3>What is Stöd och Behandling?</h3>
           <p>
-            Det är en e-tjänst som finns tillgänglig via 1177.se. Det är kort
-            sagt en plattform där vårdgivare kan erbjuda kompletterande stöd och
-            behandling digitalt till sina patienter, via olika program.
-            Plattformen i sig ägs av Inera och finns tillgänglig för alla
-            regioner, men det är regionerna själva som förvaltar tjänsten
-            regionalt. Syftet med Stöd och Behandling är att tjänsten ska göra
-            vården mer tillgänglig och patienten mer delaktig, samt att
-            vårdgivare ska få tid för fler patienter. Hur kommer det sig då att
-            vårdgivare inte ordinerar de program som reginen skapar och köper
-            in?
+            It is an e-service available through 1177.se. In short, it's a
+            platform where healthcare providers can offer complementary support
+            and treatment to their patients digitally, through various programs.
+            The platform itself is owned by Inera and is available to all
+            regions, but it is up to each region to manage the service locally.
+            The goal of <i>Stöd och Behandling</i> is to make healthcare more
+            accessible and to involve the patient more, while enabling providers
+            to have time for more patients. So why is it that healthcare
+            providers are not prescribing the programs the region creates and
+            purchases?
           </p>
+
           <a href="https://www.inera.se/tjanster/alla-tjanster-a-o/stod-och-behandling/">
-            Mer om Stöd och Behandling här
+            More about Stöd och Behandling here
           </a>
           <img
             src={SoBBackground}
@@ -102,23 +111,24 @@ function SoB() {
     },
     {
       id: "results",
-      title: "HELA PROCESSEN",
+      title: "THE WHOLE PROCESS",
       subtitle:
-        "Från problemdefinition, genom hela designprocessen till det slutgilitga resultatet.",
+        "From problem definition, through the design process, to the final delivery.",
       content: (
         <div className="SoB-section">
           <p>
-            Arbetet avslutades med en presentation för kursen, för CGI och för
-            Region Västernorrland. På den sistnämda bjöd vi in alla som på något
-            sätt deltagit i vårt arbete. Två av dessa var de regionala
-            förvaltarna av Stöd och Behandling i Västerbotten, och de bjöd in
-            oss att delta i ett webbinarium där vi återigen körde igenom
-            presentationen.
+            The project concluded with a final presentation for the course, for
+            CGI, and for Region Västernorrland. For the latter, we invited
+            everyone who had participated in our process. Among the attendees
+            were the regional administrators of <i>Stöd och Behandling</i> from
+            Västerbotten, who extended an invitation for us to present again
+            during a webinar.
             <br />
             <br />
-            Denna presentation spelades in så istället för att återberätta hela
-            processen och resultatet i text lägger jag in presentationen här!
+            This presentation was recorded, so instead of retelling the entire
+            process and results in text, I’ve embedded the presentation here!
           </p>
+
           <div>
             <iframe
               src={`https://www.youtube.com/embed/P9VEM8QGNog`}
@@ -132,37 +142,49 @@ function SoB() {
     },
     {
       id: "section3",
-      title: "AVSLUTANDE TANKAR",
-      subtitle: "Ett toppenuppdrag!",
+      title: "FINISHING THOUGHTS",
+      subtitle: "A fantastic summer!",
       content: (
         <div className="SoB-section">
           <p>
-            Internshipet var väldigt givande. Jag fick chansen att
-            applicera mina kunskaper på ett verklig problem, samtidigt som jag
-            fick lära mig en hel del nya grejer också! Förutom att få en bättre
-            inblick i hur Stöd och Behandling fungerar och hur vården är
-            uppbyggd i stort fick jag även erfarenhet att jobba mot en kund. Det
-            var en väldigt spännande process där den utforskande delen fick ta
-            mycket plats. Vi fick fria tyglar och samlade in data på flera olika
-            sätt för att lyckas fånga problemet och dess lösning, samtidigt som
-            vi hela tiden hade en dialog med våra handledare.
+            The internship was a very inspiring and rewarding start of my
+            career. I finally had the chance to apply my knowledge to a real
+            problem while also learning a lot of new things from the process and
+            from my experienced supervisors! In addition to gaining a better
+            insight into how <i>Stöd och Behandling</i> works and how the
+            healthcare system is structured in general, I also gained experience
+            working with a client. It was an exciting process where the
+            exploratory aspect played a significant role, where we had to
+            utilize a lot of different methods to connect with people since it
+            was vacation times. We had a lot of freedom and collected data in
+            various ways to successfully capture the problem and its solution,
+            all while maintaining a continuous dialogue with our supervisors and
+            "clients".
             <br />
             <br />
-            Vårt arbete verkar uppskattat och vi fick mycket fina ord på
-            slutpresenationen, både från CGI och Region Västernorrlands håll,
-            men även ifrån andra aktörer som varit delaktiga i processen. Allt
-            material har överlämnats till regionen och förhoppningsvis kommer
-            det till nytta framöver!
+            Our work seems to be appreciated as we received many kind words both
+            during and after the final presentation, from CGI and Region
+            Västernorrland, as well as from other stakeholders involved in the
+            process. They especially appreciated the fact that we had come up
+            with realistic solution based on the unique target group needs and
+            desires, as well as the limitation of resources in the organisation. The
+            material has been handed over to the region, and hopefully, it will
+            prove useful in the future!
             <br />
             <br />
             <a href="https://www.miun.se/utbildning/civing/internship/intervjusida/matilda-gomez-lindblom-och-joline-hellstrom/">
-            Läs mer om vårt internship på miun.se
-          </a>
+              Read more about our internship at miun.se
+            </a>
           </p>
-          <p><i>Stort tack till Joline Hellström som varit min fantastiska partner i projektet!</i></p>
+          <p>
+            <i>
+              A huge thank you to Joline Hellström for being such an amazing
+              partner throughout the project!
+            </i>
+          </p>
         </div>
       ),
-    }
+    },
   ];
 
   return (

@@ -49,7 +49,7 @@ function VerticalNavbar({ sections }) {
       <a onClick={(e) => {
           e.preventDefault();
           scrollToTop();
-        }} >ÖVERSIKT</a>
+        }} >OVERVIEW</a>
       {sections.map((section, index) => (
         <a
         key={index} href={`/#${section.id}`} id={`nav-${section.id}`}

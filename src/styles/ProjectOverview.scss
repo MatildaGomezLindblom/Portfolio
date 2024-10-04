@@ -17,10 +17,10 @@
   }
 
   .line {
-    width: 4px;
-    background-color: $text-color;
+    width: 1px;
+    background: linear-gradient(to bottom, transparent, $muted-color, $muted-color, transparent);
     margin: 20px 0;
-    opacity: 0.2;
+    opacity: 1;
   }
 
   .projectBadge {
@@ -82,11 +82,11 @@
     }
 
     .line {
-      height: 3px;
+      height: 1px;
       width: 100%;
-      background-color: $text-color;
+      background: linear-gradient(to right, transparent, $text-color, $text-color, transparent);
       margin: 20px 0;
-      opacity: 0.2;
+      opacity: 1;
     }
 
     .side {
@@ -105,11 +105,11 @@
     }
 
     .line {
-      height: 3px;
+      height: 1px;
       width: 100%;
-      background-color: $text-color;
+      background: linear-gradient(to right, transparent, $text-color, $text-color, transparent);
       margin: 20px 0;
-      opacity: 0.2;
+      opacity: 1;
     }
 
     .side {

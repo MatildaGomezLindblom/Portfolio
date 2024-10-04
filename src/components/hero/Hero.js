@@ -129,7 +129,7 @@ function Hero({ toggleTheme, onAnimationComplete }) {
                   scrollToSection("contact");
                 }}
               >
-                Kontakta mig
+                Get in touch
               </ButtonSecondary>
             </div>
           ) : (
@@ -145,7 +145,7 @@ function Hero({ toggleTheme, onAnimationComplete }) {
                   scrollToSection("contact");
                 }}
               >
-                Kontakta mig
+                Get in touch
               </ButtonSecondary>
             </div>
           )}

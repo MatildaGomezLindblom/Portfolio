@@ -75,7 +75,7 @@ function Navbar({ toggleTheme }) {
                     scrollToSection("about");
                   }}
                 >
-                  OM MIG
+                  ABOUT ME
                 </a>
               </li>
               <li onClick={removeActive}>
@@ -86,7 +86,7 @@ function Navbar({ toggleTheme }) {
                     scrollToSection("projectsSection");
                   }}
                 >
-                  PROJEKT
+                  PROJECTS
                 </a>
               </li>
               <li onClick={removeActive}>
@@ -97,12 +97,12 @@ function Navbar({ toggleTheme }) {
                     scrollToSection("contact");
                   }}
                 >
-                  KONTAKT
+                  CONTACT
                 </a>
               </li>
               <li onClick={removeActive}>
-                <a href="./CV.pdf" download="CV.pdf" className="CV">
-                  CV <IoMdDownload />
+                <a href="./CV-Matilda-Gomez-Lindblom.pdf" download="CV.pdf" className="CV">
+                  RESUME <IoMdDownload />
                 </a>
               </li>
               <li onClick={removeActive}>
@@ -114,7 +114,7 @@ function Navbar({ toggleTheme }) {
         );
       default:
         return <div className="goBack">
-        <button onClick={() => navigate(-1)}><FaArrowLeft /> TILLBAKA</button>
+        <button onClick={() => navigate(-1)}><FaArrowLeft /> GO BACK</button>
         </div>;
     }
   };

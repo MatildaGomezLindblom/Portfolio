@@ -129,9 +129,25 @@ h3 {
 
 .section-title h2 {
   z-index: 11;
-  padding: 0;
+  padding: 20px;
+  margin: 0;
   text-align: center;
+  justify-content: center;
 }
+
+.section-end {
+  padding-top: 10px;
+  width: 100%;
+
+  .line {
+    z-index: 11;
+    flex-grow: 1;
+    height: 2px;
+    background-color: $text-color;
+    margin: 0; 
+    width: 100%;
+  }
+} 
 
 
 

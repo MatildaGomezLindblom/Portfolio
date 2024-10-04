@@ -31,12 +31,12 @@ function Contact() {
         () => {
           reset();
           setLoading(false);
-          alert("Ditt meddelande är skickat!");
+          alert("Your message has ben sent!");
         },
         (error) => {
-          console.error("Något gick fel:", error);
+          console.error("Something went wrong:", error);
           setLoading(false);
-          alert("Något gick fel. Försök igen senare.");
+          alert("Something went wrong. Try again later.");
         }
       );
   };
@@ -49,9 +49,9 @@ function Contact() {
     </svg>
 </div>
       <div className="contact-me-section">
-        <h2 className="form-section-title">Säg hej!</h2>
+        <h2 className="form-section-title">Say hi!</h2>
         <p>
-          Kontakta mig här eller mejla{" "}
+          Contact me here or email{" "}
           <a style={{}} href="mailto:matildagoli@outlook.com">
             matildagoli@outlook.com
           </a>
@@ -60,31 +60,31 @@ function Contact() {
         <form onSubmit={handleSubmit(onSubmit)}>
           <div>
             <div>
-              <label htmlFor="firstName">Namn</label>
+              <label htmlFor="firstName">Name</label>
               <input
                 type="text"
                 {...register("firstName", { required: true })}
                 placeholder=" "
               />
-              {errors.firstName && <span>Detta fält är obligatoriskt</span>}
+              {errors.firstName && <span>This field is required</span>}
             </div>
           </div>
           <div>
-            <label htmlFor="email">Mejladress</label>
+            <label htmlFor="email">Email address</label>
             <input
               type="email"
               {...register("email", { required: true })}
               placeholder=" "
             />
-            {errors.email && <span>Detta fält är obligatoriskt</span>}
+            {errors.email && <span>This field is required</span>}
           </div>
           <div>
-            <label htmlFor="message">Meddelande</label>
+            <label htmlFor="message">Message</label>
             <textarea
               {...register("message", { required: true })}
               placeholder=" "
             />
-            {errors.message && <span>Detta fält är obligatoriskt</span>}
+            {errors.message && <span>This field is required</span>}
           </div>
 
           <div className="contact-button-container">
@@ -94,7 +94,7 @@ function Contact() {
               disabled={!isFormDirty || loading}
               type="submit"
             >
-              {loading ? "Skickar..." : "Skicka"}
+              {loading ? "Sending..." : "Send"}
             </ButtonPrimary>
           </div>
         </form>
