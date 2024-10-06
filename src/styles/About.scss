@@ -7,6 +7,10 @@
   z-index: 50;
   position: relative;
   margin-top: 100vh;
+
+  i {
+    color: $text-color;
+  }
 }
 
 .fade-divider {
@@ -99,6 +103,13 @@
   &.in-view { 
     animation: appear-right 1.5s forwards; 
     opacity: 1; 
+  }
+
+  h2 {
+    padding-top: 0;
+    margin-top: 0;
+    padding-bottom: 0;
+    margin-bottom: 0;
   }
 }
 

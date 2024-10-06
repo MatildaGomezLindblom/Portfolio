@@ -5,6 +5,7 @@ import emailjs from "@emailjs/browser";
 import ButtonPrimary from "../ButtonPrimary";
 import "../../styles/Contact.scss";
 import { FaGithub } from "react-icons/fa";
+import Footer from '../../components/footer';
 
 function Contact() {
   const [loading, setLoading] = useState(false);
@@ -99,6 +100,7 @@ function Contact() {
           </div>
         </form>
       </div>
+      <Footer></Footer>
     </div>
   );
 }

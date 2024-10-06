@@ -1,7 +1,7 @@
 @import "./variables.scss";
 
 .my-skills-container {
-  padding-top: 100px;
+  padding-top: 0px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -67,8 +67,12 @@
       margin-bottom: -10px;
     }
   }
+}
 
-  @media (max-width: 1200px) {
+@media (max-width: 1200px) {
+  .my-skills-container {
+    padding-top: 200px;
+
     .skills {
       flex-direction: column;
       align-items: center;

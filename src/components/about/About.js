@@ -43,12 +43,15 @@ function About() {
         </div>
         <div className={`about-text-section ${inView ? "in-view" : ""}`}>
           <h2>
-            Hi! My name is <mark>Matilda Gomez Lindblom</mark>
+            Hi! My name is
+          </h2>
+          <h2>
+            <mark>Matilda Gomez Lindblom</mark>
           </h2>
           <p>
-            As a master's student in interaction and design, I combine my
+            As a master's student in Interaction and Design, I combine my
             interests in creation and problem-solving with my broad skillset to
-            create meaningful and user centered user experiences.
+            create meaningful and user-centric solutions.
           </p>
           {/* <MoreButton></MoreButton> */}
         </div>

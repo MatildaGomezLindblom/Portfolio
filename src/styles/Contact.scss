@@ -117,5 +117,32 @@ label {
   }
 }
 
+.footer-container {
+  background-color: none; // Dark background color
+  z-index: 1000;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+
+  .line {
+    width: 100%;
+    height: 1px; // Thickness of the line
+    background-color: $background-color; // Accent color for the line
+    margin-bottom: 10px; // Space between the line and the text
+  }
+
+  .footer-content {
+    display: flex;
+    justify-content: flex-start;
+    font-style: italic; 
+    opacity: 0.8; 
+
+    p {
+      padding-left: 5%;
+      font-size: 12px;
+    }
+  }
+}
+
 
 //floating lable css from https://codepen.io/devesh8/pen/MWYEJEP

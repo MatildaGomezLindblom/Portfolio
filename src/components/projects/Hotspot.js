@@ -123,7 +123,7 @@ function Hotspot() {
               creation and display of pins, profiles, and functionality to log
               in and out as well as to manage friends. Based on this, a lo-fi
               prototype was created in Figma. The biggest challenge was figuring
-              out where all these components should be placed to make the
+              out where these components should be placed to make the
               navigation as intuitive as possible. Therefore, three versions
               were created and tested on six users.
             </p>
@@ -146,7 +146,7 @@ function Hotspot() {
                 feedback from the testing.{" "}
               </p>
               <p className="list-title">
-                Some changes that were made were the following:
+                Some changes that were made:
               </p>
               <ul>
                 <li>
