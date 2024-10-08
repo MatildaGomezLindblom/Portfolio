@@ -99,11 +99,11 @@ function Hotspot() {
             </p>
             <div className="design-overview">
               <div className="design-overview-content">
-                <img id="idea" src={idea}></img>
-                <img id="arrowDownRight" src={arrowDownRight}></img>
-                <img id="hotspotLoFiPreview" src={hotspotLoFiPreview}></img>
-                <img id="arrowUpRight" src={arrowUpRight}></img>
-                <img id="hotspotHiFiPreview" src={hotspotHiFiPreview}></img>
+                <img id="idea" alt="light bulb sketch" src={idea}></img>
+                <img id="arrowDownRight" alt="arrow pointing down right" src={arrowDownRight}></img>
+                <img id="hotspotLoFiPreview" alt="lo fi preview of hotspot"  src={hotspotLoFiPreview}></img>
+                <img id="arrowUpRight" alt="arrow pointing up and right" src={arrowUpRight}></img>
+                <img id="hotspotHiFiPreview" alt="hi fi preview of hotspot" src={hotspotHiFiPreview}></img>
               </div>
             </div>
           </div>

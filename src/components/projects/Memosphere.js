@@ -51,7 +51,8 @@ function Memosphere() {
 
   const projectData = {
     title: "Memosphere",
-    subtitle: "Stay in touch with loved ones in an exciting and unique way using AI.",
+    subtitle:
+      "Stay in touch with loved ones in an exciting and unique way using AI.",
     sections: [
       {
         heading: "Challenge",
@@ -166,15 +167,25 @@ function Memosphere() {
             ></img>
             <div className="design-overview">
               <div className="design-overview-content">
-                <img id="idea" src={idea}></img>
-                <img id="arrowDownRight" src={arrowDownRight}></img>
+                <img id="idea" alt="light bulb sketch" src={idea}></img>
+                <img
+                  id="arrowDownRight"
+                  alt="arrow pointing down right"
+                  src={arrowDownRight}
+                ></img>
                 <img
                   id="memosphereLoFiPreview"
+                  alt="lo io preview of memosphere"
                   src={loFiExampleMemosphere}
                 ></img>
-                <img id="arrowUpRight" src={arrowUpRight}></img>
+                <img
+                  id="arrowUpRight"
+                  alt="arrow pointing up and right"
+                  src={arrowUpRight}
+                ></img>
                 <img
                   id="memosphereHiFiPreview"
+                  alt="hi fi preview of memosphere"
                   src={HiFiExampleMemosphere}
                 ></img>
               </div>
@@ -184,7 +195,8 @@ function Memosphere() {
             <h3>Lo-fi sketch</h3>
             <p>
               To determine an approximate layout for the app, a sketch was
-              created collaboratively. This also laid ground for the foundation for our flow.
+              created collaboratively. This also laid ground for the foundation
+              for our flow.
             </p>
             <img
               className="memosphere-storyboard"
@@ -241,7 +253,7 @@ function Memosphere() {
                   className="grid-images"
                   key={index}
                   src={src}
-                  alt={`Image ${index + 1}`}
+                  alt={` ${index + 1}`}
                 />
               ))}
             </div>
@@ -524,9 +536,8 @@ function Memosphere() {
             </p>
             <p>
               <i>
-                A huge thank you to my project teammates; Oscar Tideman,
-                Lukas Nordangård, Joakim Lindfors, Moa Bergquist, and Linnéa
-                Esberg!
+                A huge thank you to my project teammates; Oscar Tideman, Lukas
+                Nordangård, Joakim Lindfors, Moa Bergquist, and Linnéa Esberg!
               </i>
             </p>
           </div>

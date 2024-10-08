@@ -27,19 +27,18 @@ function Navbar({ toggleTheme }) {
     setShowNavbar(false);
   };
 
-  // Determine the current route
-  const [currentPath, setCurrentPath] = useState(location.hash); // Initialize the current path based on hash
+  //Determine the current route
+  const [currentPath, setCurrentPath] = useState(location.hash); 
 
   useEffect(() => {
-    setCurrentPath(location.pathname); // Update the path whenever the location changes
-    console.log(location.pathname); // Log the current path
+    setCurrentPath(location.pathname); 
   }, [location]);
 
   function scrollToTop() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 
-  // Render content based on the current route
+  // render content based on the current route
   const renderNavbarContent = () => {
     switch (currentPath) {
       case "/":
