@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Portfolio/static/css/main.cb169178.css",
-    "main.js": "/Portfolio/static/js/main.3bcd8458.js",
+    "main.css": "/Portfolio/static/css/main.a6d1591f.css",
+    "main.js": "/Portfolio/static/js/main.d1947a5c.js",
     "static/js/787.128fc6e9.chunk.js": "/Portfolio/static/js/787.128fc6e9.chunk.js",
     "static/media/DFFinalHiFi.png": "/Portfolio/static/media/DFFinalHiFi.21872f6fb612c9e1d6a7.png",
     "static/media/SoBHero.png": "/Portfolio/static/media/SoBHero.0d39797f245c4398c493.png",
@@ -41,6 +41,7 @@
     "static/media/hotspotVersion1.png": "/Portfolio/static/media/hotspotVersion1.aca8eb3f247e00dc7324.png",
     "static/media/memosphereHiFi5.png": "/Portfolio/static/media/memosphereHiFi5.3724b22eae7542d772c8.png",
     "static/media/memosphereHiFi1.png": "/Portfolio/static/media/memosphereHiFi1.1437882dc430d46629c3.png",
+    "static/media/avatarAnimation.png": "/Portfolio/static/media/avatarAnimation.f0153afb72fb9b4f2352.png",
     "static/media/memosphereProfileScreen.png": "/Portfolio/static/media/memosphereProfileScreen.5222134057c995408de0.png",
     "static/media/SoBBackground.png": "/Portfolio/static/media/SoBBackground.111951e966fc6b356917.png",
     "static/media/memosphereCreateWeekScreen2.png": "/Portfolio/static/media/memosphereCreateWeekScreen2.ea483c44f79241ff760d.png",
@@ -68,6 +69,7 @@
     "static/media/DFloFiResults5.png": "/Portfolio/static/media/DFloFiResults5.d61a467cbc8ee4b49e10.png",
     "static/media/DFIcons.png": "/Portfolio/static/media/DFIcons.0c9d1deaa561bca123a6.png",
     "static/media/DFloFiResults3.png": "/Portfolio/static/media/DFloFiResults3.0c69dffb23c4f9637057.png",
+    "static/media/dbTable_photoWall_light.png": "/Portfolio/static/media/dbTable_photoWall_light.54725058ba556c199e01.png",
     "static/media/Idea.png": "/Portfolio/static/media/Idea.68be69e329c31ac1ff3f.png",
     "static/media/memosphereHiFi14.png": "/Portfolio/static/media/memosphereHiFi14.ae78d495a507a64243ba.png",
     "static/media/memosphereHiFi13.png": "/Portfolio/static/media/memosphereHiFi13.7f5efc4d72f4527c730a.png",
@@ -89,12 +91,12 @@
     "static/media/buttonStar.svg": "/Portfolio/static/media/buttonStar.1adf8f22386a1d481a4b252ed71d9737.svg",
     "static/media/star2.svg": "/Portfolio/static/media/star2.7367c37e3ffc66abba044d9f65fe20bd.svg",
     "static/media/star3.svg": "/Portfolio/static/media/star3.75135d87f0f85473a94edd2de1cec9ff.svg",
-    "main.cb169178.css.map": "/Portfolio/static/css/main.cb169178.css.map",
-    "main.3bcd8458.js.map": "/Portfolio/static/js/main.3bcd8458.js.map",
+    "main.a6d1591f.css.map": "/Portfolio/static/css/main.a6d1591f.css.map",
+    "main.d1947a5c.js.map": "/Portfolio/static/js/main.d1947a5c.js.map",
     "787.128fc6e9.chunk.js.map": "/Portfolio/static/js/787.128fc6e9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.cb169178.css",
-    "static/js/main.3bcd8458.js"
+    "static/css/main.a6d1591f.css",
+    "static/js/main.d1947a5c.js"
   ]
 }
