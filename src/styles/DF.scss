@@ -8,8 +8,8 @@
   scroll-snap-type: y mandatory;
 
   .DF-section, .project-section-title, .project-section-subtitle {
-    padding-left: 5%;
-    padding-right: 5%;
+    padding-left: 10%;
+    padding-right: 10%;
   }
 
   .DF-hero-container {
@@ -73,7 +73,7 @@
     }
 
     .section {
-      height: 500px;
+      //height: 500px;
     }
 
     .vertical-navbar {
@@ -100,15 +100,15 @@
     }
 
     .section-section {
-      padding-top: 0%;
+      padding-top: 80px;
     }
 
     .highlighted-section {
       background-color: $primary-color;
       padding-top: 40px;
       padding-bottom: 40px;
-      padding-right: 5%;
-      padding-left: 5%;
+      padding-right: 10%;
+      padding-left: 10%;
     }
 
     .DF-split-view {
@@ -187,7 +187,7 @@
     }
 
     .design-overview-content {
-      padding: 80px 5%;
+      padding: 80px 10%;
     }
     
     #idea {
@@ -226,6 +226,7 @@
   #section3,
   #section4,
   #section5,
+  #section,
   #results {
     padding-top: 80px;
     background-color: $background-color;

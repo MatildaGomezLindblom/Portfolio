@@ -8,8 +8,8 @@
   scroll-snap-type: y mandatory;
 
   .SoB-section, .project-section-title, .project-section-subtitle {
-    padding-left: 5%;
-    padding-right: 5%;
+    padding-left: 10%;
+    padding-right: 10%;
   }
 
   .SoB-hero-container {
@@ -138,8 +138,8 @@
       background-color: $primary-color;
       padding-top: 40px;
       padding-bottom: 40px;
-      padding-right: 5%;
-      padding-left: 5%;
+      padding-right: 10%;
+      padding-left: 10%;
     }
 
     .SoB-split-view {
@@ -218,7 +218,7 @@
     }
 
     .design-overview-content {
-      padding: 80px 5%;
+      padding: 80px 10%;
     }
     
     #idea {

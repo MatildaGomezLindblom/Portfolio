@@ -34,12 +34,12 @@ function ProjectsSection() {
       page: "/SoB",
       tags: "Business Development • Internship • UX • CGI • Region Västernorrland",
       title:
-        "VÄRDESKAPANDE DIGITALA TJÄNSTER I VÅRDEN - Exploration and improvement of Västernorrlands management of the digital platform Stöd och Behandling.",
+        "VALUE-CREATING DIGITAL SERVICES IN HEALTHCARE - Exploration and improvement of Västernorrlands management of the digital platform Stöd och Behandling.",
     },
   ];
 
   const handleImageClick = (project) => {
-    // Get properties of element
+    //get properties of element
     const element = document.querySelector(`#${project.id}`);
     const elementRect = element.getBoundingClientRect();
 
@@ -49,7 +49,7 @@ function ProjectsSection() {
     const screenWidth = window.innerWidth;
     const screenHeight = window.innerHeight;
 
-    // Calculate the scale factor to cover the entire screen width
+    //calculate the scale factor to cover the entire screen width
     const scaleFactor = screenWidth / elementWidth;
 
     //calculate translation to center the element

@@ -42,6 +42,8 @@ import DFChanges4 from "../../assets/projects/DF/DFChanges4.jpg";
 import DFChanges5 from "../../assets/projects/DF/DFChanges5.jpg";
 import DFFinalHiFi from "../../assets/projects/DF/DFFinalHiFi.png";
 
+import DFdbTable from "../../assets/projects/DF/dbTable_photoWall_light.png";
+
 function DF() {
   useLayoutEffect(() => {
     window.scrollTo(0, 0);
@@ -49,7 +51,6 @@ function DF() {
 
   const projectData = {
     title: "Digital photo wall",
-    pillText: "! Ongoing project",
     subtitle:
       "A digital and interactive complement to Knightec's physical photo wall.",
     sections: [
@@ -66,11 +67,11 @@ function DF() {
     additionalInfo: [
       {
         heading: "Context",
-        text: "Group project on two courses 2023-2024 (Produktutveckling i medieteknik med metoden Design-Build-Test and during Avancerat kvalitetsprojekt inom Interaktionsteknik)",
+        text: "Group project during two courses; Produktutveckling i medieteknik med metoden Design-Build-Test (2023) and Avancerat kvalitetsprojekt inom Interaktionsteknik (2024)",
       },
       {
         heading: "Resources",
-        text: "Design 15 weeks at 25% in a group of 5 people (approximately the scope of a thesis) and development 8 weeks 50 % 7,5 hp, supervised by Knightec.",
+        text: "Design 15 weeks at 25 % in a group of 5 people (approximately the scope of a master thesis) and 8 weeks of development 50 % 7,5 hp, supervised by Knightec.",
       },
       {
         heading: "Tools",
@@ -90,30 +91,29 @@ function DF() {
   };
 
   const carouselImages = [
-
-      {
-        src: DFLoFi1,
-        legend:
-          "Version 1 features a sidebar with filtering functionality and a carousel displaying all current announcements in motion.",
-      },
-      {
-        src: DFLoFi2,
-        legend: "Version 2 has the profile presented as a popup.",
-      },
-      {
-        src: DFLoFi3,
-        legend: "Version 3 includes a lot of functionality in a navbar.",
-      },
-      {
-        src: DFLoFi4,
-        legend:
-          "Version 4 initially had a quite advanced search function, which was then replaced by a dropdown filtering box.",
-      },
-      {
-        src: DFLoFi5,
-        legend:
-          "Version 5 places a strong emphasis on a more professional front and a more personal back of the profile.",
-      },
+    {
+      src: DFLoFi1,
+      legend:
+        "Version 1 features a sidebar with filtering functionality and a carousel displaying all current announcements in motion.",
+    },
+    {
+      src: DFLoFi2,
+      legend: "Version 2 has the profile presented as a popup.",
+    },
+    {
+      src: DFLoFi3,
+      legend: "Version 3 includes a lot of functionality in a navbar.",
+    },
+    {
+      src: DFLoFi4,
+      legend:
+        "Version 4 initially had a quite advanced search function, which was then replaced by a dropdown filtering box.",
+    },
+    {
+      src: DFLoFi5,
+      legend:
+        "Version 5 places a strong emphasis on a more professional front and a more personal back of the profile.",
+    },
   ];
 
   const LoFiImages = [
@@ -139,7 +139,7 @@ function DF() {
       subtitle:
         "A thorough design process from concept to interactive Hi-Fi in Figma.",
       content: (
-        <div>
+        <div className="DF-section">
           <div className="design-overview">
             <div className="design-overview-content">
               <img id="idea" src={idea}></img>
@@ -149,24 +149,13 @@ function DF() {
               <img id="DFHiFiPreview" src={HiFiExampleDF}></img>
             </div>
           </div>
-        </div>
-      ),
-    },
-    {
-      id: "section2",
-      title: "PRESTUDY",
-      subtitle: "Project preparations and deep dive into the problem area.",
-      content: (
-        <div className="DF-section">
           <p>
-            In the search for an exciting project for the course, we met a group
-            at Knightec who had an interesting proposal. They showed us their
-            physical photo wall in the office, which consists of pictures of all
-            the office's employees. The pictures can be turned around to dispaly
-            a short introduction in the back written by the person themselves.
-            The proposal was to create a digital version of this photo wall,
-            with the same purpose as the current one, but with additional
-            functionality and more interactivity.
+            While exploring exciting projects for the course, we connected with
+            a team at Knightec who proposed digitizing their office's physical
+            photo wall. The wall features employee photos that flip to reveal
+            self-written introductions. Their idea was to create a digital
+            version with the same purpose, enhanced by added functionality and
+            interactivity.
           </p>
           <div className="DF-split-view">
             <img
@@ -178,8 +167,16 @@ function DF() {
               alt="Knightecs photo wall, example from the back of one of the picture frames."
             ></img>
           </div>
-
-          <div className="DF-text-and-image">
+        </div>
+      ),
+    },
+    {
+      id: "section2",
+      title: "PRESTUDY",
+      subtitle: "Project preparations and a deep dive into the problem area.",
+      content: (
+        <div className="DF-section">
+          <div>
             <div>
               <h3>Market Analysis</h3>
               <p>
@@ -190,15 +187,12 @@ function DF() {
                 create boards with inspiration to use moving forward.
                 <br />
                 <br />
-                The conclusions drawn from this were that there seem to be
-                several companies with large screens displaying pictures of all
-                the office's employees, but no digital solution like the one our
-                client desired appeared to exist. However, various types of HR
-                platforms were examined where employees are showcased and sorted
-                in different ways. There were also some large screens placed in
-                offices that could be used to recognize employees, showcase the
-                company's achievements, and display social media, etc, which
-                inspired the process moving forward.
+                We found many companies using large screens to display employee
+                photos but no digital solution matching the client's vision. HR
+                platforms showcasing employees in various ways were explored,
+                along with office screens highlighting employee recognition,
+                achievements, and social media, which inspired the project's
+                direction.
               </p>
             </div>
             <img
@@ -210,14 +204,14 @@ function DF() {
             <h3>Personas</h3>
             <p>
               To understand the different types of people who will use the
-              service, the project's client provided various use cases that
+              service, the client provided various use cases that
               formed the basis for two personas we found particularly
               interesting to keep in mind. The first is for a more experienced
               employee who is currently working remotely and finds it a bit
               challenging to keep up with changes at the office from home. The
-              second one is younger and represents newcomers to the workplace
-              and interns. This is a person who wants to use the service to get
-              to know colleagues and feel included in the workplace.
+              second one is younger and represents newcomers to the workplace as
+              well as interns. This is a person who wants to use the service to
+              get to know colleagues and feel included in the workplace.
             </p>
           </div>
           <div className="DF-split-view">
@@ -230,10 +224,9 @@ function DF() {
           <div className="section-section">
             <h3>Interviews</h3>
             <p>
-              Interviews were conducted to create context around the target
-              group and to learn more about their wishes and needs. To gain the
-              best possible insight into the target group, in addition to our
-              two clients, three other employees were also interviewed.
+              To gain the best possible insight into the target group, in
+              addition to our two supervisors at Knightec, three other employees
+              were also interviewed.
               <br />
               <br />
               <b> Person 1:</b> Group manager who has been at Knightec for 2.5
@@ -309,7 +302,7 @@ function DF() {
     },
     {
       id: "section3",
-      title: "LO-FI",
+      title: "Lo-Fi",
       subtitle: "From idea to a tested first prototype",
       content: (
         <div className="DF-section">
@@ -372,7 +365,7 @@ function DF() {
     },
     {
       id: "section4",
-      title: "HI-FI",
+      title: "Hi-Fi",
       subtitle: "The final Hi-Fi prototype in Figma.",
       content: (
         <div className="DF-section">
@@ -495,12 +488,136 @@ function DF() {
       content: (
         <div className="DF-section">
           <p>
-            The development of the design is now taking place in the HT24
-            project course, which was planned by one of the group members during
-            a summer job at Knightec last summer. The touch view is being
-            developed using Next with TypeScript, SaSS and a Supabase
-            database for testing. This project course, worth 7.5 hp, is
-            currently ongoing, so stay tuned for further updates...
+            The development took place during a project course called Avancerat
+            kvalitetsprojekt inom Interaktionsteknik, and was planned by one of
+            the group members during a summer job at Knightec. The goal was to
+            develop a first prototype of the touch view, as a foundation that
+            Knightec could keep building on. This was done using Scrum, in 5
+            sprints of two weeks each and maintained through DevOps and GIT:
+            <br />
+            <br />
+            <b>Sprint 1</b>
+            <br />
+            Planning project and database structure, setting up DevOps,
+            researching new tools and frameworks.
+            <br />
+            <br />
+            <b>Sprint 2</b>
+            <br />
+            Creating all components for the main page and setting up the
+            supabase services.
+            <br />
+            <br />
+            <b>Sprint 3</b>
+            <br />
+            Assemling the main page and implementing sorting, searching and
+            filtering functionality, as well as creating the page for posts and
+            the calendar.
+            <br />
+            <br />
+            <b>Sprint 4</b>
+            <br />
+            Making the page to handle groups and functionality to create, delete
+            and update groups.
+            <br />
+            <br />
+            <b>Sprint 5</b>
+            <br />
+            Testing, bug fixes, documentation and pitch preperations.
+            <br />
+            <br />
+            <mark>
+              Since the project belongs to Knightec we are unable to share any
+              code. Instead, I have provided a brief overview of the key
+              features and development decisions made throughout the project:
+            </mark>
+          </p>
+          <h3>Next.js</h3>
+          <p>
+            Next.js is a React framework designed for building fast, scalable
+            web applications. Its foundation in React made it familiar to the
+            team, but it also introduced valuable enhancements. With hybrid
+            rendering capabilities (both client and server-side), Next.js
+            enables faster page loads. It also simplifies route management and
+            includes features like prefetching and image optimization. Given
+            that the photo wall contains numerous images and various components
+            on each page, efficient rendering is crucial to ensure a smooth user
+            experience. These features made Next.js an ideal choice for this
+            project.
+          </p>
+          <h3>Sass for styleing</h3>
+          <p>
+            Next.js supports Sass, a CSS library that enhances styling with
+            features like global variables, nesting, and modularization. These
+            capabilities make styling more efficient and scalable, which is
+            crucial since this project is intended for future expansion by
+            Knightec. We primarily utilized Sass variables to simplify future
+            adjustments to the color scheme and fonts, ensuring easy updates as
+            the design evolves.
+          </p>
+          <h3>Supabase database</h3>
+          <p>
+            Knightec didn't request a backend with the prototype but we decided
+            to set up a Supabase with dummy data to be able to implement and
+            test all the functionality we wished for. Supabase is an open source
+            alternative to Googles Firebase and is built upon PostgreSQL.
+            Supabase also supports real-time updates, serverless functions, and
+            automated security settings, making it possible to build and scale
+            applications efficiently and quickly.
+            <br />
+            <br />
+            The database currently holds data on users, posts/events, and
+            groups. To enhance retrieval speed and efficiency, user data is
+            divided into three distinct tables. The main User table stores
+            information necessary for displaying the user grid and supports
+            filtering and sorting functionality. Personal and professional
+            profile details are stored separately in their own tables, allowing
+            them to be fetched discreetly in the background as needed.
+          </p>
+          <img src={DFdbTable} alt="Overview of the database tables."></img>
+          <h3>SMHI for weather</h3>
+          <p>
+            To get the current header SMHI's API was used. Every 10 minutes the
+            weather for the set coordinates are fetched and an appropriate icon
+            for the weather is set in the header of the application, together
+            with the temperature.
+          </p>
+          <h3>Big Calendar</h3>
+          <p>
+            Big Calendar is an open-source component built for React. The
+            component offers extensive functionality and can be customized as
+            needed. For this project, a custom toolbar was created, events were
+            made clickable to display a popup, and the entire calendar was
+            restyled to match the desired design.
+          </p>
+          <h3>Hashing for random user display</h3>
+          <p>
+            A key feature of the photo wall is to display office members in a
+            random order each day, preventing the same people from always
+            appearing at the top. Initially, we considered randomizing the order
+            on each page load, but this could be frustrating for users and would
+            require a reload to refresh the display. Instead, we implemented a
+            hash function that uses the current date to generate a consistent,
+            seemingly random order that remains the same throughout the day,
+            ensuring a new arrangement each day.
+          </p>
+          <h3>Inactivity timeout</h3>
+          <p>
+            In response to feedback from Knightec, we implemented an inactivity
+            timeout/reset feature. This feature restarts a background timer
+            whenever a user interacts with the application and resets the
+            application when the timer expires. This approach ensures that the
+            main page is primarily displayed, enhancing user experience by
+            keeping the content relevant and up-to-date.
+          </p>
+          <h3>Filtering, searching and sorting</h3>
+          <p>
+            To enhance users' ability to find people and groups, we implemented
+            functionality for searching, filtering, and sorting. This was
+            primarily achieved through URL queries and by toggling the
+            visibility of matching items. Since multiple filters, as well as
+            both sorting and filtering can be used at the same time, these were
+            some of the more challangeing features to implement.
           </p>
         </div>
       ),
@@ -508,20 +625,93 @@ function DF() {
     {
       id: "results",
       title: "RESULTS",
-      subtitle: "Coming soon.",
+      subtitle: "Demo of our fully functional touch screen version!",
       content: (
         <div className="DF-section">
-          <p>
-            <i>
-              The project is being carried out together with my skilled group
-              members and good friends: Ebba Backlund, Moa Berquist, Melker
-              Henriksson, and Gustav Bolén!
-            </i>
-          </p>
+          <iframe
+            src={`https://www.youtube.com/embed/6wopBi77xsk`}
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+            title="Embedded youtube"
+          />
         </div>
       ),
     },
-    {},
+    {
+      id: "section6",
+      title: "MY CONTRIBUTION",
+      subtitle: "And some final thougths.",
+      content: (
+        <div>
+          <div className="DF-section">
+            <p>
+              During the design process, we collaborated closely, except for the
+              individual low-fidelity sketches, where I contributed "Version 1"
+              shown above. In the final Figma design, my main focus was on the
+              sidebar with events and filtering, the event display, the
+              calendar, and the temporary groups.
+              <br />
+              <br />
+              During development, we collaborated closely on Discord to assist
+              each other, working together on all aspects of the project. This
+              makes it difficult to attribute specific parts to any one person.
+              However, my primary contributions included the events carousel,
+              the styling and functionality of the calendar, the inactivity
+              timeout, and the search field. Additionally, I implemented all
+              aspects of the sidebar on the group page and ensured the
+              functionality for selecting users for a group worked seamless.
+              <br />
+              <br />
+              This has been a long project in the making, as well as a rewarding
+              one since it was the first "real world" product we got to both
+              design and develope. It was fun to work with a real client and
+              target group, and to work with new frameworks and tools. The group
+              worked well together and through effort and teamwork we created
+              something to be proud of.
+            </p>
+          </div>
+          <div className="DF-section">
+            <h3>Opportunities for improvement</h3>
+            <p>
+              Regarding the design we could have done even more interviews and
+              user testings. Since our sample was quite small it was difficult
+              to get clear conclusions which resulted in us mostly following our
+              supervisors opinions. We did do a quick redesign before starting
+              the development process where we changed some minor things, but as
+              always, even more time could have made it even better!
+              <br />
+              <br />
+              Our prior experiences helped us avoid many pitfalls during
+              development. However, we should have started building the project
+              earlier since some errors did not show up during regular
+              compiling. Midway, we began building before every
+              merge with main, a practice we’ll adopt earlier next time. Better planning
+              of smaller components to make them more resuable could have saved
+              time, avoiding rework like adapting the search field for light and
+              dark themes later in the project. With more time, we would have
+              tested edge cases, improved error handling, and optimized data
+              caching.
+              <br />
+              <br />
+              Ultimately, Knightec requested a prototype, not a finished
+              product. By balancing thoroughness and efficiency, we delivered a
+              large, functional prototype for them to develop further and I'm
+              very proud of what we managed to accomplish with our given
+              resourses :D
+            </p>
+            <p>
+              <i>
+                The project was carried out together with my skilled group
+                members and dear friends: Ebba Backlund, Moa Berquist, Melker
+                Henriksson, and Gustav Bolén!
+              </i>
+            </p>
+          </div>
+          <div className="space"></div>
+        </div>
+      ),
+    },
   ];
 
   return (

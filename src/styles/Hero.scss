@@ -106,6 +106,24 @@ a {
   }
 }
 
+.scroll {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  margin-top: -50px;
+
+  p {
+    margin-bottom: -1px;
+    opacity: 0.8;
+  }
+
+  .down-arrow {
+    opacity: 0.8;
+  }
+}
+
 .dark-mode {
   .hero-container {
     width: 100vw;
@@ -158,6 +176,8 @@ a {
   .cloud {
     display: none;
   }
-  
 
+  .down-arrow {
+    color: $text-color;
+  }
 }

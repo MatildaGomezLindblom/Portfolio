@@ -8,6 +8,7 @@ import Star3 from "../../assets/hero/star3.svg";
 import Cloud from "../../assets/hero/pinkCloud.png";
 import { useTheme } from "../ThemeContext";
 import ButtonSecondary from "../ButtonSecondary";
+import { GoChevronDown } from "react-icons/go";
 
 function Hero({ toggleTheme, onAnimationComplete }) {
   const { isDarkTheme } = useTheme();
@@ -165,6 +166,15 @@ function Hero({ toggleTheme, onAnimationComplete }) {
       </div>
       <div style={{ x: yBg }}>{stars}</div>
       <div style={{ x: yBg }}>{clouds}</div>
+      <motion.div
+        className="scroll"
+        initial={{ opacity: 0, y: 100 }}
+        animate={{ opacity: 1, y: 0}}
+        transition={{ delay: 3.5, duration: 0.8, ease: "easeIn" }}
+      >
+        <p>Scroll down for more</p>
+        <GoChevronDown  className="down-arrow"/>
+      </motion.div>
     </div>
   );
 }

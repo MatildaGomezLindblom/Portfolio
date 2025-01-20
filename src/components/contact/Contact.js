@@ -92,7 +92,7 @@ function Contact() {
           <div className="contact-button-container">
             <div>
             <a href="https://github.com/MatildaGomezLindblom"><FaGithub className="github-icon"/></a>
-            <a href="www.linkedin.com/in/matilda-gomez-lindblom"><FaLinkedin className="github-icon"/></a>
+            <a href="https://www.linkedin.com/in/matilda-gomez-lindblom/"><FaLinkedin className="github-icon"/></a>
             </div>
             <ButtonPrimary
               className="send-button"

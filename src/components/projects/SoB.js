@@ -10,7 +10,7 @@ function SoB() {
   });
 
   const projectData = {
-    title: "Värdeskapande digitala tjänster i vården",
+    title: "Value-Creating Digital Services in Healthcare",
     subtitle:
       "An investigative study and proposal on how the region can increase the usage of the e-service Stöd och Behandling",
     sections: [
