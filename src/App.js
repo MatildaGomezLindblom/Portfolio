@@ -10,6 +10,8 @@ import Hotspot from './components/projects/Hotspot';
 import Memosphere from './components/projects/Memosphere';
 import DF from './components/projects/DF';
 import SoB from './components/projects/SoB';
+import SEOAI from './components/projects/SEOAIAssistant';
+import Footer from "./components/footer";
 
 import './styles/global.scss';
 import { useTheme } from './components/ThemeContext'; 
@@ -47,6 +49,7 @@ function App() {
           <Route path="/Memosphere" element={<Memosphere />} />
           <Route path="/DF" element={<DF />} />
           <Route path="/SoB" element={<SoB />} />
+          <Route path="/SEOAIAssistant" element={<SEOAI />} />
           <Route
             path="/"
             element={
@@ -63,6 +66,9 @@ function App() {
                 <section id="contact">
                   <Contact />
                 </section>
+                <div>
+                <Footer></Footer>
+                </div>
               </div>
             }
           />

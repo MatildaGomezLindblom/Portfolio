@@ -43,7 +43,7 @@ function About() {
         </div>
         <div className={`about-text-section ${inView ? "in-view" : ""}`}>
           <h2>
-            Hi! My name is
+            Hi! I'm
           </h2>
           <h2>
             <mark>Matilda Gomez Lindblom</mark>
@@ -56,6 +56,7 @@ function About() {
           {/* <MoreButton></MoreButton> */}
         </div>
       </div>
+      {/*<div className="gradient-background"></div> */}
       <MySkills></MySkills>
       <div className="space"></div>
     </div>

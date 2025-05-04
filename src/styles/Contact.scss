@@ -3,20 +3,16 @@
 .contact-container {
   //min-width: 450px;
   width: 100vw;
-  height: 100vh;
   position: relative;
   z-index: 0;
-  background: linear-gradient(
-    90deg,
-    rgba(255, 209, 209, 1) 0%,
-    rgba(251, 251, 251, 1) 100%
-  );
+  background: $primary-color;
 
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1rem;
   margin: 0;
   padding: 10vw;
+  padding-bottom: 5vw;
 }
 
 .custom-shape-divider-top-1701897315 {
@@ -44,7 +40,6 @@ label {
   font-family: $font-text;
   font-size: 16px;
   padding-top: 7px;
-
 }
 
 input,
@@ -53,22 +48,37 @@ textarea {
   padding: 8px;
   margin-left: -8px;
   margin-bottom: 10px;
-  border-radius: 10px;
+  border-radius: 2px;
   border: none;
-  box-shadow: inset 0px 2px 4px#CFCFCF;
-  border: 1px solid  #CFCFCF;
-  height: 30px;
+  //box-shadow: inset 0px 2px 4px#CFCFCF;
+  border: 1px solid #cfcfcf;
   font-family: $font-text;
   font-size: 16px;
 }
 
-textarea{
+.coffee {
+  width: 40vw;
+  height: auto;
+  max-height: 70vh;
+  position: absolute;
+  z-index: -1;
+  margin-left: -20vw;
+  margin-top: -360px;
+  color: $background-color;
+}
+
+textarea {
   height: 150px;
 }
 
-input:focus, textarea:focus {
-  border: 3px solid $background-color;
-  outline:none;
+input:focus,
+textarea:focus {
+  border: 2px solid $secondary-color;
+  outline: none;
+}
+
+.form-section {
+  padding-top: 30px;
 }
 
 .form-section-title {
@@ -79,12 +89,12 @@ input:focus, textarea:focus {
 .contact-button-container {
   width: 100%;
   display: flex;
-  justify-content:space-between;
+  justify-content: end;
 }
 
 .github-icon {
-  width: 40px;
-  height: 40px;
+  width: 60px;
+  height: 60px;
   color: $secondary-color;
   padding-right: 10px;
 }
@@ -95,13 +105,13 @@ span {
 
 .dark-mode {
   .contact-container {
-    background: linear-gradient(
-      90deg,
-      rgba(22, 23, 30, 1) 0%,
-      rgba(41, 47, 95, 1) 100%
-    );
+    background: $primary-color;
   }
 
+  input,
+  textarea {
+    background: $text-color;
+  }
 }
 
 label {
@@ -112,38 +122,8 @@ label {
   .contact-container {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 1rem;
     margin: 0;
-    padding: 10vw;
   }
 }
-
-.footer-container {
-  background-color: none; // Dark background color
-  z-index: 1000;
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-
-  .line {
-    width: 100%;
-    height: 1px; // Thickness of the line
-    background-color: $background-color; // Accent color for the line
-    margin-bottom: 10px; // Space between the line and the text
-  }
-
-  .footer-content {
-    display: flex;
-    justify-content: flex-start;
-    font-style: italic; 
-    opacity: 0.8; 
-
-    p {
-      padding-left: 5%;
-      font-size: 12px;
-    }
-  }
-}
-
 
 //floating lable css from https://codepen.io/devesh8/pen/MWYEJEP

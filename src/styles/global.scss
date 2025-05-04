@@ -22,16 +22,15 @@ h1 {
 }
 
 h2 {
-  font-weight: lighter;
+  font-weight: 600;
   font-family: $font-heading;
-  font-size: 50px;
+  font-size: 70px;
   color: $text-color;
-  font-weight: normal;
   margin-bottom: 20px;
 }
 
 h3 {
-  font-weight: lighter;
+  font-weight: 600;
   font-family: $font-heading;
   font-size: 20px;
   color: $text-color;
@@ -46,9 +45,13 @@ h4 {
 
 p {
   font-family: $font-text;
-  font-size: 14px;
+  font-size: 18px;
   color: $text-color;
-  line-height: 22px;
+  line-height: 30px;
+}
+
+.smaller-text {
+  font-size: 15px;
 }
 
 mark {
@@ -211,11 +214,35 @@ body {
   width: 100vw;
 }
 
-
-
 .light-mode {
   background-color: $background-color;
   color: $text-color;
+}
+
+.footer-container {
+  width: 100%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  z-index: 1000;
+  position: relative;
+  background-color: $background-color;
+}
+
+.footer {
+  padding-left: 10vw;
+  padding-right: 10vw;
+  display: flex;
+  align-items: center;
+
+  p {
+    padding-right: 10px,;
+  }
+}
+
+@media (max-width: 1300px) {
+  h2 {
+    font-size: 50px;
+  }
 }
 
 @media (max-width: 450px) {

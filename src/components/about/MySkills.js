@@ -21,63 +21,64 @@ function About() {
   const yTitle = useTransform(scrollYProgress, [0, 0.25], [1000, 0]);
 
   return (
-    <div className="my-skills-container">
-      <motion.div className="title" style={{ opacity: opacityTitle, y: yTitle }}>
-        <h2>Three areas of expertise</h2>
-        <i>One holistic perspective.</i>
-      </motion.div>
-      <motion.div className="skills">
+      <div className="my-skills-container">
         <motion.div
-          className="skill skill-1"
-          style={{ opacity: opacitySkill1 , y: ySkill1}}
+          className="title"
+          style={{ opacity: opacityTitle, y: yTitle }}
         >
-          <IoHeart className="skills-icon icon1" />
-          <div className="skills-title">
-            <h3>User Experience</h3>
-            <p>
-              The user experience is at the core of my creative process.
-              Identifying and understanding the target audience is crucial for
-              creating accessible and value-driven solutions. Therefore, I
-              always strive to understand users' desires and needs by combining
-              qualitative and quantitative data.
-            </p>
-          </div>
+          <h2>Three areas of expertise</h2>
+          <i>One holistic perspective.</i>
         </motion.div>
+        <motion.div className="skills">
+          <motion.div
+            className="skill skill-1"
+            style={{ opacity: opacitySkill1, y: ySkill1 }}
+          >
+            <IoHeart className="skills-icon icon1" />
+            <div className="skills-title">
+              <h3>User Experience</h3>
+              <p>
+                The user experience is at the core of my creative process. I
+                design accessible, and value-driven solutions by combining
+                qualitative and quantitative user insights through an iterative
+                process.
+              </p>
+            </div>
+          </motion.div>
 
-        <motion.div
-          className="skill skill-2"
-          style={{ opacity: opacitySkill2 , y: ySkill2}}
-        >
-          <FaBrain className="skills-icon icon2" />
-          <div className="skills-title">
-            <h3>Development</h3>
-            <p>
-              I have experience in everything from C programming in Unix and
-              machine learning in Python, to web and app development in React
-              and Android Studio. With experience in both backend and frontend,
-              I can contribute to the entire development process and easily
-              adapt to new languages and frameworks.
-            </p>
-          </div>
-        </motion.div>
+          <motion.div
+            className="skill skill-2"
+            style={{ opacity: opacitySkill2, y: ySkill2 }}
+          >
+            <FaBrain className="skills-icon icon2" />
+            <div className="skills-title">
+              <h3>Development</h3>
+              <p>
+                I have experience building APIs, manage databases, and craft
+                engageing user interfaces using a diverse set of tools and
+                libraries. My frontend and backend skills let me contribute
+                throughout the development process and quickly adapt to new
+                tools.
+              </p>
+            </div>
+          </motion.div>
 
-        <motion.div
-          className="skill skill-3"
-          style={{ opacity: opacitySkill3 , y: ySkill3}}
-        >
-          <FaFireFlameCurved className="skills-icon icon3" />
-          <div className="skills-title">
-            <h3>Graphic Design</h3>
-            <p>
-              With my keen sense of color and shape, as well as my knowledge of
-              typography and visual hierarchy, I am skilled at communicating my
-              ideas visually and creating appealing materials to effectively
-              convey messages and create understanding.
-            </p>
-          </div>
+          <motion.div
+            className="skill skill-3"
+            style={{ opacity: opacitySkill3, y: ySkill3 }}
+          >
+            <FaFireFlameCurved className="skills-icon icon3" />
+            <div className="skills-title">
+              <h3>Graphic Design</h3>
+              <p>
+                With a strong sense of color and shape, typography and visual
+                hierarchy, I communicate my ideas and create a mutual
+                understanding through appealing and effective visuals.
+              </p>
+            </div>
+          </motion.div>
         </motion.div>
-      </motion.div>
-    </div>
+      </div>
   );
 }
 

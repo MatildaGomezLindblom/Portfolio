@@ -36,8 +36,8 @@ nav {
 
 .navbar-list a {
   text-decoration: none;
-  font-weight: normal;
-  font-size: 16px;
+  font-weight: bold;
+  font-size: 14px;
   font-family: $font-heading;
   color: $text-color;
   transition: all 0.4s ease;
@@ -57,13 +57,17 @@ nav {
 
   button {
     text-decoration: none;
-  font-weight: normal;
-  font-size: 16px;
-  font-family: $font-heading;
-  color: $text-color;
-  transition: all 0.4s ease;
-  background: none;
-  border: none;
+    font-weight: normal;
+    font-size: 14px;
+    font-weight: bold;
+    font-family: $font-heading;
+    color: $text-color;
+    transition: all 0.4s ease;
+    background: none;
+    border: none;
+    display: flex;
+    align-items: center;
+    gap: 5px;
 
   &:hover {
     color: $secondary-color;
@@ -73,16 +77,18 @@ nav {
 
 .CV {
   display: flex;              
-  align-items: flex-end;     
-  text-decoration: none;     
-  color: inherit;              
+  align-items: center;  
+  padding-top: 3px;             
   
   svg {
-    margin-left: 2px; 
+    margin-left: 2px;
+    display: flex;              
+    align-items: center;  
+    justify-content: center;
   }
 }
 
-@media (max-width: 530px) {
+@media (max-width: 700px) {
   .menu-toggle {
     width: 30px;
     height: 30px;

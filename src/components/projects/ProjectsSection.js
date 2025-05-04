@@ -9,32 +9,54 @@ function ProjectsSection() {
 
   const projects = [
     {
+      id: "project-0",
+      page: "/SEOAIAssistant",
+      tags: "Umbraco • Azure OpenAI • .NET9 • Lit • Vite • UX • Python",
+      title:
+        "SEO AI ASSISTANT",
+        description:
+        "An LLM-powered Umbraco Backoffice extension that streamlines SEO meta tag creation and page performance tracking for web editors.",
+        image: require('../../assets/projects/SEOAIAssistant/SEOAIAssistantHero.jpg'),
+    },
+    {
       id: "project-1",
       page: "/Hotspot",
-      tags: "React Native • User Management • UX • Firebase",
+      tags: "React Native • User Management • UX • Map Integration • Firebase",
       title:
-        "HOTSPOT - The app for pinning and sharing your favorite places with friends.",
+        "HOTSPOT",
+        description:
+        "The app for pinning and sharing your favorite places with friends.",
+        image: require('../../assets/projects/HotspotHeroImage.jpg'),
     },
     {
       id: "project-3",
       page: "/DF",
-      tags: "Next • Knightec • UX • Supabase",
+      tags: "Next • Searching • Filtering • Sorting • UX • Supabase",
       title:
-        "DIGITAL PHOTO WALL - A digital and interactive complement to Knightec's physical photo wall.",
+        "DIGITAL PHOTO WALL",
+        description:
+        "A digital and interactive complement to Knightec's physical photo wall.",
+        image: require('../../assets/projects/DF/DFHeroImage.png'),
     },
     {
       id: "project-2",
       page: "/Memosphere",
-      tags: "React Native • OpenAI • UX • Firebase",
+      tags: "React Native • OpenAI • Vision API • UX • Firebase",
       title:
-        "MEMOSPHERE - Stay in touch with loved ones in an exciting and unique way using AI.",
+        "MEMOSPHERE",
+        description:
+        "Stay in touch with loved ones in an exciting and unique way using AI.",
+        image: require('../../assets/projects/Memosphere/MemosphereHeroImage.png'),
     },
     {
       id: "project-4",
       page: "/SoB",
-      tags: "Business Development • Internship • UX • CGI • Region Västernorrland",
+      tags: "Business Development • User Research • Communication • Process Optimization • Graphic Design",
       title:
-        "VALUE-CREATING DIGITAL SERVICES IN HEALTHCARE - Exploration and improvement of Västernorrlands management of the digital platform Stöd och Behandling.",
+        "VALUE-CREATING DIGITAL SERVICES IN HEALTHCARE",
+        description:
+        "Exploration and improvement of Västernorrlands management of the digital platform Stöd och Behandling.",
+        image: require('../../assets/projects/SoBHero.png'),
     },
   ];
 
@@ -75,18 +97,23 @@ function ProjectsSection() {
     }, 800);
   };
 
+  const isOdd = projects.length % 2 !== 0;
+
   return (
     <div className="projects-container">
-      <div className="section-title">
-        <div className="line"></div>
-        <h2 className="title">Featured projects</h2>
-        <div className="line"></div>
+            <div className="section-title">
+        <h2 className="title">Featured</h2>
+        <h2 className="title">projects</h2>
       </div>
       <div className="featured-projects">
-        {projects.map((project) => (
+        {projects.map((project, index) => {
+          const isFirst = index === 0 && isOdd;
+          return (
+          <div key={project.id} className={`project-container ${isFirst ? "wide-project" : "normal-project"}`}>
           <motion.div
             key={project.id}
             id={project.id}
+            style={{ backgroundImage: `url(${project.image})` }}
             className="project"
             initial={{ scale: 1, x: 0, y: 0, zIndex: 10 }}
             animate={
@@ -105,14 +132,16 @@ function ProjectsSection() {
             {transitioningProject?.id !== project.id && (
               <div className="overlay">
                 <p>{project.tags}</p>
-                <h4>{project.title}</h4>
               </div>
             )}
           </motion.div>
-        ))}
-      </div>
-      <div className="section-end">
-        <div className="line"></div>
+          <div className="project-label">
+          <h5>{project.title}</h5>
+          <p className="smaller-text">{project.description}</p>
+          </div>
+          </div>
+          );
+        })}
       </div>
       <div className="space"></div>
     </div>

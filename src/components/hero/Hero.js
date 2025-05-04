@@ -172,7 +172,7 @@ function Hero({ toggleTheme, onAnimationComplete }) {
         animate={{ opacity: 1, y: 0}}
         transition={{ delay: 3.5, duration: 0.8, ease: "easeIn" }}
       >
-        <p>Scroll down for more</p>
+        <p className="smaller-text">Scroll down for more :)</p>
         <GoChevronDown  className="down-arrow"/>
       </motion.div>
     </div>

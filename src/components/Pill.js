@@ -1,16 +1,10 @@
 import React from "react";
-import "../styles/global.scss";
+import "../styles/Pill.scss";
 
-function Pill({title}) {
+function Pill({ title }) {
   return (
-    <div class="pill-container">
-      <div>
-        <button
-          className="pill"
-        >
-          {title}
-        </button>
-      </div>
+    <div className="pill-container">
+      <button className="pill">{title}</button>
     </div>
   );
 }

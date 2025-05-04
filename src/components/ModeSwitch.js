@@ -9,7 +9,7 @@ const ModeSwitch = ({toggleTheme}) => {
 
   const handleToggle = () => {
     setIsOn(!isOn);
-    toggleTheme(); // Call the toggleTheme function to change the theme
+    toggleTheme();
   };
 
   return (
@@ -30,6 +30,9 @@ const ModeSwitch = ({toggleTheme}) => {
           />
         </AnimatePresence>
       </motion.div>
+      <div className='mode-text-container'>
+        <p className='mode-text'>{isOn ? 'NIGHT' : 'DAY'}</p>
+      </div>
     </div>
   )
 }

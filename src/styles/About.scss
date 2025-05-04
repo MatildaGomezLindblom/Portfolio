@@ -77,6 +77,23 @@
   box-shadow: 2px;
 }
 
+.gradient-background {
+  position: sticky;
+  top: 0;
+  z-index: 0;
+  display: block;
+  background-image: linear-gradient(
+    to bottom,
+    $background-color 0%,
+    $background-color 10%,
+    $primary-color 50%,
+    $background-color 90%,
+    $background-color 100%
+  );
+  height: 100vh;
+  width: 100vw;
+}
+
 /* .matilda-cut-out {
     width: 80%;
     clip-path: circle( 50% at center);
@@ -99,6 +116,7 @@
   margin-left: -70%;
   z-index: 2;
   opacity: 0;
+  margin-top: -110px;
 
   &.in-view { 
     animation: appear-right 1.5s forwards; 
@@ -170,6 +188,7 @@
 
   .about-text-section {
     margin-left: 0;
+    margin-top: -10px;
   }
 
   .matilda-cut-out {
