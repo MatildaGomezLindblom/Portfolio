@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/Portfolio/static/css/main.a6d1591f.css",
-    "main.js": "/Portfolio/static/js/main.d1947a5c.js",
-    "static/js/787.128fc6e9.chunk.js": "/Portfolio/static/js/787.128fc6e9.chunk.js",
+    "main.css": "/Portfolio/static/css/main.aef576a9.css",
+    "main.js": "/Portfolio/static/js/main.4c77a979.js",
+    "static/js/453.41811d64.chunk.js": "/Portfolio/static/js/453.41811d64.chunk.js",
     "static/media/DFFinalHiFi.png": "/Portfolio/static/media/DFFinalHiFi.21872f6fb612c9e1d6a7.png",
     "static/media/SoBHero.png": "/Portfolio/static/media/SoBHero.0d39797f245c4398c493.png",
     "static/media/hotspotMoodboard.png": "/Portfolio/static/media/hotspotMoodboard.684f991909b6966ffd56.png",
@@ -41,6 +41,7 @@
     "static/media/hotspotVersion1.png": "/Portfolio/static/media/hotspotVersion1.aca8eb3f247e00dc7324.png",
     "static/media/memosphereHiFi5.png": "/Portfolio/static/media/memosphereHiFi5.3724b22eae7542d772c8.png",
     "static/media/memosphereHiFi1.png": "/Portfolio/static/media/memosphereHiFi1.1437882dc430d46629c3.png",
+    "static/media/SEOAIAssistantHero.jpg": "/Portfolio/static/media/SEOAIAssistantHero.8134322325b3e810c41f.jpg",
     "static/media/avatarAnimation.png": "/Portfolio/static/media/avatarAnimation.f0153afb72fb9b4f2352.png",
     "static/media/memosphereProfileScreen.png": "/Portfolio/static/media/memosphereProfileScreen.5222134057c995408de0.png",
     "static/media/SoBBackground.png": "/Portfolio/static/media/SoBBackground.111951e966fc6b356917.png",
@@ -91,12 +92,12 @@
     "static/media/buttonStar.svg": "/Portfolio/static/media/buttonStar.1adf8f22386a1d481a4b252ed71d9737.svg",
     "static/media/star2.svg": "/Portfolio/static/media/star2.7367c37e3ffc66abba044d9f65fe20bd.svg",
     "static/media/star3.svg": "/Portfolio/static/media/star3.75135d87f0f85473a94edd2de1cec9ff.svg",
-    "main.a6d1591f.css.map": "/Portfolio/static/css/main.a6d1591f.css.map",
-    "main.d1947a5c.js.map": "/Portfolio/static/js/main.d1947a5c.js.map",
-    "787.128fc6e9.chunk.js.map": "/Portfolio/static/js/787.128fc6e9.chunk.js.map"
+    "main.aef576a9.css.map": "/Portfolio/static/css/main.aef576a9.css.map",
+    "main.4c77a979.js.map": "/Portfolio/static/js/main.4c77a979.js.map",
+    "453.41811d64.chunk.js.map": "/Portfolio/static/js/453.41811d64.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.a6d1591f.css",
-    "static/js/main.d1947a5c.js"
+    "static/css/main.aef576a9.css",
+    "static/js/main.4c77a979.js"
   ]
 }
