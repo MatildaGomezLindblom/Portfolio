@@ -7,11 +7,6 @@
   margin-top: -41px;
   scroll-snap-type: y mandatory;
 
-  .DF-section, .project-section-title, .project-section-subtitle {
-    padding-left: 10%;
-    padding-right: 10%;
-  }
-
   .DF-hero-container {
     display: flex;
     justify-content: center;
@@ -97,10 +92,6 @@
 
     img {
       width: 100%;
-    }
-
-    .section-section {
-      padding-top: 80px;
     }
 
     .highlighted-section {
@@ -279,15 +270,7 @@
   }
 
   @media (min-width: 1800px) {
-    .title {
-      padding-left: 10vw !important;
-    
-    }
 
-    .DF-section, .project-section-title, .project-section-subtitle {
-      padding-left: 10vw !important;
-      padding-right: 10vw !important;
-    }
     
     .content-container {
       grid-template-columns: 1fr 6fr;

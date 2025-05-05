@@ -221,11 +221,10 @@ body {
 
 .footer-container {
   width: 100%;
-  padding-top: 10px;
-  padding-bottom: 10px;
   z-index: 1000;
   position: relative;
   background-color: $background-color;
+
 }
 
 .footer {
@@ -233,9 +232,16 @@ body {
   padding-right: 10vw;
   display: flex;
   align-items: center;
+  width: 100vw;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 50px;
+  background-color: $background-color;
+  border-top: solid 0.2px $primary-color;
 
   p {
-    padding-right: 10px,;
+    padding-right: 10px;
   }
 }
 
@@ -251,3 +257,10 @@ body {
   }
 }
 
+.section-section {
+  padding-top: 150px;
+}
+
+.close-top {
+  padding-top: 0;
+}

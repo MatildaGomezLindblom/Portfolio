@@ -1,4 +1,5 @@
 import "../../styles/Memosphere.scss";
+import "../../styles/ProjectGlobal.scss";
 import { useLayoutEffect } from "react";
 import VerticalNavbar from "./VerticalNavbar";
 import ProjectOverview from "./ProjectOverview";
@@ -43,6 +44,7 @@ import memosphereProfileScreen from "../../assets/projects/Memosphere/memosphere
 
 import ImageCarousel from "./Carousel";
 import { FaGithub } from "react-icons/fa";
+import Footer from "../footer";
 
 function Memosphere() {
   useLayoutEffect(() => {
@@ -52,15 +54,15 @@ function Memosphere() {
   const projectData = {
     title: "Memosphere",
     subtitle:
-      "Stay in touch with loved ones in an exciting and unique way using AI.",
+      "Stay in touch with loved ones in a playful and unique way using AI.",
     sections: [
       {
         heading: "Challenge",
-        text: "Design and develop a mobile application using some type of new technology on the theme: 'Ensure that family, friends & professionals who care for seniors receive the support they need?'.",
+        text: "Create a mobile application on the theme: 'Ensure that family, friends & professionals who care for seniors receive the support they need?'.",
       },
       {
         heading: "Solution",
-        text: "An AI-driven mobile application aimed at strengthening the relationship between seniors and their loved ones by encouraging weekly contact where they share weekly updates.",
+        text: "An AI-driven mobile application aimed at strengthening the relationship between seniors and their loved ones by encouraging weekly contact.",
       },
     ],
     buttonText: "Jump to Results",
@@ -71,7 +73,7 @@ function Memosphere() {
       },
       {
         heading: "Resources",
-        text: "5 weeks 30% in a group of 6 people, with guidance from Daresay.",
+        text: "5 weeks 30% in a group of 6, with guidance from Daresay.",
       },
       {
         heading: "Tools",
@@ -81,10 +83,8 @@ function Memosphere() {
     role: {
       heading: "My Role and Tasks",
       tasks: [
-        "UX/UI design",
-        "User testing of prototypes",
-        "Design and set up database",
-        "Service layer for the database",
+        "UX/UI design and user testing",
+        "Design and set up database + service layer",
         "Publishing flow",
         "Research on OpenAI",
       ],
@@ -138,27 +138,20 @@ function Memosphere() {
       subtitle: "From idea to design in the blink of an eye.",
       content: (
         <div>
-          <div>
+          <div className="section-section close-top">
             <p>
-              We wanted to utilize AI, which led us to the idea of creating an
-              application where users share their week with family and friends.
-              Each week, users can upload a picture from the past week or
-              generate one using AI based on a prompt. The application will then
-              use OpenAI's Vision (new feature at the time) and a database of
-              questions to generate unique inspiration for the user. This makes
-              each weekly summary unique and interesting.
+              We wanted to explore AI and came up with an app where users share
+              a weekly summary with family and friends. Each week, they can
+              upload a photo or generate one using AI based on a prompt. Using
+              OpenAI’s Vision and a question database, the app creates unique,
+              personalized prompts to make each summary engaging.
               <br />
               <br />
-              In the application, users can see their friends in an fun and
-              innovative environment where, instead of viewing a list of
-              friends, they see their friends' characters on an interactive
-              canvas. This is designed to provide a unique and playful touch.
-              Users can navigate between their own profile and others' to view
-              their weekly summaries.
-              <br /> <br />
-              We also considered incorporating other data from the user's
-              device, such as health data, to ask more personalized questions
-              about this.
+              Instead of a standard friends list, users see their friends as
+              characters on an interactive canvas, adding a playful twist. Users
+              can view each other’s profiles and weekly summaries, and we also
+              considered integrating device data, like health stats, for more
+              tailored questions.
             </p>
             <img
               className="memosphere-storyboard"
@@ -213,8 +206,7 @@ function Memosphere() {
             <h3>Mid-fi</h3>
             <p>
               When we had a common understanding of what was needed, everyone
-              made one proposal each. Some chose to create sketches, while
-              others created wireframes or more of a mid-fi design.
+              made one proposal each.
             </p>
             <div>
               <ImageCarousel
@@ -226,9 +218,9 @@ function Memosphere() {
           <div className="section-section">
             <h3>Moodboard and graphic profile</h3>
             <p>
-              We reviewed all the proposals together and decided to move forward
-              with the space concept in version 1 as the foundation. We had many
-              similar ideas that collectively inspired the final design.
+              We decided to move forward with the space concept in version 1 as
+              the foundation. We had many similar ideas that collectively
+              inspired the final design.
             </p>
             <div className="mooadboard-graphicprofile-container">
               <img
@@ -243,10 +235,6 @@ function Memosphere() {
           </div>
           <div className="section-section">
             <h3>Hi-Fi</h3>
-            <p>
-              Based on the mood board, the graphic profile, and our collective
-              proposals, we developed a hi-fi in Figma.
-            </p>
             <div className="image-grid">
               {hiFiImages.map((src, index) => (
                 <img
@@ -265,22 +253,20 @@ function Memosphere() {
       id: "section2",
       title: "DEVELOPMENT",
       subtitle:
-        "From Figma prototype to functional application with AI support in React Native and Firestore database.",
+        "React Native application with AI support and a Firestore database.",
       content: (
         <div>
-          <p>
-            During development, we divided the work through a Kanban board via
-            GitHub. We started by diving into a new technology each, then
-            presented what we had learned to the rest of the group. After that,
-            we began programming. We did a lot of coding individually, but also
-            collaborated some towards the end.
+          <p className="section-section close-top">
+            We organized our development process using a Kanban board on GitHub.
+            Each team member explored a new technology and shared their findings
+            with the group. After that, we started coding individually, with
+            more collaboration towards the end.
           </p>
           <div className="section-section">
             <h3>Choice of AI model</h3>
             <p>
               We chose to use OpenAI because it is a user-friendly and
-              relatively inexpensive solution that some group members had
-              already used in previous projects. By the time we started our
+              relatively inexpensive solution. By the time we started our
               project, there had also been several updates to the service that
               we looked forward to utilizing! These were:
               <br />
@@ -288,8 +274,8 @@ function Memosphere() {
               <b>gpt-4-turbo:</b> a faster and cheaper version of gpt-4.
               <br />
               <br />
-              <b>DALL-E 3:</b>an AI model for image generation that enhances the
-              user's prompt when necessary to create even more detailed and
+              <b>DALL-E 3:</b> an AI model for image generation that enhances
+              the user's prompt when necessary to create even more detailed and
               creative images.
               <br />
               <br />
@@ -297,32 +283,16 @@ function Memosphere() {
               image processing to analyze images. It can understand and generate
               text based on visual insights, allowing it to analyze and answer
               questions about images, as well as create text that describes or
-              relates to images (super cool!!).
+              relates to images.
             </p>
           </div>
-          <div className="section-section memosphere-text-and-image">
+          <div className="section-section text-and-image">
             <div>
               <h3>The database</h3>
               <p>
-                Due to the limited time in the project, we chose to use a
-                Firestore database since it was something we were familiar with
-                from previous projects.
-                <br />
-                <br />
-                <b>Users</b> holds all user information, including the color of
-                their character's spacesuit and a profile picture for a more
-                personal touch.
-                <br />
-                <br />
-                <b>Friends</b> keeps track of all the user's friends and friend
-                requests.
-                <br />
-                <br />
-                <b>Weeks</b> contains information about the weekly updates for
-                all users.
-                <br />
-                To retrieve and manage information from the database, a service
-                layer was created.
+                We chose Firestore for its scalability, simplicity, and
+                real-time support. To retrieve and manage information from the
+                database, a service layer was created.
               </p>
             </div>
             <div>
@@ -332,7 +302,7 @@ function Memosphere() {
               ></img>
             </div>
           </div>
-          <div className="section-section memosphere-text-and-image">
+          <div className="section-section text-and-image">
             <div>
               <img
                 src={memosphereHomeScreen}
@@ -340,15 +310,14 @@ function Memosphere() {
               ></img>
             </div>
             <div>
-              <h3>Hemskärm med användare i rymdsetting</h3>
+              <h3>Home screen with contacts in space!</h3>
               <p>
                 The home screen displays you and your friends as space avatars.
                 You can choose a profile picture and a color for your avatar.
-                Currently, there are four colors available, but more can be
-                added. The avatars appear randomly, and your own avatar is
-                slightly larger and always centered. You can freely move the
-                avatars around the screen, and by clicking on an avatar, you
-                navigate to that person's profile and weekly flow.
+                The avatars appear randomly, and your own avatar is slightly
+                larger and always centered. You can freely move the avatars
+                around the screen, and by clicking on an avatar, you navigate to
+                that person's profile and weekly flow.
                 <br />
                 <br />
                 The menu button offers three options: settings, manage friends,
@@ -361,7 +330,7 @@ function Memosphere() {
               </p>
             </div>
           </div>
-          <div className="section-section memosphere-text-and-image">
+          <div className="section-section text-and-image">
             <div>
               <h3>Selecting the image of the week</h3>
               <p>
@@ -385,7 +354,7 @@ function Memosphere() {
               ></img>
             </div>
           </div>
-          <div className="section-section memosphere-text-and-image">
+          <div className="section-section text-and-image">
             <div>
               <img
                 src={memosphereCreateWeekScreen2}
@@ -395,12 +364,8 @@ function Memosphere() {
             <div>
               <h3>Writing the week description</h3>
               <p>
-                When the user selects an image, it is sent to OpenAI's API,
-                which analyzes it to generate inspiration for the user. For this
-                analysis, the newly released feature gpt-4-vision is used, a
-                model that can understand and generate text based on visual
-                insights. For this model, we sent the image along with the
-                following prompt:
+                When the user selects an image, it is sent to OpenAI's We sent
+                the image along with the following prompt:
                 <br />
                 <br />
                 <i>
@@ -420,7 +385,7 @@ function Memosphere() {
               </p>
             </div>
           </div>
-          <div className="section-section memosphere-text-and-image">
+          <div className="section-section text-and-image">
             <div>
               <h3>Profile Page</h3>
               <p>
@@ -471,7 +436,7 @@ function Memosphere() {
       subtitle: "And some concluding thoughts.",
       content: (
         <div>
-          <div>
+          <div className="section-section close-top">
             <p>
               The idea and the initial sketch of the app were developed in
               group. After that, we created our own interpretations of the
@@ -566,6 +531,7 @@ function Memosphere() {
           ))}
         </div>
       </div>
+      <Footer></Footer>
     </div>
   );
 }

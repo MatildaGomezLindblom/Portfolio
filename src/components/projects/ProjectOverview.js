@@ -1,9 +1,9 @@
 import React from "react";
 import "../../styles/Hotspot.scss";
-import ButtonSecondary from "../ButtonSecondary";
 import "../../styles/ProjectOverview.scss";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useState, useEffect } from "react";
+import ButtonPrimary from "../ButtonPrimary";
 
 function ProjectOverview({ projectData }) {
   const [isVisible, setIsVisible] = useState(false);
@@ -66,14 +66,14 @@ function ProjectOverview({ projectData }) {
               </div>
             ))}
             <div>
-              <ButtonSecondary
+              <ButtonPrimary
                 onClick={(e) => {
                   e.preventDefault();
                   scrollToSection("results");
                 }}
               >
                 {projectData.buttonText}
-              </ButtonSecondary>
+              </ButtonPrimary>
             </div>
           </div>
           <div className="line"></div>

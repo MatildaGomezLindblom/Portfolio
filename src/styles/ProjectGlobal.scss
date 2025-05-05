@@ -1,0 +1,74 @@
+@import "variables";
+
+.section-section {
+    padding-top: 150px;
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+
+  .text-and-image {
+    padding-top: 20%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    align-items: center;
+    padding-left: 10%;
+    padding-right: 10%;
+
+    h3 p {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+  }
+
+  .project-section-title {
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+
+  .project-section-subtitle {
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+  
+  @media (max-width: 450px) {
+    .section-section {
+      padding-top: 150px;
+    }
+  }
+  
+  .close-top {
+    padding-top: 0;
+  }
+
+  @media (min-width: 1500px) {
+    .section-section {
+        padding-left: 20%;
+        padding-right: 20%;
+    }
+    .project-section-title {
+        padding-left: 20%;
+        padding-right: 20%;
+      }
+    
+      .project-section-subtitle {
+        padding-left: 20%;
+        padding-right: 20%;
+      }
+
+      .text-and-image {
+        padding-left: 20%;
+        padding-right: 20%;
+      }
+  }
+
+  @media (max-width: 1500px) {
+    .text-and-image {
+        padding-top: 20%;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 20px;
+        align-items: center;
+      }
+  }
+

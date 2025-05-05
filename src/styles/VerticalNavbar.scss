@@ -37,11 +37,13 @@
   margin: 5px 0;
   border-radius: 2px;
   transition: background-color 0.5s;
+  font-size: 14px;
+  font-weight: bold;
 }
 
 .vertical-navbar-container a.active {
   position: relative; 
-  font-size: 19px;
+  font-size: 16px;
   transition: font-size 0.5s ease; 
 }
 
@@ -58,7 +60,7 @@
 }
 
 .vertical-navbar-container a:hover {
-  font-size: 19px;
+  font-size: 16px;
   transition: font-size 0.3s ease; 
 }
 

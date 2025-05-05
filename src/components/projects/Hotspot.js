@@ -18,6 +18,7 @@ import hotspotGraphicProfile from "../../assets/projects/Hotspot/hotspotGraphicP
 import hotspotHiFi from "../../assets/projects/Hotspot/hotspotHiFi.png";
 import hotspotDatabase from "../../assets/projects/Hotspot/hotspotDatabase.png";
 import { FaGithub } from "react-icons/fa";
+import Footer from "../footer";
 
 function Hotspot() {
   useLayoutEffect(() => {
@@ -30,11 +31,11 @@ function Hotspot() {
     sections: [
       {
         heading: "Challenge",
-        text: "Design and develop an interactive prototype of a mobile application, with extra focus on accessibility. We chose to solve the problem of finding hidden gems in a smooth and reliable way.",
+        text: "Design and develop an interactive mobile application, with focus on accessibility. We chose to solve the problem of finding hidden gems in a smooth and reliable way.",
       },
       {
         heading: "Solution",
-        text: "An app with user management and an integrated map where users can create pins for their favorite places with comments shared among the user's friends.",
+        text: "An app with user management and an integrated map where users can create pins for their favorite places with comments, shared among the user's friends.",
       },
     ],
     buttonText: "Jump to the result",
@@ -55,12 +56,9 @@ function Hotspot() {
     role: {
       heading: "My role",
       tasks: [
-        "UX/UI design",
-        "User testing of prototypes",
-        "Designing and setting up the database",
-        "Service layer for the database",
-        "Friends page",
-        "Search function for friends",
+        "UX/UI design and user testing",
+        "Designing and setting up the database with services",
+        "Friends page with search functionality",
       ],
     },
   };
@@ -87,11 +85,11 @@ function Hotspot() {
     {
       id: "section1",
       title: "DESIGN",
-      subtitle: "From idea to tested hi-fi in Figma in a week.",
+      subtitle: "From idea to tested hi-fi in a week.",
       content: (
         <div>
           <div>
-            <p>
+            <p className="section-section close-top">
               The idea was to create an application that allows users to pin
               locations on the map, both for their own benefit and to create a
               recommendation system for friends and family that would be more
@@ -100,10 +98,26 @@ function Hotspot() {
             <div className="design-overview">
               <div className="design-overview-content">
                 <img id="idea" alt="light bulb sketch" src={idea}></img>
-                <img id="arrowDownRight" alt="arrow pointing down right" src={arrowDownRight}></img>
-                <img id="hotspotLoFiPreview" alt="lo fi preview of hotspot"  src={hotspotLoFiPreview}></img>
-                <img id="arrowUpRight" alt="arrow pointing up and right" src={arrowUpRight}></img>
-                <img id="hotspotHiFiPreview" alt="hi fi preview of hotspot" src={hotspotHiFiPreview}></img>
+                <img
+                  id="arrowDownRight"
+                  alt="arrow pointing down right"
+                  src={arrowDownRight}
+                ></img>
+                <img
+                  id="hotspotLoFiPreview"
+                  alt="lo fi preview of hotspot"
+                  src={hotspotLoFiPreview}
+                ></img>
+                <img
+                  id="arrowUpRight"
+                  alt="arrow pointing up and right"
+                  src={arrowUpRight}
+                ></img>
+                <img
+                  id="hotspotHiFiPreview"
+                  alt="hi fi preview of hotspot"
+                  src={hotspotHiFiPreview}
+                ></img>
               </div>
             </div>
           </div>
@@ -119,13 +133,11 @@ function Hotspot() {
           <div className="section-section">
             <h3>Lo-fi</h3>
             <p>
-              We knew we needed a map with search and filtering functions, the
-              creation and display of pins, profiles, and functionality to log
-              in and out as well as to manage friends. Based on this, a lo-fi
-              prototype was created in Figma. The biggest challenge was figuring
-              out where these components should be placed to make the
-              navigation as intuitive as possible. Therefore, three versions
-              were created and tested on six users.
+              Based on the basic components we knew we wanted, a lo-fi prototype
+              was created in Figma. The biggest challenge was figuring out where
+              these components should be placed to make the navigation as
+              intuitive as possible. Therefore, three versions were created and
+              tested on six users.
             </p>
             <div>
               <ImageCarousel
@@ -139,15 +151,12 @@ function Hotspot() {
               <h3>Results from user testing</h3>
               <p>
                 The testing showed that it was not appreciated when the icon in
-                the navbar changed depending on which page the user was on.
-                Therefore, versions 1 and 2 were the favorites. We chose to
-                continue with version 1 since the navigation resembled other
-                popular apps like Instagram, with some adjustments based on
-                feedback from the testing.{" "}
+                the navbar changed depending on which page the user was on. We
+                chose to continue with version 1 since the navigation resembled
+                other popular apps like Instagram, with some adjustments based
+                on feedback from the testing.{" "}
               </p>
-              <p className="list-title">
-                Some changes that were made:
-              </p>
+              <p className="list-title">Some changes that were made:</p>
               <ul>
                 <li>
                   Only one map instead of separate ones for my pins and my
@@ -169,11 +178,11 @@ function Hotspot() {
           <div className="section-section">
             <h3>Moodboard and graphic profile</h3>
             <p>
-              Since our application would contain a map with pins as well as a
-              lot of images, we chose to stick to a few colors and a light
-              theme. We selected a muted red for highlighted elements like
-              buttons, along with a beige-yellow as a complement to create a
-              nice gradient.
+              Since the application would contain a map and images, we chose to
+              stick to a few colors and a light theme. We selected a muted red
+              for highlighted elements like buttons, along with a beige-yellow
+              as a complement to create a nice gradient. Nunito and rounded
+              buttons creats a friendly and fun feel.
             </p>
             <div className="mooadboard-graphicprofile-container">
               <img
@@ -188,11 +197,7 @@ function Hotspot() {
           </div>
           <div className="section-section">
             <h3>Hi-Fi</h3>
-            <p>
-              Based on the mood board, the graphic profile, as well as the
-              updated low-fidelity prototype, a high-fidelity design was created
-              in Figma. Below are some of the pages we made.
-            </p>
+            <p>A hi-fi design was then created in Figma.</p>
             <img
               className="hotspotHiFi"
               src={hotspotHiFi}
@@ -206,38 +211,22 @@ function Hotspot() {
       id: "section2",
       title: "DEVELOPMENT",
       subtitle:
-        "From Figma prototype to a semi-functional application with user management and map functionality in React Native, with a Firestore database.",
+        "Creating an application with user management and map functionality in React Native, with a Firestore database.",
       content: (
         <div>
-          <p>
-            During the programming phase, we spent a lot of time together as a
-            group in the beginning to plan and establish a unified structure for
-            the project. We set up a Kanban board where everyone could take on
-            their own tasks since we were working individually a lot. At the
-            end, we spent a few days together to connect all the parts and
-            finalize what had not been completed.
-          </p>
-          <div className="section-section">
+          <div className="section-section close-top">
             <h3>The database</h3>
             <p>
-              We chose to use Firestore as the database for our project due to
-              its scalability and simplicity, as well as its support for
-              real-time updates. This was my first experience with a NoSQL
-              database, which required some research to establish a database
-              structure we were satisfied with. We considered two options for
-              storing friend lists: either as part of the user document or as a
-              separate collection. We decided to create a separate collection
-              for friends. This improves performance and scalability by avoiding
-              the need to read the entire user document each time we fetch a
-              user's friend list, although it does make the queries a bit more
-              complex.
+              We chose Firestore for its scalability, simplicity, and real-time
+              support. As my first NoSQL experience, I researched how to
+              structure the database and we opted to store friend lists in a
+              separate collection to improve performance and scalability,
+              despite slightly more complex queries.
               <br />
               <br />
-              In the same way, we handle pins. We have a separate collection for
-              user IDs that contains a subcollection for pins, where each
-              document represents a user's pin. This structure facilitates the
-              management and retrieval of pins while keeping the user documents
-              more manageable.
+              Similarly, we store pins in a subcollection under each user ID,
+              keeping user documents lightweight and making pin management and
+              retrieval more efficient.
             </p>
             <img
               src={hotspotDatabase}
@@ -247,53 +236,42 @@ function Hotspot() {
           <div className="section-section">
             <h3>The Map and Pins</h3>
             <p>
-              The map and pins are central parts of Hotspot. For the map
-              display, we use react-native-maps, which integrates with Google
-              Maps on Android and Apple Maps or Google Maps on iOS. The current
-              location is determined using expo-location, allowing the map to
-              center on the user's position. To quickly search for and navigate
-              to specific locations, we use
-              react-native-google-places-autocomplete, which provides search
-              suggestions as the user types.
+              The map with pins is the core of Hotspot. We use{" "}
+              <b>react-native-maps</b>{" "}
+              for map display, integrating with Google or Apple Maps depending
+              on the platform. <b>expo-location</b>{" "} centers the map on the
+              user's current location, while{" "}
+              <b>react-native-google-places-autocomplete</b>{" "}
+               enables fast, suggestion-based search.
               <br />
               <br />
               Pins on the map are placed during loading and represent both the
-              user's own pins and their friends' pins from the database. Each
-              pin has a unique color and icon based on its category, and the
-              user can filter pins by category, such as beaches.
+              user's and their friends pins. Each pin has a unique color and
+              icon based on its category, in which they can be filtered by.
               <br />
               <br />
-              When a user creates a pin, they add a picture, location,
-              description, and title. The new pin is visible on both the user's
-              and their friends' maps. Each pin is enriched with location
-              information from the Google Places API. If multiple users within
-              the same friendship group create pins at the same location, these
-              will be grouped under a common pin, preventing multiple pins from
-              being created for the same favorite spot.
+              When creating a pin, users add a title, description, location, and
+              photo. Pins appear on both the user’s and their friends’ maps and
+              are enriched with data from the Google Places API. To avoid
+              duplicates, pins created at the same location within a friend
+              group are grouped into one shared marker.
             </p>
           </div>
           <div className="section-section">
             <h3>Users Management</h3>
             <p>
-              To create an account in the app, the user needs to provide an
-              email address, name, and password. The user also has the option to
-              upload a profile picture from their camera roll. On their profile,
-              the user can see their own information, a feed of their pins, and
-              a preview of their friends. The user can also click to navigate to
-              friends' profiles.
+              To sign up, users provide an email, name, password, and optionally
+              upload a profile picture. Their profile displays personal info, a
+              pin feed, and a friends preview, with the option to view others'
+              profiles.
               <br />
               <br />
-              When navigating to a friend's page, the application loads the
-              user's friend list. Friend requests are displayed at the top of
-              the page, with only one request shown initially. Below the friend
-              requests, there is a list of the user's friends. The page includes
-              a search box at the top where the user can search for usernames.
-              When searching, matching friends are displayed first, followed by
-              friends of friends, and lastly users who have no mutual friends
-              with the searcher. The profile cards for friends show a picture,
-              name, and any friendship status. The user can swipe on a card to
-              quickly add or remove a friend, or click on the card to access a
-              more detailed view with the same functionality.
+              On a friend's profile, users can see friend requests, a friend
+              list, and a search box to find users. Search results are
+              prioritized by connection: friends first, then friends of friends,
+              and finally others.Each profile card shows a photo, name, and
+              friendship status. Users can swipe to add/remove friends or tap to
+              view full details and manage the connection.
             </p>
           </div>
         </div>
@@ -302,9 +280,9 @@ function Hotspot() {
     {
       id: "results",
       title: "RESULTS",
-      subtitle: "Demo video and link to GitHub repo.",
+      subtitle: "Demo video!",
       content: (
-        <div className="section-section">
+        <div className="section-section" style={{ paddingTop: "0" }}>
           <iframe
             src={`https://www.youtube.com/embed/1zZFFfUX72g`}
             frameBorder="0"
@@ -312,10 +290,6 @@ function Hotspot() {
             allowFullScreen
             title="Embedded youtube"
           />
-          <a href="https://github.com/OlleStrandberg/Pumaproject">
-            {" "}
-            <FaGithub /> GitHub repo här
-          </a>
         </div>
       ),
     },
@@ -326,50 +300,45 @@ function Hotspot() {
       content: (
         <div>
           <div>
-            <p>
+            <p className="section-section close-top">
               The design part was mostly done together, but my main focus was on
-              the friends' page and buttons, which also became my focus during
-              the development phase. It was an interesting page to work on as it
+              the friends' page, which also became my focus during the
+              development phase. It was an interesting page to work on as it
               included swipe animations, dropdowns, data loading, and a more
               advanced search function.
               <br />
               <br />
               I also took on the task of handling the database. Firebase was
               completely new to me, and it was a very rewarding challenge! I
-              planned and presented the structure as well as creating a service
-              layer and testing. During the final phase of the project, I
-              ensured that the service layer was integrated with all pages in
-              the application and that the data flowed smoothly between all
-              components so that the application functioned as intended.
+              planned and presented the structure and created a service layer +
+              testing. During the final phase of the project, I ensured that the
+              service layer was integrated with all pages in the application and
+              that the data flowed smoothly between all components so that the
+              application functioned as intended.
               <br />
               <br />
-              The most enjoyable part of the project was that we, as a group,
-              could create so much functionality in a short time thanks to our
-              collaboration. I also had the chance to learn about NoSQL and
-              Firebase, and my role gave me a pretty good overview of how
-              everything would come together in the end.
+              The most rewarding part of the project was how much we
+              accomplished in a short time through strong collaboration. I also
+              gained hands-on experience with NoSQL and Firebase, and my role
+              gave me a solid understanding of how all parts of the app fit
+              together.
             </p>
           </div>
           <div className="section-section">
             <h3>Improvement opportunities</h3>
             <p>
-              Due to the limited time, combined with the fact that we were using
-              some new frameworks, we did not manage to create a fully
-              functional application. It still lacks many desired
-              functionalities, such as filtering pins by friends or adding a
-              friend directly from their profile page. There are also some bugs
-              since we didn’t have time to test the application thoroughly at
-              the end, as well as some warnings that appear in Expo; however,
-              these don’t seem to affect functionality.
+              Due to time constraints and working with new frameworks, we didn’t
+              manage to build a fully functional app. Features like filtering
+              pins by friends or adding a friend from their profile are still
+              missing, and some bugs and Expo warnings remain due to limited
+              testing.
               <br />
               <br />
-              If we were to redo the project, I would skip trying to fix Google
-              Sign-In since it ultimately wasn’t compatible with Expo. I would
-              also ensure that we made an even more detailed plan at the
-              beginning to ensure that all parts fit together better in the end.
-              Perhaps I would have omitted certain functionalities, such as
-              login, to have time for testing at the end to eliminate even more
-              bugs and warnings.
+              In hindsight, we should have skipped trying to implement Google
+              Sign-In (which wasn’t compatible with Expo) and made a more
+              detailed plan early on to better align all parts of the project. I
+              might also have deprioritized login to allow time for more
+              thorough testing.
               <br />
               <br />
               Despite this, I am very proud of the result, and it was a very
@@ -377,7 +346,7 @@ function Hotspot() {
             </p>
             <p>
               <i>
-                Hotspot was done in collaboration with Vilma Christensen, Linnea
+                Hotspot was done in collaboration with the amazing Vilma Christensen, Linnea
                 Nilsson, Olle Strandberg and Malin Ramstedt.
               </i>
             </p>
@@ -407,6 +376,7 @@ function Hotspot() {
           ))}
         </div>
       </div>
+      <Footer></Footer>
     </div>
   );
 }

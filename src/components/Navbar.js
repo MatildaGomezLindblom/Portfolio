@@ -100,7 +100,7 @@ function Navbar({ toggleTheme }) {
                 </a>
               </li>
               <li onClick={removeActive}>
-                <a href="./CV-Matilda-Gomez-Lindblom.pdf" download="CV.pdf" className="CV">
+                <a href="/CV-Matilda-Gomez-Lindblom.pdf" type="application/pdf" download="CV-Matilda-Gomez-Lindblom.pdf" className="CV">
                   RESUME <IoMdDownload />
                 </a>
               </li>

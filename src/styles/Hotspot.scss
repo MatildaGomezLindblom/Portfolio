@@ -34,10 +34,6 @@
     z-index: 4;
     scroll-snap-align: start;
 
-    h3 {
-      padding-left: 10%;
-      padding-right: 10%;
-    }
 
     h4 {
       padding-top: 10px;
@@ -76,15 +72,11 @@
     color: $secondary-color;
     padding-bottom: 0;
     margin-bottom: 0;
-    padding-left: 10%;
-    padding-right: 10%;
   }
 
   .project-section-subtitle {
     padding-top: 0;
     margin-top: 0;
-    padding-left: 10%;
-    padding-right: 10%;
   }
 
   img {
@@ -110,8 +102,6 @@
     }
 
     p {
-      padding-left: 10%;
-      padding-right: 10%;
       padding-bottom: 20px;
     }
 
@@ -142,15 +132,17 @@
       width: 35%;
     }
 
-    .section-section {
-      padding-top: 100px;
-    }
-
     .hotspot-testing-results {
       display: flex;
       flex-direction: row;
       padding-right: 5px;
       padding-left: 5px;
+      padding-left: 10%;
+      padding-right: 10%;
+
+      ul {
+        width: 100%;
+      }
     }
 
     .hotspot-testing-results img {
@@ -164,8 +156,6 @@
 
     .hotspot-storyboard {
       width: 90%;
-      padding-left: 10%;
-      padding-right: 10%;
     }
 
     .mooadboard-graphicprofile-container {
@@ -173,22 +163,14 @@
       grid-template-columns: 1fr 1fr;
       gap: 10px;
       padding: 10px;
-      padding-left: 10%;
-      padding-right: 10%;
     }
 
-    .hotspotHiFi {
-      padding-left: 10%;
-      padding-right: 10%;
-    }
   }
 
   #section2 {
     height: auto;
     padding-top: 150px;
     p {
-      padding-left: 10%;
-      padding-right: 10%;
       padding-bottom: 20px;
     }
   }
@@ -197,8 +179,6 @@
     height: auto;
     padding-top: 150px;
     iframe {
-      padding-left: 10%;
-      padding-right: 10%;
       width: auto;
       height: 60vh;
     }
@@ -218,8 +198,6 @@
     height: auto;
     padding-top: 150px;
     p {
-      padding-left: 10%;
-      padding-right: 10%;
       padding-bottom: 20px;
     }
 
@@ -228,7 +206,7 @@
     }
   }
 
-  @media (max-width: 1000px) {
+  @media (max-width: 1500px) {
     #section1 {
       .hotspot-testing-results {
         flex-direction: column;
@@ -255,62 +233,5 @@
     }
   }
 
-  @media (min-width: 1800px) {
-    .title {
-      padding-left: 10vw !important;
-    }
 
-    #section1,
-    #section2,
-    #results,
-    #section4 {
-      h2,
-      h3,
-      h4,
-      p,
-      ul,
-      a {
-        padding-left: 10vw !important;
-        padding-right: 10vw !important;
-      }
-
-      .design-overview-content {
-        padding: 80px 10vw !important;
-      }
-
-      .hotspot-storyboard,
-      .mooadboard-graphicprofile-container,
-      .hotspotHiFi {
-        padding-left: 10vw !important;
-        padding-right: 10vw !important;
-      }
-
-      .hotspot-testing-results {
-        padding-right: 10vw !important;
-        padding-left: 10vw !important;
-      }
-
-      iframe {
-        padding-left: 10vw !important;
-        padding-right: 10vw !important;
-      }
-
-      .space {
-        margin-left: 10vw !important;
-        margin-right: 10vw !important;
-      }
-
-      .hotspot-testing-results {
-        h2,
-        h3,
-        h4,
-        p,
-        ul,
-        a {
-          padding-left: 0vw !important;
-          padding-right: 0vw !important;
-        }
-      }
-    }
-  }
 }

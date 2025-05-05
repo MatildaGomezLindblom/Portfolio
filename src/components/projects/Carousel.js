@@ -26,7 +26,7 @@ const ImageCarousel = ({ images }) => {
         {images.map((image, index) => (
           <div key={index} className="carousel-item">
             <img src={image.src} alt={`Slide ${index}`} className="carousel-image" />
-            <p className="carousel-legend">{image.legend}</p>
+            <p className="carousel-legend smaller-text">{image.legend}</p>
           </div>
         ))}
       </div>

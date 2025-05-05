@@ -1,4 +1,5 @@
 import "../../styles/DF.scss";
+import "../../styles/ProjectGlobal.scss";
 import { useLayoutEffect } from "react";
 import VerticalNavbar from "./VerticalNavbar";
 import ProjectOverview from "./ProjectOverview";
@@ -6,6 +7,7 @@ import ImageCarousel from "./Carousel";
 import { FaGithub } from "react-icons/fa";
 import DFPhotoWallFront from "../../assets/projects/DF/DFPhotoWallFront.png";
 import DFPhotoWallBackside from "../../assets/projects/DF/DFPhotoWallBackside.png";
+import Footer from "../footer";
 
 import LoFiExampleDF from "../../assets/projects/DF/LoFiExampleDF.png";
 import arrowDownRight from "../../assets/projects/Hotspot/arrowDownRight.png";
@@ -50,17 +52,17 @@ function DF() {
   });
 
   const projectData = {
-    title: "Digital photo wall",
+    title: "Digital Photo Wall",
     subtitle:
       "A digital and interactive complement to Knightec's physical photo wall.",
     sections: [
       {
         heading: "Challenge",
-        text: "To design and develop a digital version of the analog photo wall at Knightec's office, aiming to reinforcing the impression that the company is at the forefront of technology and increasing community in the office.",
+        text: "Create digital version of Knightec’s analog photo wall, reinforcing the company’s tech-forward identity and strengthening the sense of community in the office.",
       },
       {
         heading: "Solution",
-        text: "A web application in two parts: a touch view for the office and a desktop view. The application allows users to see professional and personal information about all office employees, sort and filter by different groups, and spread information about events and similar activities.",
+        text: "A web application with both an admin version and a public interface allowing users to see information about all office employees, sort and filter by different groups, and share updates about events and activities.",
       },
     ],
     buttonText: "Jump to the results",
@@ -71,7 +73,7 @@ function DF() {
       },
       {
         heading: "Resources",
-        text: "Design 15 weeks at 25 % in a group of 5 people (approximately the scope of a master thesis) and 8 weeks of development 50 % 7,5 hp, supervised by Knightec.",
+        text: "Design 15 weeks at 25 % and 8 weeks of development 50 %, in a group of 5, supervised by Knightec.",
       },
       {
         heading: "Tools",
@@ -81,8 +83,7 @@ function DF() {
     role: {
       heading: "My role and tasks",
       tasks: [
-        "UX/UI design",
-        "User testing of prototypes",
+        "UX/UI design and user testing",
         "Architecture",
         "Calendar implementation",
         "Posts and events",
@@ -136,8 +137,7 @@ function DF() {
     {
       id: "section1",
       title: "DESIGN INTRODUCTION",
-      subtitle:
-        "A thorough design process from concept to interactive Hi-Fi in Figma.",
+      subtitle: "A thorough design process.",
       content: (
         <div className="DF-section">
           <div className="design-overview">
@@ -149,13 +149,12 @@ function DF() {
               <img id="DFHiFiPreview" src={HiFiExampleDF}></img>
             </div>
           </div>
-          <p>
-            While exploring exciting projects for the course, we connected with
-            a team at Knightec who proposed digitizing their office's physical
-            photo wall. The wall features employee photos that flip to reveal
-            self-written introductions. Their idea was to create a digital
-            version with the same purpose, enhanced by added functionality and
-            interactivity.
+          <p className="section-section close-top">
+            We connected with a team at Knightec who wanted us to digitalize
+            their office's physical photo wall that features employee photos
+            that flip to reveal self-written introductions. Their idea was to
+            create a digital version with the same purpose, enhanced by added
+            functionality and interactivity.
           </p>
           <div className="DF-split-view">
             <img
@@ -175,24 +174,22 @@ function DF() {
       title: "PRESTUDY",
       subtitle: "Project preparations and a deep dive into the problem area.",
       content: (
-        <div className="DF-section">
+        <div>
           <div>
-            <div>
+            <div className="section-section close-top">
               <h3>Market Analysis</h3>
               <p>
-                After a planning phase that included a SWOT analysis and the
-                planning of the agile project through a GANTT chart, a market
-                analysis was conducted where everyone in the group individually
-                looked up similar services. Images and links were collected to
-                create boards with inspiration to use moving forward.
+                After a planning phase involving a SWOT analysis and a GANTT
+                chart, we conducted a market analysis where each team member
+                researched similar services. We gathered images and links to
+                create inspiration boards.
                 <br />
                 <br />
-                We found many companies using large screens to display employee
-                photos but no digital solution matching the client's vision. HR
-                platforms showcasing employees in various ways were explored,
-                along with office screens highlighting employee recognition,
-                achievements, and social media, which inspired the project's
-                direction.
+                While many companies use large screens to display employee
+                photos, we found no digital solution that matched the client’s
+                vision. We explored HR platforms and office display solutions
+                showcasing employee recognition and achievements, which helped
+                shape the project’s direction.
               </p>
             </div>
             <img
@@ -203,15 +200,11 @@ function DF() {
           <div className="section-section">
             <h3>Personas</h3>
             <p>
-              To understand the different types of people who will use the
-              service, the client provided various use cases that
-              formed the basis for two personas we found particularly
-              interesting to keep in mind. The first is for a more experienced
-              employee who is currently working remotely and finds it a bit
-              challenging to keep up with changes at the office from home. The
-              second one is younger and represents newcomers to the workplace as
-              well as interns. This is a person who wants to use the service to
-              get to know colleagues and feel included in the workplace.
+              To understand the users, the client provided use cases that helped
+              us develop two key personas. One is a senior employee working
+              remotely who struggles to stay updated on office happenings. The
+              other is a younger newcomer or intern who wants to get to know
+              colleagues and feel included at work.
             </p>
           </div>
           <div className="DF-split-view">
@@ -263,16 +256,13 @@ function DF() {
             <div className="highlighted-section">
               <h3>Conclusions from interviews</h3>
               <p>
-                After discussions with the clients, it was decided that the
-                purpose of the service is to be a fun complement to the photo
-                wall for the employees, meaning it will not serve as advertising
-                outward. However, it was discussed that the service could later
-                be developed to also function as the outward-facing aspect by
-                combining it with the information screen in the lobby. The
-                screen should have fun features, but also important and useful
-                functionality, such as seeing who works where, groupings,
-                contact details, etc. The service should be designed for a
-                smaller screen, such as a larger computer monitor.
+                Following discussions with the client, the service was defined
+                as a fun internal complement to the existing photo wall, not an
+                outward-facing tool. However, future development could expand
+                its use to the lobby’s information screen. The goal is a
+                feature-rich interface that includes team groupings, contact
+                details, and workplace locations, designed to fit a larger
+                computer monitor.
               </p>
             </div>
           </div>
@@ -280,9 +270,8 @@ function DF() {
             <div>
               <h3>Brainstorming and prioritazion</h3>
               <p>
-                We used brainstorming for idea generation of various features
-                that the solution could include. These were written down on
-                post-it notes, which were then prioritized in an{" "}
+                We used brainstorming where ideas were written down on post-it
+                notes, which were then prioritized in an{" "}
                 <a
                   href="https://www.nngroup.com/articles/prioritization-methods/"
                   target="_blank"
@@ -303,18 +292,16 @@ function DF() {
     {
       id: "section3",
       title: "Lo-Fi",
-      subtitle: "From idea to a tested first prototype",
+      subtitle: "The first prototype",
       content: (
-        <div className="DF-section">
-          <div>
+        <div>
+          <div className="section-section close-top">
             <h3>Lo-Fi</h3>
             <p>
               Each group member first created their own interpretation of the
-              prioritized ideas by making Lo-Fi designs. After this, a new
-              iteration of the same phase took place, where everyone in the
-              group once again individually created digital wireframes inspired
-              by the previous sketches. This was done to create common
-              wireframes compiled from all individual sketches.
+              prioritized ideas by creating sketches, follwed by an iteration
+              where everyone in the group individually created digital
+              wireframes.
             </p>
             <div>
               <ImageCarousel
@@ -326,9 +313,8 @@ function DF() {
           <div className="section-section">
             <h3>Wireframes</h3>
             <p>
-              After the second individual iteration, a joint iteration was
-              conducted where wireframes were created based on what we liked
-              from our proposals. Below are some of them:
+              After the second iteration, we combined our favorite ideas into
+              shared wireframes. Some examples are shown below:
             </p>
             <div className="image-grid">
               {LoFiImages.map((src, index) => (
@@ -341,7 +327,7 @@ function DF() {
               ))}
             </div>
           </div>
-          <div>
+          <div className="section-section">
             <h3>Testing of Wireframes</h3>
             <p>
               The testing was conducted with the clients and supervisors at
@@ -366,20 +352,17 @@ function DF() {
     {
       id: "section4",
       title: "Hi-Fi",
-      subtitle: "The final Hi-Fi prototype in Figma.",
+      subtitle: "The final prototype in Figma.",
       content: (
-        <div className="DF-section">
-          <p>
-            The HiFi prototype was created in Figma. The design is based on the
-            updated wireframes and adds color and shape as well as some extra
-            functionality that emerged during testing.
-          </p>
-          <div className="">
-            <h3>Graphic profile</h3>
-            <p>
-              The graphic profile is inspired by Knightec's current website and
-              Instagram feed:
-            </p>
+        <div>
+          <div>
+            <div className="section-section close-top">
+              <h3>Graphic profile</h3>
+              <p>
+                The graphic profile is inspired by Knightec's current website
+                and Instagram feed:
+              </p>
+            </div>
             <div className="DF-split-view">
               <img
                 src={DFKnightecInstagram}
@@ -390,28 +373,17 @@ function DF() {
                 alt="Screenshot from Knightecs website."
               ></img>
             </div>
-            <div className="DF-text-and-image">
+            <div className="section-section">
               <div>
                 <p>
-                  Fonts and other styling were taken from the website when
-                  possible. The color palette mainly consists of white and
-                  black, with a lot of images, primarily of nature. Therefore,
-                  white and black were chosen as the primary/neutral colors of
-                  the design, with a slight tone down to avoid high contrast
-                  that wouldn't align with accessability standards. Nature
-                  images were sourced from Knightec's website as well as various
-                  free platforms. Components such as buttons and the navigation
-                  bar were imitated to create consistency between the photo wall
-                  complement and the rest of the company’s graphic identity.
-                  <br />
-                  <br />
-                  Additionally, we chose to add a gray and a purple to have more
-                  color to work with to highlight certain aspects. To denote
-                  destructive actions such as delete, a slightly toned-down red
-                  color was selected. Generally, the buttons are black, but
-                  these extra colors help guide the eye to the right place
-                  during processes. Also, it's easier for the user to understand
-                  the meaning of the button with color and not just words.
+                  We based the design on Knightec’s existing website, using
+                  fonts, nature imagery, and a primarily black-and-white palette
+                  to maintain consistency and accessibility. To avoid harsh
+                  contrast, we slightly toned down the colors. For visual
+                  hierarchy and clearer UI signals, we added a soft gray, a
+                  purple for highlights, and a muted red for destructive
+                  actions. Buttons are generally black, but color is used
+                  strategically to guide the user and clarify intent.
                 </p>
               </div>
               <img
@@ -419,7 +391,7 @@ function DF() {
                 alt="The graphical profile inspired by Knightecs graphical identity."
               ></img>
             </div>
-            <div className="DF-text-and-image">
+            <div className="text-and-image">
               <img
                 src={DFIcons}
                 alt="The graphical profile inspired by Knightecs graphical identity."
@@ -430,14 +402,12 @@ function DF() {
                   was a "down arrow." This was then used to create a "back
                   arrow" and a "remove cross." The remaining icons were sourced
                   from an icon library and modified to appear more uniform.
-                  Different versions of each icon were developed to select the
-                  one that feels most relevant for the purpose.
                 </p>
               </div>
             </div>
           </div>
           <div className="section-section">
-            <h3>Testning of the Hi-Fi prototype</h3>
+            <h3>Testning the Hi-Fi</h3>
             <p>
               The testing was conducted on-site with the client (who had been
               involved throughout the entire process) and a graduate student in
@@ -486,14 +456,14 @@ function DF() {
       title: "DEVELOPMENT",
       subtitle: "The development of the touch screen view in Next.js.",
       content: (
-        <div className="DF-section">
+        <div className="section-section close-top">
           <p>
-            The development took place during a project course called Avancerat
-            kvalitetsprojekt inom Interaktionsteknik, and was planned by one of
-            the group members during a summer job at Knightec. The goal was to
-            develop a first prototype of the touch view, as a foundation that
-            Knightec could keep building on. This was done using Scrum, in 5
-            sprints of two weeks each and maintained through DevOps and GIT:
+            The development took place during a project course and was planned
+            by one of the group members during a previous summer job at
+            Knightec. The goal was to develop a first prototype of the touch
+            view, as a foundation that Knightec could keep building on. This was
+            done using Scrum, in 5 sprints of two weeks each and maintained
+            through DevOps and Git:
             <br />
             <br />
             <b>Sprint 1</b>
@@ -534,33 +504,23 @@ function DF() {
           </p>
           <h3>Next.js</h3>
           <p>
-            Next.js is a React framework designed for building fast, scalable
-            web applications. Its foundation in React made it familiar to the
-            team, but it also introduced valuable enhancements. With hybrid
-            rendering capabilities (both client and server-side), Next.js
-            enables faster page loads. It also simplifies route management and
-            includes features like prefetching and image optimization. Given
-            that the photo wall contains numerous images and various components
-            on each page, efficient rendering is crucial to ensure a smooth user
-            experience. These features made Next.js an ideal choice for this
-            project.
+            Next.js, built on React, was a natural choice for our team and
+            offered key advantages like hybrid rendering, simplified routing,
+            prefetching, and image optimization. These features were especially
+            valuable given the image-heavy nature of the photo wall, helping
+            ensure smooth performance and fast page loads."
           </p>
           <h3>Sass for styleing</h3>
           <p>
-            Next.js supports Sass, a CSS library that enhances styling with
-            features like global variables, nesting, and modularization. These
-            capabilities make styling more efficient and scalable, which is
-            crucial since this project is intended for future expansion by
-            Knightec. We primarily utilized Sass variables to simplify future
-            adjustments to the color scheme and fonts, ensuring easy updates as
-            the design evolves.
+            Next.js supports Sass, which we used for efficient and scalable
+            styling. Sass variables made it easy to manage colors and fonts,
+            ensuring the design can be easily updated as the project evolves.
           </p>
           <h3>Supabase database</h3>
           <p>
-            Knightec didn't request a backend with the prototype but we decided
-            to set up a Supabase with dummy data to be able to implement and
-            test all the functionality we wished for. Supabase is an open source
-            alternative to Googles Firebase and is built upon PostgreSQL.
+            Although Knightec didn’t require a backend, we set up a Supabase
+            with dummy data to test all functionality. Supabase is an open
+            source alternative to Googles Firebase and is built upon PostgreSQL.
             Supabase also supports real-time updates, serverless functions, and
             automated security settings, making it possible to build and scale
             applications efficiently and quickly.
@@ -627,7 +587,7 @@ function DF() {
       title: "RESULTS",
       subtitle: "Demo of our fully functional touch screen version!",
       content: (
-        <div className="DF-section">
+        <div className="section-section close-top">
           <iframe
             src={`https://www.youtube.com/embed/6wopBi77xsk`}
             frameBorder="0"
@@ -644,7 +604,7 @@ function DF() {
       subtitle: "And some final thougths.",
       content: (
         <div>
-          <div className="DF-section">
+          <div className="section-section close-top">
             <p>
               During the design process, we collaborated closely, except for the
               individual low-fidelity sketches, where I contributed "Version 1"
@@ -671,34 +631,26 @@ function DF() {
               something to be proud of.
             </p>
           </div>
-          <div className="DF-section">
+          <div className="section-section">
             <h3>Opportunities for improvement</h3>
             <p>
-              Regarding the design we could have done even more interviews and
-              user testings. Since our sample was quite small it was difficult
-              to get clear conclusions which resulted in us mostly following our
-              supervisors opinions. We did do a quick redesign before starting
-              the development process where we changed some minor things, but as
-              always, even more time could have made it even better!
+              While we conducted some interviews and user tests, a larger sample
+              could have provided clearer insights. We made minor design
+              adjustments before development, but more time would’ve allowed for
+              deeper iteration.
               <br />
               <br />
-              Our prior experiences helped us avoid many pitfalls during
-              development. However, we should have started building the project
-              earlier since some errors did not show up during regular
-              compiling. Midway, we began building before every
-              merge with main, a practice we’ll adopt earlier next time. Better planning
-              of smaller components to make them more resuable could have saved
-              time, avoiding rework like adapting the search field for light and
-              dark themes later in the project. With more time, we would have
-              tested edge cases, improved error handling, and optimized data
-              caching.
+              Our prior experience helped us avoid major pitfalls, though we
+              realized too late that some issues only appeared during builds,
+              not compiles. We improved our workflow mid-project by building
+              before every merge, something we’ll implement earlier next time.
+              With more time, we would have tested edge cases, improved error
+              handling, and optimized data caching.
               <br />
               <br />
-              Ultimately, Knightec requested a prototype, not a finished
-              product. By balancing thoroughness and efficiency, we delivered a
-              large, functional prototype for them to develop further and I'm
-              very proud of what we managed to accomplish with our given
-              resourses :D
+              Still, the goal was a prototype, and we delivered a robust and
+              functional one. I’m proud of what we achieved with the resources
+              we had! :D
             </p>
             <p>
               <i>
@@ -733,6 +685,7 @@ function DF() {
           ))}
         </div>
       </div>
+      <Footer></Footer>
     </div>
   );
 }
