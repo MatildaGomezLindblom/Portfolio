@@ -1,13 +1,13 @@
 @import "variables";
 
-.SoB-container {
+.SEOAI-container {
   background-color: $background-color;
   display: grid;
   grid-template-rows: 1fr 4fr;
   margin-top: -41px;
   scroll-snap-type: y mandatory;
 
-  .SoB-section,
+  .SEOAI-section,
   .project-section-title,
   .project-section-subtitle {
     padding-left: 10%;
@@ -76,7 +76,7 @@
     }
 
     .section {
-      height: 500px;
+      //height: 500px;
     }
 
     .vertical-navbar {
@@ -143,7 +143,7 @@
       padding-left: 10%;
     }
 
-    .SoB-split-view {
+    .SEOAI-split-view {
       display: flex;
       align-items: center;
       justify-content: center;
@@ -152,17 +152,17 @@
       flex-wrap: wrap;
     }
 
-    .SoB-split-view > div {
+    .SEOAI-split-view > div {
       flex: 1;
     }
 
-    .SoB-split-view img {
+    .SEOAI-split-view img {
       width: calc(50% - 20px);
       flex-shrink: 1;
       height: auto;
     }
 
-    .SoB-text-and-image {
+    .SEOAI-text-and-image {
       padding-top: 20%;
       display: grid;
       grid-template-columns: repeat(2, 1fr);
@@ -175,12 +175,12 @@
       }
     }
 
-    .SoB-text-and-image div h3 {
+    .SEOAI-text-and-image div h3 {
       padding-left: 0 !important;
       padding-right: 0 !important;
     }
 
-    .SoB-text-and-image div p {
+    .SEOAI-text-and-image div p {
       padding-left: 0 !important;
       padding-right: 0 !important;
     }
@@ -232,11 +232,11 @@
       padding-left: 5px;
     }
 
-    #SoBLoFiPreview {
+    #SEOAILoFiPreview {
       width: 39%;
     }
 
-    #SoBHiFiPreview {
+    #SEOAIHiFiPreview {
       width: 35%;
     }
 
@@ -248,7 +248,7 @@
     }
   }
 
-  #section3 .SoB-text-and-image {
+  #section3 .SEOAI-text-and-image {
     padding-top: 50px;
   }
 
@@ -269,14 +269,14 @@
 
   @media (max-width: 800px) {
     .content {
-      .SoB-split-view {
+      .SEOAI-split-view {
         flex-direction: column;
       }
-      .SoB-split-view img {
+      .SEOAI-split-view img {
         width: 100%;
         height: auto;
       }
-      .SoB-text-and-image {
+      .SEOAI-text-and-image {
         padding-top: 20%;
         display: grid;
         grid-template-columns: 1fr;
@@ -310,7 +310,7 @@
       padding-left: 10vw !important;
     }
 
-    .SoB-section,
+    .SEOAI-section,
     .project-section-title,
     .project-section-subtitle {
       padding-left: 10vw !important;
